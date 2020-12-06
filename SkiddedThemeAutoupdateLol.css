@@ -1,6 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap'); */ /* old font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'); /* new font */
-/* @import url('https://codedotspectra.github.io/themes/mini-themes/settingsIcons.css'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 :root {  
     --background-primary: #151514;
     --background-secondary: #111111;
