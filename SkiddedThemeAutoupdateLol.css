@@ -338,6 +338,9 @@
 
 
 /* Connected accounts */
+.connectedAccountName-f8AEe2 {cursor: pointer !important; } /* Change cursor */
+.connectedAccountVerifiedIcon-3aZz_K{display: none} /* Remove useless verified badge */
+
 .connectedAccount-36nQx7 {
 	background: #151515;
     border: solid #191919;
@@ -474,6 +477,24 @@
 .item-1tOPte.colorDefault-2K3EoJ {
 	transition: 0.1s
 }
+
+
+.scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
+	background: #222;
+	border-radius: 5px;
+	
+}
+.animatorTop-2Y7x2r.scale-3iLZhb.didRender-33z1u8 .menu-3sdvDG.styleFixed-sX-yHV {
+	background: #2c2c2c;
+	box-shadow: 0 0 1px 1px #111; /* with blur shadow*/
+	
+}
+#status-picker::before{
+	margin-top: 172px;
+	margin-left: 11px !important;
+	background: #2c2c2c;
+	box-shadow: 0 0 1px 1px #111; 
+}
 /* END STATUS PICKER HOVER COLORS + TRANSITION */
 
 
@@ -481,10 +502,55 @@
     --background-secondary: #181818;
 }
 
-
 .option-3KoAJB .selectedIcon-3uS11H { /* BLUE CHECKMARK CUSTOM STATUS */
 	color: var(--main-color)
 }
+/* BLUE CHECKMARK BUY NITRO */
+[class="checkbox-1ix_J3 flexCenter-3_1bcw flex-1O1GKY justifyCenter-3D2jYp alignCenter-1dQNNs round-2jCFai checked-3_4uQ9"] {
+	background-color: var(--main-color) !important;
+	border-color: var(--main-color) !important
+}
+
+
+/* TOP BAR */
+.titleBar-AC4pGV>*:nth-child(2):hover {
+    background-color: #AA2832;
+}
+.titleBar-AC4pGV>*:nth-child(3):hover {
+    background-color: #056295;
+}
+.titleBar-AC4pGV>*:nth-child(4):hover {
+    background-color: #FDB100;
+}
+
+.titleBar-AC4pGV>*:nth-child(2) {
+    margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
+}
+.titleBar-AC4pGV>*:nth-child(3) {
+    margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
+}
+.titleBar-AC4pGV>*:nth-child(4) {
+    margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
+}
+/* END TOP BAR */
+
+
+[class="sidebarRegionScroller-3MXcoP thin-1ybCId scrollerBase-289Jih fade-2kXiP2"] {
+	border-radius: 0px 8px;
+}
+
+
+
+
+
+
+
 
 .lookLink-9FtZy-.colorBrand-3pXr91:hover .contents-18-Yxp { /* Blue underline new bluetooth */
     background-image: linear-gradient(0deg,transparent,transparent 1px,var(--main-color) 0,var(--main-color) 2px,transparent 0);
@@ -566,9 +632,21 @@
 }
 .withFrame-haYltI {
     height: 20px;
-    margin-top: 0px;
+    margin-top: 4px;
 }
 /* END WINDOW TOP BAR */
+
+
+
+
+
+
+
+
+
+
+
+
 
 .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
     background-color: #18191C;
@@ -593,35 +671,7 @@
     background-color: #0C0C0C;
 }
 
-.titleBar-AC4pGV>*:nth-child(2):hover {
-    background-color: #AA2832;
-}
 
-.titleBar-AC4pGV>*:nth-child(3):hover {
-    background-color: #056295;
-}
-
-.titleBar-AC4pGV>*:nth-child(4):hover {
-    background-color: #FDB100;
-}
-
-.titleBar-AC4pGV>*:nth-child(2) {
-    margin-top: 6px
-	background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
-
-.titleBar-AC4pGV>*:nth-child(3) {
-    margin-top: 6px
-	background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
-
-.titleBar-AC4pGV>*:nth-child(4) {
-    margin-top: 6px
-	background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
 
 .theme-dark .footer-2gL1pp {
     background-color: #111111;
