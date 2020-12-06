@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'); /* new font */
 /* @import url('https://codedotspectra.github.io/themes/mini-themes/settingsIcons.css'); */
 :root {  
-	--background-primary: #151514;
-	--background-secondary: #111111;
-	--background-tertiary: #151514;
+    --background-primary: #151514;
+    --background-secondary: #111111;
+    --background-tertiary: #151514;
 	--primaryGradient1: rgb(160, 60, 0);
-	--primaryGradient2: rgb(80, 20, 0);
+    --primaryGradient2: rgb(80, 20, 0);
 	--primaryGradientS1: rgb(0,120,100);
-	--primaryGradientS2: rgb(0,160,68);
+    --primaryGradientS2: rgb(0,160,68);
 	--primaryGradientT1: rgb(89, 54, 149);
-	--primaryGradientT2: rgb(54, 32, 92);
-	--background-secondary-alt: #0c0c0c;
-	--scrollbar-auto-thumb: #555;
-	--scrollbar-thin-thumb: #555;
-	--channeltextarea-background: #0C0C0C;
-	--background-floating: #151514;
+    --primaryGradientT2: rgb(54, 32, 92);
+    --background-secondary-alt: #0c0c0c;
+    --scrollbar-auto-thumb: #555;
+    --scrollbar-thin-thumb: #555;
+    --channeltextarea-background: #0C0C0C;
+    --background-floating: #151514;
 	--deprecated-quickswitcher-input-background: #151514;
 	--text-link: #d97245;
 	--main-color: #d97245;
@@ -234,7 +234,7 @@
     background-color: #359469;
 	transition: 0.1s
 }
-.colorDefault-2K3EoJ.focused-3afm-j { /* Boost context menu */
+[id="guild-header-popout"].colorDefault-2K3EoJ.focused-3afm-j { /* Boost context menu */
     background-color: var(--main-color);
 	transition: 0.1s
 }
@@ -404,7 +404,36 @@
 }
 /* END PFP SQUARE/BORDER */
 
+/* STATUS PICKER HOVER COLORS + TRANSITION */
+[id="status-picker-online"].focused-3afm-j{
+    background-color: rgb(67, 181, 129);
+}
+[id="status-picker-idle"].focused-3afm-j{
+    background-color: rgb(250, 166, 26);
+}
+[id="status-picker-dnd"].focused-3afm-j{
+    background-color: rgb(240, 71, 71);
+}
+[id="status-picker-invisible"].focused-3afm-j{
+    background-color: rgb(116, 127, 141);
+}
+[id="status-picker-custom-status"].focused-3afm-j{
+    background-color: rgb(116, 127, 141);
+}
+.item-1tOPte.colorDefault-2K3EoJ {
+	transition: 0.1s
+}
+/* END STATUS PICKER HOVER COLORS + TRANSITION */
 
+
+.theme-dark { /* Powercord popout yolo lol */
+    --background-secondary: #181818;
+}
+
+
+.option-3KoAJB .selectedIcon-3uS11H { /* BLUE CHECKMARK CUSTOM STATUS */
+	color: var(--main-color)
+}
 
 
 
@@ -505,21 +534,6 @@
     background-color: #0C0C0C;
 }
 
-.titleBar-AC4pGV>*:nth-child(2) {
-    background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
-
-.titleBar-AC4pGV>*:nth-child(3) {
-    background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
-
-.titleBar-AC4pGV>*:nth-child(4) {
-    background-color: transparent;
-    transition: background-color 0.25s ease-out;
-}
-
 .titleBar-AC4pGV>*:nth-child(2):hover {
     background-color: #AA2832;
 }
@@ -534,14 +548,20 @@
 
 .titleBar-AC4pGV>*:nth-child(2) {
     margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
 }
 
 .titleBar-AC4pGV>*:nth-child(3) {
     margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
 }
 
 .titleBar-AC4pGV>*:nth-child(4) {
     margin-top: 6px
+	background-color: transparent;
+    transition: background-color 0.25s ease-out;
 }
 
 .theme-dark .footer-2gL1pp {
