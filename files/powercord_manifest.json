@@ -1,7 +1,8 @@
 {
-    "name": "lol theme",
+    "name": "Gamesense Theme but not anymore",
     "description": "Themeok",
     "version": "b1.0",
     "author": "Nixuge²#5923",
-    "theme": "style.css"
+    "theme": "style.css",
+	"license": "yolo"
 }
