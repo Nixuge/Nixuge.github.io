@@ -17,6 +17,7 @@
 	--deprecated-quickswitcher-input-background: #151514;
 	--text-link: #d97245;
 	--main-color: #d97245;
+	--pfp-radius: 10px;
 }
 
 .botTagInvert-18-95s {
@@ -216,14 +217,14 @@
     background-color: var(--main-color);
 }
 .lookInverted-2D7oAl.colorGreen-29iAKY, .buttonInvertedPurple-WtBglX {
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
 }
 .lookInverted-2D7oAl.colorGreen-29iAKY:hover, .buttonInvertedPurple-WtBglX:hover {
 	background-color: rgba(0,0,0,0.8);
 }
 .lookInverted-2D7oAl.colorBrand-3pXr91 { /* ALL BUTTONS */
     color: var(--main-color);
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.5);
 }
 .lookInverted-2D7oAl.colorBrand-3pXr91:hover {
     background-color: rgba(0,0,0,0.8);
@@ -241,6 +242,12 @@
 }
 .lookFilled-1Gx00P.colorWhite-rEQuAQ:disabled { /* Disabled join button */
     background-color: #111;
+}
+.lookFilled-1Gx00P.colorWhite-rEQuAQ { /* Normal join button */
+	background-color: rgba(0,0,0,0.5)
+}
+.lookFilled-1Gx00P.colorWhite-rEQuAQ:hover {/* Normal join button hover */
+	background-color: rgba(0,0,0,0.8)
 }
 [class="item-1tOPte labelContainer-1BLJti colorPremium-p4p7qO colorDefault-2K3EoJ focused-3afm-j"] { /* Boost server orig color*/
 	background: rgba(255, 115, 250,0.7) !important
@@ -332,6 +339,7 @@
 
 /* Connected accounts */
 .connectedAccount-36nQx7 {
+	background: #151515;
     border: solid #191919;
     border-width: 1px 1px 1px 1px;
     border-radius: 4px;
@@ -343,7 +351,7 @@
     border-width: 1px 1px 1px 1px;
     border-radius: 4px;
     padding: 0 20px 0 0;
-		transition: 0.3s;
+	transition: 0.3s;
 }
 .connectedAccountIcon-3P3V6F { padding: 8px; border-radius: 4px 0 0 4px;}
 .connectedAccountIcon-3P3V6F[src="/assets/4662875160dc4c56954003ebda995414.png"] { background: #1da0f248 !important; }
@@ -363,36 +371,59 @@
 
 /* PFP SQUARE/BORDER */
 .avatarWrapperNormal-3wFMbf foreignObject, /* Squared icons */
-.header-QKLPzZ foreignObject { 
+.header-QKLPzZ foreignObject,
+.listRow-hutiT_ foreignObject{ 
   mask: none;
   border-radius: var(--pfp-radius);
 }
 
 .avatarWrapperNormal-3wFMbf rect, /* Hide status icons */
-.header-QKLPzZ rect{ 
+.header-QKLPzZ rect,
+.listRow-hutiT_ rect{ 
   display: none
 }
 
-.avatarWrapperNormal-3wFMbf [aria-label*="Do Not Disturb"] foreignObject, /* DND */
+/* ---------------------------------------------------------------------------------------- */
+
+.avatarWrapperNormal-3wFMbf [aria-label*="Do Not Disturb"] foreignObject, /* DND normal */
 .header-QKLPzZ [aria-label*="Do Not Disturb"] foreignObject{
   border: 2px solid rgb(240, 71, 71);
-  
+}
+.listRow-hutiT_ [aria-label*="Do Not Disturb"] foreignObject {  /* DND common friends */
+  border: 1px solid rgb(240, 71, 71);
 }
 
-.avatarWrapperNormal-3wFMbf [aria-label*="Online"] foreignObject, /* Online */
-.header-QKLPzZ [aria-label*="Online"] foreignObject{
+/* ---------------------------------------------------------------------------------------- */
+
+.avatarWrapperNormal-3wFMbf [aria-label*="Online"] foreignObject, /* Online normal */
+.header-QKLPzZ [aria-label*="Online"] foreignObject {
   border: 2px solid rgb(67, 181, 129);
 }
+.listRow-hutiT_ [aria-label*="Online"] foreignObject { /* Online common friends */
+  border: 1px solid rgb(67, 181, 129);
+}
+
+/* ---------------------------------------------------------------------------------------- */
 
 .avatarWrapperNormal-3wFMbf [aria-label*="Idle"] foreignObject, /* Idle */
 .header-QKLPzZ [aria-label*="Idle"] foreignObject{
   border: 2px solid rgb(250, 166, 26);
 }
+.listRow-hutiT_ [aria-label*="Idle"] foreignObject {/* Idle common friends */
+  border: 1px solid rgb(250, 166, 26);
+}
+
+/* ---------------------------------------------------------------------------------------- */
 
 .avatarWrapperNormal-3wFMbf [aria-label*="Streaming"] foreignObject, /* Streaming */
 .header-QKLPzZ [aria-label*="Streaming"] foreignObject{
   border: 2px solid rgb(89, 54, 149);
 }
+.listRow-hutiT_ [aria-label*="Streaming"] foreignObject {/* Streaming common friends */
+  border: 1px solid rgb(89, 54, 149);
+}
+
+/* ---------------------------------------------------------------------------------------- */
 
 .avatarWrapperNormal-3wFMbf [aria-label*="Offline"] foreignObject,/* Offline */
 .avatarWrapperNormal-3wFMbf [aria-label*="Invisible"] foreignObject,
@@ -400,24 +431,46 @@
 .header-QKLPzZ [aria-label*="Invisible"] foreignObject{
   border: 2px solid rgb(116, 127, 141);
 }
+.listRow-hutiT_ [aria-label*="Offline"] foreignObject,
+.listRow-hutiT_ [aria-label*="Invisible"] foreignObject {/* Offline common friends */
+  border: 1px solid rgb(116, 127, 141);
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
 /* END PFP SQUARE/BORDER */
 
 /* STATUS PICKER HOVER COLORS + TRANSITION */
 [id="status-picker-online"].focused-3afm-j{
     background-color: rgb(67, 181, 129);
 }
+[id="status-picker-online"].colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {
+    background-color: rgb(37, 151, 99);
+}
+
 [id="status-picker-idle"].focused-3afm-j{
     background-color: rgb(250, 166, 26);
 }
+[id="status-picker-idle"].colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {
+	background-color: rgb(220, 136, 6);
+}
+
 [id="status-picker-dnd"].focused-3afm-j{
     background-color: rgb(240, 71, 71);
 }
-[id="status-picker-invisible"].focused-3afm-j{
-    background-color: rgb(116, 127, 141);
+[id="status-picker-dnd"].colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {
+    background-color: rgb(210, 41, 41);
 }
+
+[id="status-picker-invisible"].focused-3afm-j,
 [id="status-picker-custom-status"].focused-3afm-j{
     background-color: rgb(116, 127, 141);
 }
+[id="status-picker-invisible"].colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O),
+[id="status-picker-custom-status"].colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {
+    background-color: rgb(86, 97, 111);
+}
+
 .item-1tOPte.colorDefault-2K3EoJ {
 	transition: 0.1s
 }
@@ -431,6 +484,14 @@
 
 .option-3KoAJB .selectedIcon-3uS11H { /* BLUE CHECKMARK CUSTOM STATUS */
 	color: var(--main-color)
+}
+
+.lookLink-9FtZy-.colorBrand-3pXr91:hover .contents-18-Yxp { /* Blue underline new bluetooth */
+    background-image: linear-gradient(0deg,transparent,transparent 1px,var(--main-color) 0,var(--main-color) 2px,transparent 0);
+}
+
+.newMessagesBar-265mhP { /* New message bar */
+    background-color: var(--main-color);
 }
 
 
