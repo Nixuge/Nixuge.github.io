@@ -564,9 +564,6 @@
 .titleBar-AC4pGV>*:nth-child(4):hover {
     background-color: #FDB100;
 }
-.titleBar-AC4pGV:hover {
-	background: #fff !important
-}
 .titleBar-AC4pGV>*:nth-child(2) {
     margin-top: 6px
 	background-color: transparent;
