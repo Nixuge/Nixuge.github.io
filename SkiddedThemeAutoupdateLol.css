@@ -200,6 +200,20 @@
 /* FIN NOUVEAU SERVEUR */
 
 
+/* MENTION COLOR (NOT SURE BUT YES) */
+.wrapper-3WhCwL {
+    color: var(--main-color);
+}
+.mentioned-xhSam7 .mention {
+	color: #cc1f1f
+}
+/* END MENTION COLOR */
+
+
+
+
+
+
 
 
 
@@ -361,7 +375,7 @@
 
 
 
-/* Connected accounts */
+/* CONNECTED ACCOUNTS */
 .connectedAccountName-f8AEe2 {cursor: pointer !important; } /* Change cursor */
 .connectedAccountVerifiedIcon-3aZz_K{display: none} /* Remove useless verified badge */
 
@@ -393,8 +407,17 @@
 .connectedAccountIcon-3P3V6F[src="/assets/806953fe1cc616477175cbcdf90d5cd3.png"] { background: #cea14638 !important; }
 .connectedAccountIcon-3P3V6F[src="/assets/5d69e29f0d71aaa04ed9725100199b4e.png"] { background: #24292e !important; }
 .connectedAccountName-f8AEe2 { margin-left: 13px;}
-/* End connected accounts */
 
+/* Connected accounts settings */
+.inner-2Y6JuD.accountBtnInner-sj5jLs:hover { /* Hover over connect your accounts things */
+	background-color: rgba(255,255,255,0.1);
+}
+.inner-2Y6JuD.accountBtnInner-sj5jLs { /* transition for above */
+	transition: 0.2s;
+}
+
+
+/* END CONNECTED ACCOUNTS */
 
 /* PFP SQUARE/BORDER */
 .avatarWrapperNormal-3wFMbf foreignObject, /* Squared icons */
@@ -541,7 +564,9 @@
 .titleBar-AC4pGV>*:nth-child(4):hover {
     background-color: #FDB100;
 }
-
+.titleBar-AC4pGV:hover {
+	background: #fff !important
+}
 .titleBar-AC4pGV>*:nth-child(2) {
     margin-top: 6px
 	background-color: transparent;
@@ -562,13 +587,14 @@
 
 /* Settings sidebar */
 [class="sidebarRegionScroller-3MXcoP thin-1ybCId scrollerBase-289Jih fade-2kXiP2"] {
+	padding-top: 20px;
 	background: var(--background-primary)
 }
 [class="sidebarRegionScroller-3MXcoP thin-1ybCId scrollerBase-289Jih fade-2kXiP2"] .sidebar-CFHs9e {
 	background: #191919;
 	border-radius: 8px 8px 0 0;
 	padding-left: 8px;
-	padding-top: 20px;
+	padding-top: 13px;
 	padding-bottom: 20px;
 }
 /* End settings sidebar */
@@ -809,4 +835,22 @@
 .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
     background-color: #151514;
     color: hsla(0,0%,100%,.8);
+}
+
+
+
+/* PLUGINS SECTION */
+
+/* BETTER FRIENDS */
+.theme-dark .popoutList-T9CKZQ {
+    background: #181818;
+}
+.theme-dark .selectableItem-1MP3MQ:hover {
+    background-color: rgba(37,37,37,.6);
+}
+[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6 selectableItem-1MP3MQ bf-friend-item selected-31soGA"] {
+	background-color: var(--main-color) !important;
+}
+[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6 selectableItem-1MP3MQ bf-friend-item selected-31soGA"]:hover {
+	cursor: pointer;
 }
