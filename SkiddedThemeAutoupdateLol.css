@@ -313,6 +313,21 @@
 .theme-dark .modal-yWgWj- { /* Powercord donate */
     background-color: var(--background-primary);
 }
+.powercord-updater.powercord-text .animated path{ /* Powercord update logo */
+	fill: var(--main-color);
+}
+.theme-dark { /* Powercord popout yolo lol */
+    --background-secondary: #181818;
+}
+.powercord-updater .debug-info b { /* Powercord debug info */
+	color: var(--main-color) !important
+}
+.formNotice-2_hHWR.cardPrimary-1Hv-to.card-3Qj_Yx{ /* Powercord debug info */
+    background: #171717;
+}
+
+
+
 
 /* Keybinds/settings things */
 .theme-dark .card-FDVird:before {
@@ -335,6 +350,15 @@
 .barFill-23-gu- { /* bars color orange */
     background: var(--main-color);
 }
+
+
+.radioIconForeground-XwlXQN { /* Settings toggle icon color */
+	color: var(--main-color)
+}
+[aria-label="Verified"].flowerStar-1GeTsn path{ /* Verified game badge*/
+	fill: var(--main-color)
+}
+
 
 
 /* Connected accounts */
@@ -497,10 +521,6 @@
 /* END STATUS PICKER HOVER COLORS + TRANSITION */
 
 
-.theme-dark { /* Powercord popout yolo lol */
-    --background-secondary: #181818;
-}
-
 .option-3KoAJB .selectedIcon-3uS11H { /* BLUE CHECKMARK CUSTOM STATUS */
 	color: var(--main-color)
 }
@@ -540,10 +560,18 @@
 /* END TOP BAR */
 
 
+/* Settings sidebar */
 [class="sidebarRegionScroller-3MXcoP thin-1ybCId scrollerBase-289Jih fade-2kXiP2"] {
-	border-radius: 0px 8px;
+	background: var(--background-primary)
 }
-
+[class="sidebarRegionScroller-3MXcoP thin-1ybCId scrollerBase-289Jih fade-2kXiP2"] .sidebar-CFHs9e {
+	background: #191919;
+	border-radius: 8px 8px 0 0;
+	padding-left: 8px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* End settings sidebar */
 
 
 
