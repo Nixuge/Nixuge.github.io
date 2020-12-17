@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 :root {  
-    --background-primary: #151514;
-    --background-secondary: #111111;
-    --background-tertiary: #151514;
+	--background-primary: #151514;
+	--background-secondary: #111111;
+	--background-tertiary: #151514;
 	--primaryGradient1: rgb(160, 60, 0);
-    --primaryGradient2: rgb(80, 20, 0);
+	--primaryGradient2: rgb(80, 20, 0);
 	--primaryGradientS1: rgb(0,120,100);
-    --primaryGradientS2: rgb(0,160,68);
+	--primaryGradientS2: rgb(0,160,68);
 	--primaryGradientT1: rgb(89, 54, 149);
-    --primaryGradientT2: rgb(54, 32, 92);
-    --background-secondary-alt: #0c0c0c;
-    --scrollbar-auto-thumb: #555;
-    --scrollbar-thin-thumb: #555;
-    --channeltextarea-background: #0C0C0C;
-    --background-floating: #151514;
+	--primaryGradientT2: rgb(54, 32, 92);
+	--background-secondary-alt: #0c0c0c;
+	--scrollbar-auto-thumb: #555;
+	--scrollbar-thin-thumb: #555;
+	--channeltextarea-background: #0C0C0C;
+	--background-floating: #151514;
 	--deprecated-quickswitcher-input-background: #151514;
 	--text-link: #d97245;
 	--main-color: #d97245;
 	--pfp-radius: 10px;
+	--display-gift-button: none;
+	--display-gif-button: none;
 }
 
 .botTagInvert-18-95s {
@@ -252,7 +254,13 @@
 	transition: 0.1s
 }
 .colorBrand-ROmMP1 { /* Invite context menu */
-    color: var(--main-color);
+    color: var(--main-color) ;
+}
+.colorDefault-2K3EoJ.focused-3afm-j { /* Invite right click */
+	background: var(--main-color)
+}
+.colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {/* Selected items context menu */
+	background: rgba(217, 114, 69, 0.8)
 }
 .lookFilled-1Gx00P.colorWhite-rEQuAQ:disabled { /* Disabled join button */
     background-color: #111;
@@ -339,8 +347,18 @@
 .formNotice-2_hHWR.cardPrimary-1Hv-to.card-3Qj_Yx{ /* Powercord debug info */
     background: #171717;
 }
+.button-38aScr.lookInverted-2D7oAl.colorYellow-2JqYwt.sizeSmall-2cSMqn.grow-q77ONN .contents-18-Yxp{ /* Powercord reload */
+    color: #faa61a !important;
+}
 
-
+/* Hide gift/gif */
+.app-2rEoOp [aria-label="Send a gift"] {
+	display: var(--display-gift-button) !important
+}
+.app-2rEoOp [aria-label="Open GIF picker"] {
+	display: var(--display-gif-button) !important
+}
+/* TO CHANGE: edit --display-gift-button and --display-gif-button vars (default: none, overwrite with !important) */
 
 
 /* Keybinds/settings things */
@@ -850,4 +868,9 @@
 }
 [class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6 selectableItem-1MP3MQ bf-friend-item selected-31soGA"]:hover {
 	cursor: pointer;
+}
+
+/* BetterFormattingRedux */
+.bf-toolbar::before {
+    background: #121212 !important;
 }
