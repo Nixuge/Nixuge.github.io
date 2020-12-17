@@ -260,7 +260,7 @@
 	background: var(--main-color)
 }
 .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {/* Selected items context menu */
-	background: rgba(217, 114, 69, 0.8)
+	background: rgba(217, 114, 69, 0.8) !important
 }
 .lookFilled-1Gx00P.colorWhite-rEQuAQ:disabled { /* Disabled join button */
     background-color: #111;
