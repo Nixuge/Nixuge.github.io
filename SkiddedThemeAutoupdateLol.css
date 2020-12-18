@@ -260,7 +260,7 @@
 	background: var(--main-color)
 }
 .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {/* Selected items context menu */
-	background: rgba(217, 114, 69, 0.8) !important
+	background-color: rgba(217, 114, 69, 0.8)
 }
 .lookFilled-1Gx00P.colorWhite-rEQuAQ:disabled { /* Disabled join button */
     background-color: #111;
@@ -291,12 +291,31 @@
 }
 [class="item-1tOPte labelContainer-1BLJti colorDefault-2K3EoJ focused-3afm-j"] {
 	transition: 0.1s;
-	background-color: var(--main-color) !important
+	background-color: var(--main-color)
 }
 .side-8zPYf6 .item-PXvHYJ { /* Transition menu settings */
 	transition: 0.1s
 }
+.lookOutlined-3sRXeN.colorBrand-3pXr91 { /* Request Data button */
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
 /* End buttons */
+
+
+/* PAY THING */
+.theme-dark .premiumIndicator-1XvbfM { /* Subscription button payement */
+    background-color: var(--main-color);
+}
+.lookFilled-1Gx00P.colorBrand-3pXr91:active { /* Add payement active */
+    background-color: rgba(217, 114, 69,0.7);
+}
+.checkbox-1ix_J3.flexCenter-3_1bcw.flex-1O1GKY.justifyCenter-3D2jYp.alignCenter-1dQNNs.box-mmYMsp.checked-3_4uQ9 { /* Payement checkmark */
+	border-color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
+/* END PAY THING */
+
 
 /* Server boost icons blue -> orange */
 .emojiIcon-2xOPMD {
@@ -873,4 +892,20 @@
 /* BetterFormattingRedux */
 .bf-toolbar::before {
     background: #121212 !important;
+}
+
+
+/* Powercord Notifications */
+.progressBar-3u8FBM.small-1CUeBa.animating-3Qqqzp { /* Bar */
+    background: linear-gradient(to right, rgba(209,104,58,1), rgba(198,132,70,1)) !important;
+}
+.lookGhost-2Fn_0-.colorBrand-3pXr91 { /* Buttons */
+    color: var(--main-color);
+    background-color: rgba(217,114,69,.1);
+}
+.powercord-toast[data-toast-type=info] .icon { /* I icon */
+	color: var(--main-color)
+}
+.wrapper-3WhCwL { /* ALSO MENTIONS */
+    background:rgba(217,114,69,.1);
 }
