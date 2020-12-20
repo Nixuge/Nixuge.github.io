@@ -572,23 +572,104 @@
 	box-shadow: 0 0 1px 1px #111; /* with blur shadow*/
 	
 }
-#status-picker::before{
-	margin-top: 172px;
-	margin-left: 11px !important;
-	background: #2c2c2c;
-	box-shadow: 0 0 1px 1px #111; 
+.description-2L932D { /* Hide random descriptions */
+	display: none;
 }
 /* END STATUS PICKER HOVER COLORS + TRANSITION */
 
 
-.option-3KoAJB .selectedIcon-3uS11H { /* BLUE CHECKMARK CUSTOM STATUS */
+/* UPLOAD  THING*/
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .bgScale-1otPtc { 
+    background: var(--main-color);
+}
+
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo .icon-kyxXVr.one-2crnLX {
+    fill: #fff !important
+} 
+/* END UPLOAD  THING*/
+
+
+/* SPOTIFY POWERCORD THING BETTER */
+.panels-j1Uci_ > .powercord-spotify .spotify-seek-bar {
+        position: absolute;
+        bottom: 53px;
+        width: 240px;
+        height: 55px;
+		transition: 0.2s
+}
+.powercord-spotify .spotify-seek-bar-progress {
+    background: linear-gradient(90deg, rgba(30,216,96,0.9) 0%, rgba(30,216,96,0.3) 100%);
+	/* border-radius: 5px 5px 0px 0px; */
+}
+.panels-j1Uci_:hover .spotify-seek-bar-progress {
+	border-radius: 5px;
+	transition: 0.2s;
+}
+.powercord-spotify {
+    background: linear-gradient(90deg, rgba(30,216,96,0.1) 0%, rgba(30,216,96,0.05) 100%);
+}
+
+
+/* .panels-j1Uci_:hover .spotify-seek-bar { height: 63px; } */
+.powercord-spotify > .container-3baos1 > .avatarWrapper-2yR4wp, 
+.powercord-spotify > .container-3baos1 > .nameTag-3uD-yy, .spotify-buttons, 
+.spotify-seek-duration { z-index: 1; }
+
+
+.panels-j1Uci_:hover .spotify-extra-controls {
+    opacity: 1;
+    height: 35px;
+    margin-bottom: -14px;
+	transition: 0.2s
+}
+.powercord-spotify.hover .spotify-extra-controls {
+    opacity: 1;
+    height: 35px;
+    padding-bottom: 3px;
+}
+.panels-j1Uci_:hover .spotify-seek-elements {
+    opacity: 1;
+    height: 12px;
+}
+
+.panels-j1Uci_:hover .spotify-seek:not(.no-premium) .spotify-seek-bar {
+    height: 4px;
+}
+.panels-j1Uci_:hover .spotify-seek:not(.no-premium) .spotify-seek-bar-cursor {
+    opacity: 1;
+}
+/* END SPOTIFY POWERCORD THING BETTER */
+/* Skidded from Nyria#3863 (265924886461939712) */
+/* https://canary.discord.com/channels/538759280057122817/755005803303403570/787342561777418250 */
+
+
+
+
+/* RANDOM CHECKMARKS */
+/* custom status */
+.option-3KoAJB .selectedIcon-3uS11H { 
 	color: var(--main-color)
 }
-/* BLUE CHECKMARK BUY NITRO */
+/* buy nitro */
 [class="checkbox-1ix_J3 flexCenter-3_1bcw flex-1O1GKY justifyCenter-3D2jYp alignCenter-1dQNNs round-2jCFai checked-3_4uQ9"] {
 	background-color: var(--main-color) !important;
 	border-color: var(--main-color) !important
 }
+/* END RANDOM CHECKMARKS */
+
+
+/* OVERLAY SETTINGS */
+.wrapper-3jrx9n {
+    border: 2px solid var(--main-color);
+}
+.option-n0icdO:hover {
+    background-color: var(--main-color);
+}
+.selected-mKYnfr.option-n0icdO {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+/* END OVERLAY SETTINGS */
 
 
 /* TOP BAR */
@@ -660,46 +741,13 @@
     background-color: var(--background-modifier-selected);
 	transition: 0.13s
 }
-.wordmark-2iDDfm svg { /* ? */
-    display: none;
-}
-.wordmark-2iDDfm {
-    opacity: 1;
-    font-family: 'Quicksand' !important; /* CHANGED FONT */
-}
+
 
 .sprite-2iCowe {
     background-position: 0px 0px !important;
 }
 
 
-.wordmark-2iDDfm::before {
-    content: 'noe';
-    /* font-size: 18px; */
-    z-index: 1000;
-    position: fixed;
-    display: inline-block;
-    color: var(--text-normal);
-    height: auto;
-    top: 11px;
-    left: 10px;
-    background-color: transparent;
-}
-
-
-
-.wordmark-2iDDfm::after {
-    content: 'sense';
-    /* font-size: 18px; */
-    z-index: 1000;
-    position: fixed;
-    display: inline-block;
-    color: var(--main-color);
-    height: auto;
-    top: 11px;
-    left: 34.5px;
-    background-color: transparent;
-}
 
 .markup-2BOw-j {
     font-family: 'Quicksand',Helvetica,Arial,sans-serif; /* CHANGED FONT */
@@ -712,19 +760,6 @@
     /* font-size: 12pt; */
     color: white;
 }
-
-/* WINDOW TOP BAR */
-.typeWindows-1za-n7 {
-    height: 20px;
-}
-.withFrame-haYltI {
-    height: 20px;
-    margin-top: 4px;
-}
-/* END WINDOW TOP BAR */
-
-
-
 
 
 
@@ -773,77 +808,11 @@
 }
 
 
-/* Custom status picker */
-
 #popout_8 > .animatorBottom-fS5rNO {
     transition: none;
 }
 
-#status-picker {
-    width: 44.5px;
-    margin: -9px 0 0 7px;
-}
-#status-picker::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background-color: inherit;
-    padding: 15px 0 0 20px;
-    margin-left: 13px;
-    transform: rotate(45deg);
-}
 
-.statusItem-33LqPf > .icon-1IxfJ2 {
-    margin-left: 1px;
-}
-#status-picker-custom-status > div > .statusItem-33LqPf {
-    margin-left: -0.5px;
-}
-
-.scrollerBase-289Jih > [id*="status-picker-"] + .separator-2I32lJ,
-.statusItem-33LqPf > .status-1fhblQ,
-.statusItem-33LqPf > .description-2L932D,
-.statusItem-33LqPf > .separator-2I32lJ,
-.statusItem-33LqPf > .customText-tY5LJn,
-.statusItem-33LqPf > .clearStatusIcon-3-MDNF {
-    display: none;
-}
-
-
-/* Status Picker */
-#popout_8 > .animatorBottom-fS5rNO {
-    transition: none;
-}
-
-#status-picker {
-    width: 44.5px;
-    margin: -9px 0 0 7px;
-}
-#status-picker::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background-color: inherit;
-    padding: 15px 0 0 20px;
-    margin-left: 13px;
-    transform: rotate(45deg);
-}
-
-.statusItem-33LqPf > .icon-1IxfJ2 {
-    margin-left: 1px;
-}
-#status-picker-custom-status > div > .statusItem-33LqPf {
-    margin-left: -0.5px;
-}
-
-.scrollerBase-289Jih > [id*="status-picker-"] + .separator-2I32lJ,
-.statusItem-33LqPf > .status-1fhblQ,
-.statusItem-33LqPf > .description-2L932D,
-.statusItem-33LqPf > .separator-2I32lJ,
-.statusItem-33LqPf > .customText-tY5LJn,
-.statusItem-33LqPf > .clearStatusIcon-3-MDNF {
-    display: none;
-}
 
 .input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus, .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b, .lookFilled-1h1y05.selectOpen-hQuR6b, .lookFilled-1h1y05.select-1Pkeg4:focus {
     border-color: var(--main-color);
@@ -909,3 +878,9 @@
 .wrapper-3WhCwL { /* ALSO MENTIONS */
     background:rgba(217,114,69,.1);
 }
+
+
+
+
+
+
