@@ -242,7 +242,8 @@
     color: var(--main-color);
     background-color: rgba(0,0,0,0.5);
 }
-.lookInverted-2D7oAl.colorBrand-3pXr91:hover {
+.lookInverted-2D7oAl.colorBrand-3pXr91:hover,
+.lookInverted-2D7oAl.colorBrand-3pXr91:disabled {
     background-color: rgba(0,0,0,0.8);
 }
 .lookFilled-1Gx00P.colorGreen-29iAKY:hover, .lookFilled-1Gx00P.colorGreen-29iAKY:hover {
@@ -369,6 +370,15 @@
 .button-38aScr.lookInverted-2D7oAl.colorYellow-2JqYwt.sizeSmall-2cSMqn.grow-q77ONN .contents-18-Yxp{ /* Powercord reload */
     color: #faa61a !important;
 }
+
+
+.profileBadgeWrapper-1rGSsp.powercord-badge { /* POWERCORD BLUE BADGES TO ORANGE */
+	color: #d97245 !important
+}
+.profileBadgeWrapper-1rGSsp.powercord-badge [aria-label="Trans Rights"] { /* NO POWERCORD TRANS RIGHTS */
+	display: none
+}
+
 
 /* Hide gift/gif */
 .app-2rEoOp [aria-label="Send a gift"] {
@@ -639,8 +649,67 @@
     opacity: 1;
 }
 /* END SPOTIFY POWERCORD THING BETTER */
-/* Skidded from Nyria#3863 (265924886461939712) */
+/* Some parts skidded from Nyria#3863 (265924886461939712) */
 /* https://canary.discord.com/channels/538759280057122817/755005803303403570/787342561777418250 */
+
+
+/* UPLOAD THING */
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo .icon-kyxXVr.one-2crnLX,
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.webcode-22GGLX { /* 1/HTML
+	/* https://canary.discord.com/assets/60c3eaf0d7173c929482362ea1d2543a.svg */
+	background-image: url(https://nixuge.github.io/svg/uploading/webcode.svg)
+}
+
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo .icon-kyxXVr.two-3BBQI9,
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.code-aoB-kL { /* 2/py
+	/* https://canary.discord.com/assets/4ab2ee5027741df387151ca717ae5614.svg */
+	background-image: url(https://nixuge.github.io/svg/uploading/code.svg)
+}
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo .icon-kyxXVr.three-27ScFD,
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.document-2cvI0u { /* 3/txt */
+	/* https://canary.discord.com/assets/a4ef7d20760cef4c165825770fd12ac7.svg */
+	background-image: url(https://nixuge.github.io/svg/uploading/document.svg)
+}
+
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.unknown-3TPTMr { /* unknown */
+	/* https://canary.discord.com/assets/92fc72e47a5854ae12c1167e69573d77.svg */
+	background-image: url(https://nixuge.github.io/svg/uploading/unknown.svg)
+}
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.archive-2hqXug { /* ZIP */
+	/* https://canary.discord.com/assets/3408a4597fdee6f7edef69f7fb487b38.svg */
+	background-image: url(https://nixuge.github.io/svg/uploading/archive.svg)
+}
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo {
+	border: none
+}
+/* UPLOAD THING DONE */
+/* UPLOADED THING */
+
+.icon-1kp3fr[alt='Attachment file type: document'] { /* txt */
+	content:url("https://nixuge.github.io/svg/uploaded/document.svg");
+}
+.icon-1kp3fr[alt='Attachment file type: archive'] { /* zip */
+	content:url("https://nixuge.github.io/svg/uploaded/archive.svg");
+}
+.icon-1kp3fr[alt='Attachment file type: code'] { /* py */
+	content:url("https://nixuge.github.io/svg/uploaded/code.svg");
+}
+.icon-1kp3fr[alt='Attachment file type: unknown'] { /* unknown */
+	content:url("https://nixuge.github.io/svg/uploaded/unknown.svg");
+}
+.icon-1kp3fr[alt='Attachment file type: webcode'] { /* html */
+	content:url("https://nixuge.github.io/svg/uploaded/webcode.svg");
+}
+/* UPLOADED THING DONE */
+/* https://yoksel.github.io/url-encoder/ */
+/* https://boxy-svg.com/app/ */
+
+
+
+/* Orange loading animation cubes */
+.wanderingCubesItem-WPXqao { 
+	background-color: #d97245
+}
 
 
 
@@ -655,6 +724,15 @@
 	background-color: var(--main-color) !important;
 	border-color: var(--main-color) !important
 }
+/* checkmark right click call */
+.colorDefault-2K3EoJ .checkbox-3s5GYZ, .colorDefault-2K3EoJ .radioSelection-1HmrQS,
+.colorDefault-2K3EoJ.focused-3afm-j .check-1JyqgN {
+    color: var(--main-color);
+}
+
+
+
+
 /* END RANDOM CHECKMARKS */
 
 
@@ -764,7 +842,9 @@
 
 
 
-
+.tipTitle-GL9qAt { /* tip when loading discord */
+    color: var(--main-color);
+}
 
 
 
@@ -878,9 +958,3 @@
 .wrapper-3WhCwL { /* ALSO MENTIONS */
     background:rgba(217,114,69,.1);
 }
-
-
-
-
-
-
