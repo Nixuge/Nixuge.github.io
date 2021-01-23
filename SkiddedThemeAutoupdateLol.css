@@ -608,7 +608,7 @@
 		transition: 0.2s
 }
 .powercord-spotify .spotify-seek-bar-progress {
-    background: linear-gradient(90deg, rgba(30,216,96,0.9) 0%, rgba(30,216,96,0.3) 100%);
+    background: linear-gradient(90deg, rgba(30,216,96,0.9) 0%, rgba(30,216,96,0.3) 100%) !important;
 	/* border-radius: 5px 5px 0px 0px; */
 }
 .panels-j1Uci_:hover .spotify-seek-bar-progress {
