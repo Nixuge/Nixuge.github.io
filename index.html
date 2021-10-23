@@ -187,8 +187,8 @@ document.head.appendChild(favicon);
 function copyText(item) {
   /* Get the text field */
   var copyText = document.getElementById(item).innerHTML;
+  if(copyText == "Copied to clipboard!"){return}
   navigator.clipboard.writeText(copyText);
-  
   document.getElementById(item).innerHTML="Copied to clipboard!";
   
   setTimeout(() => {  document.getElementById(item).innerHTML=copyText; }, 800);
