@@ -180,7 +180,9 @@
 function copyText(item) {
   /* Get the text field */
   var copyText = document.getElementById(item).innerHTML;
-
+  alert(copyText)
+  alert(item)
+  alert(document.getElementById(item))
   navigator.clipboard.writeText(copyText);
   
   document.getElementById(item).innerHTML="Copied to clipboard!";
