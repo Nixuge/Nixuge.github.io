@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<title>Homepage - Nixuge.me</title>
-</head>
 	<body>
 
 		<h1>Nixuge.me</h1>
@@ -182,6 +179,10 @@ let favicon = document.createElement('link');
 favicon.rel = 'icon';
 favicon.href = `icons/favicon${fav_num}.png`;
 document.head.appendChild(favicon);
+
+var titles = ['Feur', 'Coucou', 'Home', 'Lambda pd']
+var title = titles[Math.floor(Math.random() * titles.length)]
+document.title = title + " - Nixuge.me"
 
 
 function copyText(item) {
