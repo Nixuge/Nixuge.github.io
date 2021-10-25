@@ -43,7 +43,6 @@
 		font-size: 36px;
 		opacity: 1;
 		text-align:center;
-		animation: fade1 1s linear;
 	}
 	
 	.social {
@@ -144,6 +143,19 @@
 	}
 </style>
 <script>
+//Only play animations if not coming from nixuge.me
+var oldURL = document.referrer;
+if(oldURL != 'https://nixuge.me') {
+  var style = document.createElement('style');
+  style.innerHTML = `
+  body {
+	animation: fade1 1s linear;
+  }
+  `;
+document.head.appendChild(style);
+}
+
+
 let fav_num = Math.floor(Math.random() * 4);
 let favicon = document.createElement('link');
 favicon.rel = 'icon';
@@ -164,8 +176,4 @@ function copyText(item) {
   
   setTimeout(() => {  document.getElementById(item).innerHTML=copyText; }, 800);
 }
-
-
-var oldURL = document.referrer;
-alert(oldURL);
 </script>
