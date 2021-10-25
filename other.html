@@ -145,8 +145,8 @@
 <script>
 //Only play animations if not coming from nixuge.me
 var oldURL = document.referrer;
-alert(oldURL)
-if(oldURL != 'https://nixuge.me') {
+//alert(oldURL)
+if(!oldURL.includes("nixuge.me")) {
   var style = document.createElement('style');
   style.innerHTML = `
   body {
