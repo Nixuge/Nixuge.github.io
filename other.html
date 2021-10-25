@@ -43,6 +43,7 @@
 		font-size: 36px;
 		opacity: 1;
 		text-align:center;
+		animation: fade1 1s linear;
 	}
 	
 	.social {
@@ -143,6 +144,7 @@
 	}
 </style>
 <script>
+/* this sucks nvm
 //Only play animations if not coming from nixuge.me
 var oldURL = document.referrer;
 //alert(oldURL)
@@ -154,7 +156,7 @@ if(!oldURL.includes("nixuge.me")) {
   }
   `;
 document.head.appendChild(style);
-}
+}*/
 
 
 let fav_num = Math.floor(Math.random() * 4);
