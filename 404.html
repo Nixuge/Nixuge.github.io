@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<h1>404</h1>
+	</head>
+	<body> 
+		<div class="tooltip" data-direction="bottom" onclick="location.href = '/';">
+			<div class="tooltip__initiator">
+				<img class="404" src="images/404.png">
+			</div>
+		<div class="tooltip__item", id="Powercord">Return home?</div>
+		</div>
+	</body>
+</html>
+
+</html>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+	body {
+		background-color: #101010;
+		color: #FFF;
+		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+		font-size: 36px;
+		opacity: 1;
+		text-align:center;
+		animation: fade1 1s linear;
+	}
+
+	@keyframes fade1 {
+		0%,15% { opacity: 0 }
+		100% { opacity: 1 }
+	}
+</style>
+<style>
+		#tooltip{
+		opacity: 0;
+		width:670px;
+		height:40px;
+		background: #555;
+		border-radius: 5px;
+		margin:auto;
+		font-size: 30px;
+	}
+	.pc:focus + #tooltip {
+		opacity:1;
+	}
+	
+	/*skid sans honte*/
+	.tooltip__item {
+		position: absolute;
+		min-width: 100px;
+		padding: 20px;
+		visibility: hidden;
+		opacity: 0;
+		background: #222;
+		transition: all .250s cubic-bezier(0, 0, 0.2, 1);
+		color: #fff;
+		border: 2px solid #555;
+		border-radius: 3px;
+		font-weight: 500;
+		z-index: 4;
+	}
+	.tooltip__item__unselected:after {
+		  content: "";
+		  display: block;
+		  position: absolute;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+	}
+	
+	.tooltip__initiator {
+		cursor: pointer;
+		z-index: 5;
+	}
+	.tooltip__initiator:hover ~ .tooltip__item {
+		  visibility: visible;
+		  opacity: 1;
+	}
+	.tooltip__item {
+		  top: calc(0% - 3em);
+		  left: 50%; 
+		  transform: translate3d(-50%, -15px, 0);
+		  border-radius: 15px;
+	}
+	.tooltip__item:after {
+			top: -0.5em;
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+			border-width: 0 0.5em 0.5em 0.5em;
+			border-color: transparent transparent white transparent;
+			-webkit-filter: drop-shadow(1px 2px 1px #333);
+			filter: drop-shadow(1px -1px 1px #333);
+	}
+	
+	.tooltip {
+	  position: relative;
+	   
+	}
+</style>
