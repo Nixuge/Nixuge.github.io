@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<title>404!</title>
 		<h1>404</h1>
 	</head>
 	<body> 
@@ -99,3 +100,10 @@
 	   
 	}
 </style>
+<script>
+let fav_num = Math.floor(Math.random() * 4);
+let favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.href = `images/favicons/favicon${fav_num}.png`;
+document.head.appendChild(favicon);
+</script>
