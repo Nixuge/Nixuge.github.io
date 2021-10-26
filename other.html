@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 
 <html>
+	<head>
+		<title>Other - nixuge.me</title>
+	</head>
 	<body>
-
-		<h1>Nixuge.me</h1>
+		<div class="tooltip" data-direction="bottom" onclick="location.href = '/';">
+			<div class="tooltip__initiator">
+				<h1>Nixuge.me</h1>
+			</div>
+		<div class="tooltip__item", id="Powercord">Back home?</div>
+		</div>
 		<p>Other links:</p><br>
 		<div class="inline">
 			<!-- CYDIA -->
@@ -171,11 +178,6 @@ let favicon = document.createElement('link');
 favicon.rel = 'icon';
 favicon.href = `images/favicons/favicon${fav_num}.png`;
 document.head.appendChild(favicon);
-
-var titles = ['Feur', 'Coucou', 'Home', 'Lambda pd']
-var title = titles[Math.floor(Math.random() * titles.length)]
-document.title = title + " - Nixuge.me"
-
 
 function copyText(item) {
   /* Get the text field */
