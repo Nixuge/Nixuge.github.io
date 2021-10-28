@@ -9,7 +9,7 @@
 			<div class="tooltip__initiator">
 				<h1>Nixuge.me</h1>
 			</div>
-		<div class="tooltip__item", id="Home">Back home?</div>
+			<div class="tooltip__item", id="Home">Back home?</div>
 		</div>
 		<p>Other links:</p><br>
 		<div class="inline">
@@ -17,7 +17,7 @@
 		</div>
 		
 		<div class="inline">
-			<div class="tooltip" data-direction="bottom" onclick="copyText('Powercord')">
+			<div class="tooltip" onclick="copyText('Powercord')">
 				<div class="tooltip__initiator">
 					  <!-- element with tooltip hover call -->
 					<svg class="social" width="90" height="90" viewBox="0 0 447 447" fill="#222" xmlns="http://www.w3.org/2000/svg">
@@ -37,11 +37,17 @@
 				<div class="tooltip__item", id="Powercord">git clone https://github.com/Nixuge/coucou.git</div>
 			</div>
 		
-			<div class="tooltip" data-direction="bottom" onclick="location.href = 'https://discord.gg/PEtgk4TSEF';">
+			<div class="tooltip" onclick="location.href = 'https://discord.gg/PEtgk4TSEF';">
 				<div class="tooltip__initiator">
-					<img class="404" src="images/HiveBackup.png">
+					<img class="404" src="static/images/HiveBackup.png">
 				</div>
 				<div class="tooltip__item">HiveMC‎ backup‎ project</div> <!-- Space without linebreaks on tooltips here!!! -->
+			</div>
+			<div class="tooltip" data-direction="bottom" onclick="location.href = 'caniJB';">
+				<div class="tooltip__initiator">
+					<img class="404" src="static/images/Cydia.png">
+				</div>
+				<div class="tooltip__item">Can‎ I‎ jailbreak?</div> <!-- Space without linebreaks on tooltips here!!! -->
 			</div>
 		</div>
 	</body>
@@ -49,6 +55,7 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+	@import url('https://nixuge.me/static/css/tooltips.css');
 	body {
 		background-color: #101010;
 		color: #FFF;
@@ -89,93 +96,11 @@
 	}
 	
 </style>
-<style>
-	#tooltip{
-		opacity: 0;
-		width:670px;
-		height:40px;
-		background: #555;
-		border-radius: 5px;
-		margin:auto;
-		font-size: 30px;
-	}
-	.pc:focus + #tooltip {
-		opacity:1;
-	}
-	
-	/*skid sans honte*/
-	.tooltip__item {
-		position: absolute;
-		min-width: 100px;
-		padding: 20px;
-		visibility: hidden;
-		opacity: 0;
-		background: #222;
-		transition: all .250s cubic-bezier(0, 0, 0.2, 1);
-		color: #fff;
-		border: 2px solid #555;
-		border-radius: 3px;
-		font-weight: 500;
-		z-index: 4;
-	}
-	.tooltip__item__unselected:after {
-		  content: "";
-		  display: block;
-		  position: absolute;
-		  width: 0;
-		  height: 0;
-		  border-style: solid;
-	}
-	
-	.tooltip__initiator {
-		cursor: pointer;
-		z-index: 5;
-	}
-	.tooltip__initiator:hover ~ .tooltip__item {
-		  visibility: visible;
-		  opacity: 1;
-	}
-	.tooltip__item {
-		  top: calc(100% + 1em);
-		  left: 50%; 
-		  transform: translate3d(-50%, -15px, 0);
-		  border-radius: 15px;
-	}
-	.tooltip__item:after {
-			top: -0.5em;
-			left: 50%;
-			transform: translate3d(-50%, 0, 0);
-			border-width: 0 0.5em 0.5em 0.5em;
-			border-color: transparent transparent white transparent;
-			-webkit-filter: drop-shadow(1px 2px 1px #333);
-			filter: drop-shadow(1px -1px 1px #333);
-	}
-	
-	.tooltip {
-	  position: relative;
-	   
-	}
-</style>
 <script>
-/* this sucks nvm
-//Only play animations if not coming from nixuge.me
-var oldURL = document.referrer;
-//alert(oldURL)
-if(!oldURL.includes("nixuge.me")) {
-  var style = document.createElement('style');
-  style.innerHTML = `
-  body {
-	animation: fade1 1s linear;
-  }
-  `;
-document.head.appendChild(style);
-}*/
-
-
 let fav_num = Math.floor(Math.random() * 4);
 let favicon = document.createElement('link');
 favicon.rel = 'icon';
-favicon.href = `images/favicons/favicon${fav_num}.png`;
+favicon.href = `static/images/favicons/favicon${fav_num}.png`;
 document.head.appendChild(favicon);
 
 function copyText(item) {

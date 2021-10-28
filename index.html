@@ -55,6 +55,7 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+	@import url('https://nixuge.me/static/css/tooltips.css');
 	body {
 		background-color: #101010;
 		color: #FFF;
@@ -95,78 +96,11 @@
 	}
 	
 </style>
-<style>
-	#tooltip{
-		opacity: 0;
-		width:670px;
-		height:40px;
-		background: #555;
-		border-radius: 5px;
-		margin:auto;
-		font-size: 30px;
-	}
-	.pc:focus + #tooltip {
-		opacity:1;
-	}
-	
-	/*skid sans honte*/
-	.tooltip__item {
-		position: absolute;
-		min-width: 100px;
-		padding: 20px;
-		visibility: hidden;
-		opacity: 0;
-		background: #222;
-		transition: all .250s cubic-bezier(0, 0, 0.2, 1);
-		color: #fff;
-		border: 2px solid #555;
-		border-radius: 3px;
-		font-weight: 500;
-		z-index: 4;
-	}
-	.tooltip__item__unselected:after {
-		  content: "";
-		  display: block;
-		  position: absolute;
-		  width: 0;
-		  height: 0;
-		  border-style: solid;
-	}
-	
-	.tooltip__initiator {
-		cursor: pointer;
-		z-index: 5;
-	}
-	.tooltip__initiator:hover ~ .tooltip__item {
-		  visibility: visible;
-		  opacity: 1;
-	}
-	.tooltip__item {
-		  top: calc(100% + 1em);
-		  left: 50%; 
-		  transform: translate3d(-50%, -15px, 0);
-		  border-radius: 15px;
-	}
-	.tooltip__item:after {
-			top: -0.5em;
-			left: 50%;
-			transform: translate3d(-50%, 0, 0);
-			border-width: 0 0.5em 0.5em 0.5em;
-			border-color: transparent transparent white transparent;
-			-webkit-filter: drop-shadow(1px 2px 1px #333);
-			filter: drop-shadow(1px -1px 1px #333);
-	}
-	
-	.tooltip {
-	  position: relative;
-	   
-	}
-</style>
 <script>
 let fav_num = Math.floor(Math.random() * 4);
 let favicon = document.createElement('link');
 favicon.rel = 'icon';
-favicon.href = `images/favicons/favicon${fav_num}.png`;
+favicon.href = `static/images/favicons/favicon${fav_num}.png`;
 document.head.appendChild(favicon);
 
 var titles = ['Feur', 'Coucou', 'Home', 'Lambda pd']
