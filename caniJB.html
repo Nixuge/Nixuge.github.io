@@ -183,15 +183,18 @@
 	#Note {
 		font-size: 30px;
 	}
-	h3 a:visited,
-	h3 a {
+	a:visited,
+	a {
 		color: #ddd;
 	}
-	h3 a:hover {
+	a:hover {
 		color: #999;
 	}
 	#results {
 		animation: fade 2s linear;
+	}
+	#results #jbs {
+		font-size: 50px;
 	}
 	
 	
@@ -251,7 +254,6 @@ function submit() {
         throw err
       });
 }
-
 function getAndSetResult(jsonData, iOS, phone) {
   
   //console.log(jsonData["values"][0])
@@ -283,7 +285,7 @@ function getAndSetResult(jsonData, iOS, phone) {
     result = "No data";
   }
   if(result == "No JB") {
-    document.getElementById("results").innerHTML="<h2>Uh oh, looks like you can't jailbreak yet</h2>";
+    document.getElementById("results").innerHTML="<h2>Uh oh, looks like you can't jailbreak yet</h2><br>Maybe try again in some time?";
 	var style = document.createElement('style');
     style.innerHTML = `
     .color2 {
@@ -368,7 +370,14 @@ function getJailbreakSources(hyperlinks, jailbreaks, working) {
   }
   `;
   document.head.appendChild(style);
-  document.getElementById("results").innerHTML="<h2>It looks like your device is jailbreakable<br>Here are your options:<h3>" + longString;
+  document.getElementById("results").innerHTML="<h2>It looks like your device is jailbreakable<br>Here are your options:</h2><div id=\"jbs\">" + longString + "</div>";
 
 }
+</script>
+<script>
+let fav_num = Math.floor(Math.random() * 4);
+let favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.href = `static/images/favicons/favicon${fav_num}.png`;
+document.head.appendChild(favicon);
 </script>
