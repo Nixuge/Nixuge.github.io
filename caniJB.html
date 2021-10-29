@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 
+<!-- important note: -->
+<!-- if anyone who knows js even a little happened to end up here, i'm sorry -->
+
 <html>
 	<head>
 		<title>Can I jailbreak? - nixuge.me</title>
 	</head>
 	<body>
+	<div class="color1">
+	<div class="color2">
 		<div class="tooltip" onclick="location.href = '/';">
 			<div class="tooltip__initiator">
 				<h1>Nixuge.me</h1>
@@ -22,42 +27,115 @@
 			</div>
 		</div>
 
-		
+		Device:
 		<select name="phone-selector" id="phone">
-		  <option value="unselected" selected disabled hidden>Select your phone here </option>
-		  
-		  <option value="5s">iPhone 5s</option>
-		  <option value="6">iPhone 6</option>
-		  <option value="6s">iPhone 6s</option>
-		  <option value="SE1">iPhone SE (1st gen)</option>
-		  <option value="7">iPhone 7</option>
-		  <option value="8">iPhone 8</option>
-		  <option value="X">iPhone X</option>
-		  <option value="XR">iPhone XR</option>
-		  <option value="XS">iPhone XS</option>
-		  <option value="SE2">iPhone SE (2nd gen)</option>
-		  <option value="11">iPhone 11</option>
-		  <option value="12">iPhone 12</option>
+			<option value="unselected" selected disabled hidden>Select here </option>
+			<option value="unselected" disabled>-iPhones-</option>
+			<option value="iPhone 13 Pro">iPhone 13 Pro</option>
+			<option value="iPhone 13">iPhone 13</option>
+			<option value="iPhone 12 Pro">iPhone 12 Pro</option>
+			<option value="iPhone 12">iPhone 12</option>
+			<option value="iPhone 11 Pro">iPhone 11 Pro</option>
+			<option value="iPhone 11">iPhone 11</option>
+			<option value="iPhone SE (2nd gen)">iPhone SE (2nd gen)</option>
+			<option value="iPhone XS">iPhone XS</option>
+			<option value="iPhone XR">iPhone XR</option>
+			<option value="iPhone X">iPhone X</option>
+			<option value="iPhone 8">iPhone 8</option>
+			<option value="iPhone 7">iPhone 7</option>
+			<option value="iPhone 6s">iPhone 6s</option>
+			<option value="iPhone SE (1st gen)">iPhone SE (1st gen)</option>
+			<option value="iPhone 6">iPhone 6</option>
+			<option value="iPhone 5s">iPhone 5s</option>
+			<option value="iPhone 5c">iPhone 5c</option>
+			<option value="iPhone 5">iPhone 5</option>
+			<option value="iPhone 4s">iPhone 4s</option>
+			<option value="iPhone 4">iPhone 4</option>
+			<option value="iPhone 3GS">iPhone 3GS</option>
+			<option value="iPhone 3G">iPhone 3G</option>
+			<option value="iPhone 2G">iPhone 2G</option>
+			<option value="unselected" disabled>-iPads-</option>
+			<option value="iPad 9">iPad 9</option>
+			<option value="iPad 8">iPad 8</option>
+			<option value="iPad 7">iPad 7</option>
+			<option value="iPad 6">iPad 6</option>
+			<option value="iPad 5">iPad 5</option>
+			<option value="iPad 4">iPad 4</option>
+			<option value="iPad 3">iPad 3</option>
+			<option value="iPad 2">iPad 2</option>
+			<option value="iPad 1">iPad 1</option>
+			<option value="iPad Mini 6">iPad Mini 6</option>
+			<option value="iPad Mini 5">iPad Mini 5</option>
+			<option value="iPad Mini 4">iPad Mini 4</option>
+			<option value="iPad Mini 3">iPad Mini 3</option>
+			<option value="iPad Mini 2">iPad Mini 2</option>
+			<option value="iPad Mini 1">iPad Mini 1</option>
+			<option value="iPad Air 4">iPad Air 4</option>
+			<option value="iPad Air 3">iPad Air 3</option>
+			<option value="iPad Air 2">iPad Air 2</option>
+			<option value="iPad Air 1">iPad Air 1</option>
+			<option value="iPad Pro (12.9 inch, 5th Gen)">iPad Pro (12.9 inch, 5th Gen)</option>
+			<option value="iPad Pro (12.9 inch, 4th Gen)">iPad Pro (12.9 inch, 4th Gen)</option>
+			<option value="iPad Pro (12.9 inch, 3rd Gen)">iPad Pro (12.9 inch, 3rd Gen)</option>
+			<option value="iPad Pro (12.9 inch, 2nd Gen)">iPad Pro (12.9 inch, 2nd Gen)</option>
+			<option value="iPad Pro (12.9 inch, 1st Gen)">iPad Pro (12.9 inch, 1st Gen)</option>
+			<option value="iPad Pro (11 inch, 3rd Gen)">iPad Pro (11 inch, 3rd Gen)</option>
+			<option value="iPad Pro (11 inch, 2nd Gen)">iPad Pro (11 inch, 2nd Gen)</option>
+			<option value="iPad Pro (11 inch, 1st Gen)">iPad Pro (11 inch, 1st Gen)</option>
+			<option value="iPad Pro (10 inch, 2nd Gen)">iPad Pro (10 inch, 2nd Gen)</option>
+			<option value="iPad Pro (10.5 inch)">iPad Pro (10.5 inch)</option>
+			<option value="iPad Pro (9.7 inch)">iPad Pro (9.7 inch)</option>
+			<option value="unselected" disabled>-iPods-</option>
+			<option value="iPod Touch 7">iPod Touch 7</option>
+			<option value="iPod Touch 6">iPod Touch 6</option>
+			<option value="iPod Touch 5">iPod Touch 5</option>
+			<option value="iPod Touch 4">iPod Touch 4</option>
+			<option value="iPod Touch 3">iPod Touch 3</option>
+			<option value="iPod Touch 2">iPod Touch 2</option>
+			<option value="iPod Touch 1">iPod Touch 1</option>
 		</select>
-		
-		<select name="iOS-selector" id="iOS">
-		  <option value="unselected" selected disabled hidden>Select your iOS version here </option>
-		  
-		  <option value="1112">iOS 11.0-11.1.2</option>
-		  <option value="1141">iOS 11.2-11.4.1</option>
-		  <option value="1212">iOS 12.0-12.1.2</option>
-		  <option value="1232">iOS 12.1.3-12.3.2</option>
-		  <option value="1255">iOS 12.4-12.5.5</option>
-		  <option value="13x">iOS 13.x.x (all versions)</option>
-		  <option value="143">iOS 14.0-14.3</option>
-		  <option value="1451">iOS 14.4-14.5.1</option>
-		  <option value="1481">iOS 14.6-14.8.1</option>
-		  <option value="15x">iOS 15.x.x</option>
+		iOS: 
+		<select name="iOS-selector" id="iOS1">
+		  <option selected value="15">15</option>
+		  <option value="14">14</option>
+		  <option value="13">13</option>
+		  <option value="12">12</option>
+		  <option value="11">11</option>
+		  <option value="10">10</option>
+		  <option value="9">9</option>
+		  <option value="8">8</option>
+		  <option value="7">7</option>
+		  <option value="6">6</option>
+		  <option value="5">5</option>
+		  <option value="4">4</option>
+		  <option value="3">3</option>
+		  <option value="2">2</option>
+		  <option value="1">1</option>
+		</select>.<select name="iOS-selector" id="iOS2">
+		  <option selectedvalue="0">0</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		</select>.<select name="iOS-selector" id="iOS3">
+		  <option selected value=""> </option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
 		</select>
+
 		<button class="favorite styled" type="button" onclick="submit()">SUBMIT</button>
 		
 		<br><div id="results"></div>
-		
+	</div>
+	</div>
 	</body>
 </html>
 
@@ -65,17 +143,31 @@
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 	@import url('https://nixuge.me/static/css/tooltips.css');
 	body {
-		background-color: #101010;
 		color: #FFF;
 		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
 		font-size: 36px;
 		opacity: 1;
 		text-align:center;
 		animation: fade1 1s linear;
+		background-color: #101010;
 	}
+	.color1 {
+		background-color: #101010 !important;
+		height:100%; 
+	}
+	.color2 {
+		transition: all .25s ease-in;
+		width:100%; 
+		height:98vh !important; 
+		overflow:hidden;	
+  }
 	
 	@keyframes fade1 {
 		0%,15% { opacity: 0 }
+		100% { opacity: 1 }
+	}
+	@keyframes fade {
+		0% { opacity: 0 }
 		100% { opacity: 1 }
 	}
 	
@@ -91,75 +183,192 @@
 	#Note {
 		font-size: 30px;
 	}
+	h3 a:visited,
+	h3 a {
+		color: #ddd;
+	}
+	h3 a:hover {
+		color: #999;
+	}
+	#results {
+		animation: fade 2s linear;
+	}
+	
 	
 </style>
 <script>
+//did the funny json bc y not even tho pretty sure there's a lib lmfao
+
 function submit() {
-  var iOSlist = document.getElementById("iOS");
-  var iOS = iOSlist.options[iOSlist.selectedIndex].value;
+
+   var style = document.createElement('style');
+   style.innerHTML = `
+   .color2 {
+   background-color: rgba(16, 16, 16, 0.7) !important
+   }
+   `;
+  document.head.appendChild(style);
+  document.getElementById("results").innerHTML="";
+
+  var phoneList = document.getElementById("phone");
+  var phone = phoneList.options[phoneList.selectedIndex].value.toLowerCase();
   
-  var iPhonelist = document.getElementById("phone");
-  var iPhone = iPhonelist.options[iPhonelist.selectedIndex].value;
-  if(iPhone == "unselected") {
-      alert("Please select a phone");
-	  return;
-  } else if(iOS == "unselected") {
-      alert("Please select an iOS version");
-	  return;
+  //prob a way better way to do this but fuck it
+  var ioses = []
+  ioses.push(document.getElementById("iOS1"));
+  ioses.push(document.getElementById("iOS2"));
+  ioses.push(document.getElementById("iOS3"));
+  var ioses2 = []
+  for(const element of ioses) {
+    ioses2.push(element.options[element.selectedIndex].value.toLowerCase());
   }
-  
-  var dict = {};
-  
-  dict["1112"] = {};
-  dict["1112"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Electra", "unc0ver", "LiberiOS", "to.panga"];
-  
-  dict["1141"] = {};
-  dict["1141"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Electra", "unc0ver"];
-  
-  dict["1212"] = {};
-  dict["1212"][["5s", "6", "6s", "SE1", "7", "8", "X", "XR", "XS"]] = ["unc0ver", "Chimera"];
-  dict["1212"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n", "rootlessJB4"];
-  
-  dict["1232"] = {};
-  dict["1232"][["5s", "6", "6s", "SE1", "7", "8", "X", "XR", "XS"]] = ["unc0ver"];
-  dict["1232"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n", "Chimera"];
-  
-  dict["1255"] = {};
-  dict["1255"][["5s", "6", "6s", "SE1", "7", "8", "X", "XR", "XS"]] = ["unc0ver"];
-  dict["1255"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n", "Chimera", "rootlessJB4"];
-  
-  dict["13x"] = {};
-  dict["13x"][["5s", "6", "6s", "SE1", "7", "8", "X", "XR", "XS", "11", "SE2"]] = ["unc0ver", "Odyssey"];
-  dict["13x"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n"];
-  
-  dict["143"] = {};
-  dict["143"][["5s", "6", "6s", "SE1", "7", "8", "X", "XR", "XS", "11", "SE2", "12"]] = ["unc0ver", "Taurine"];
-  dict["143"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n"];
-  
-  dict["1451"] = {};
-  dict["1451"][["XR", "XS", "11", "SE2", "12"]] = ["unc0ver", "Fugu14"];
-  dict["1451"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n"];
-  
-  dict["1481"] = {};
-  dict["1481"][["5s", "6", "6s", "SE1", "7", "8", "X"]] = ["Checkra1n"];
-  
-  dict["15x"] = {};
-  
-  var supportedJBs = [];
-  
-  for (var key in dict){
-    if(key == iOS) {
-      for (var key2 in dict[key]){
-	    if(key2.includes(iPhone)) {
-	      supportedJBs.push(dict[key][key2])
-	    }
-      }
+  iOS = ""
+  for(const [index, element] of ioses2.entries()) {
+    iOS += element
+    if(index == 0 || (index == 1 && ioses2[2] != "")) {
+	  iOS += ".";
 	}
   }
-  if(supportedJBs.length == 0) {
-    document.getElementById("results").innerHTML="<h2>Uh oh, looks like you can't jailbreak :c </h2><br>(or perhaps you selected the wrong version for your device?)";
+  if(parseInt(ioses2[0]) >= 15) {
+    var url1 = "https://sheets.googleapis.com/v4/spreadsheets/11DABHIIqwYQKj1L83AK9ywk_hYMjEkcaxpIg6phbTf0/values/iOS%2FiPadOS%20" + ioses2[0];
+  } else if(parseInt(ioses2[0]) <= 3) {
+    var url1 = "https://sheets.googleapis.com/v4/spreadsheets/11DABHIIqwYQKj1L83AK9ywk_hYMjEkcaxpIg6phbTf0/values/iPhoneOS%20" + ioses2[0];
   } else {
-    document.getElementById("results").innerHTML="<h2>You can use the following jailbreaks:</h2>" + supportedJBs.toString().replaceAll(",", "<br><br>");
+    var url1 = "https://sheets.googleapis.com/v4/spreadsheets/11DABHIIqwYQKj1L83AK9ywk_hYMjEkcaxpIg6phbTf0/values/iOS%20" + ioses2[0];
   }
+  var url = url1 + "?key=AIzaSyAlHY0ukMoVwaOV_Jr_2sUHGWpVJFpjp7w&majorDimension=COLUMNS"
+  
+  
+  if(phone == "unselected") {
+    alert("Select a phone");
+	return;
+  }
+  
+    fetch(url)
+      .then(res => res.json())
+      .then(out => getAndSetResult(out, iOS, phone))
+      .catch(err => {
+        throw err
+      });
+}
+
+function getAndSetResult(jsonData, iOS, phone) {
+  
+  //console.log(jsonData["values"][0])
+  //console.log("iOS: " + iOS)
+  //console.log("idevice: " + phone)
+  var versionsIndexes = [];
+  var deviceIndex;
+  for (const [index, line] of jsonData["values"][0].entries()) {
+	if(line == "Device") {
+	  versionsIndexes.push(index);
+	}
+	//fuck regex
+	line2 = line.replace("(MB)", "").replace("(MC)", "").replace("(New BR)", "").replace("(Old BR)", "").replace("(16GB)", "").replace("(4,8GB)", "").replace("(GSM)", "").replace("CDMA", "").replace("(Wifi, GSM)", "").replace("(2012)", "").replace("(Wifi)", "").replace("Cellular", "")
+	if(line2.toLowerCase().trim() == phone) {
+	  if(!deviceIndex) deviceIndex = index;
+	}
+  }
+  result = ""
+  for (const [index, column] of jsonData["values"].entries()) {
+	for (const columnIndex in versionsIndexes) {
+	  if(column.length >= columnIndex && column[columnIndex].includes(" " + iOS) && !column[columnIndex].includes(" " + iOS + ".") && !column[columnIndex].includes(" " + iOS + " ")) {
+	    result = jsonData["values"][index][deviceIndex];
+		//console.log("index: " + index)
+		//console.log("deviceIndex: " + deviceIndex)
+	  }
+	}
+  }
+  if(result == "" || result == undefined || result == "N/A") {
+    result = "No data";
+  }
+  if(result == "No JB") {
+    document.getElementById("results").innerHTML="<h2>Uh oh, looks like you can't jailbreak yet</h2>";
+	var style = document.createElement('style');
+    style.innerHTML = `
+    .color2 {
+    background-color: rgba(219, 68, 55, 0.7) !important
+    }
+    `;
+    document.head.appendChild(style);
+	
+  } else if (result == "No data") {
+    document.getElementById("results").innerHTML="<h2>Uh oh, looks like there's no data for this device/iOS </h2><br>Perhaps you selected the wrong iOS version?";
+	var style = document.createElement('style');
+    style.innerHTML = `
+    .color2 {
+    background-color: rgba(40, 40, 40, 0.7) !important
+    }
+    `;
+    document.head.appendChild(style);
+	
+	
+  } else {
+    fetch("https://sheets.googleapis.com/v4/spreadsheets/11DABHIIqwYQKj1L83AK9ywk_hYMjEkcaxpIg6phbTf0/values/Directory?key=AIzaSyAlHY0ukMoVwaOV_Jr_2sUHGWpVJFpjp7w&majorDimension=COLUMNS")
+      .then(res => res.json())
+      .then(out => getJailbreakSourcesPre(out["values"], result.split(",")))
+      .catch(err => {
+        throw err
+      });
+  }
+  
+  
+}
+function getJailbreakSourcesPre(jailbreaks, working) {
+
+  fetch("https://sheets.googleapis.com/v4/spreadsheets/11DABHIIqwYQKj1L83AK9ywk_hYMjEkcaxpIg6phbTf0?key=AIzaSyAlHY0ukMoVwaOV_Jr_2sUHGWpVJFpjp7w&fields=sheets(data(rowData(values(hyperlink))))")
+    .then(res => res.json())
+    .then(out => getJailbreakSources(out["sheets"][0]["data"][0]["rowData"], jailbreaks, working))
+    .catch(err => {
+      throw err
+    });
+
+}
+function getJailbreakSources(hyperlinks, jailbreaks, working) {
+  
+  jelbreksEpic = {}
+  working = working.map(string => string.trim())
+  
+  for(const [index, jailbreak] of jailbreaks[0].entries()) {
+    //alert(jailbreak)
+	if(working.includes(jailbreak)) {
+	  if(jelbreksEpic[jailbreaks[1][index]] == undefined) jelbreksEpic[jailbreaks[1][index]]=[]
+	  
+	  tempdict = {}
+	  tempdict[jailbreak] = hyperlinks[index]["values"][0]["hyperlink"]
+	  
+	  jelbreksEpic[jailbreaks[1][index]].push(tempdict)
+	  
+	}
+	
+  }
+  console.log(jelbreksEpic)
+  
+  var longString = ""
+  
+  for(const [key, value] of Object.entries(jelbreksEpic)) {
+    longString += key+":"
+	for(const truc of value){
+	  
+	  for(const [jel, site] of Object.entries(truc)) {
+	    longString += " <a href=\"" + site + "\"> " + jel + "</a>"
+	  }
+	  
+	}
+	longString += "<br>"
+	
+
+  }
+  
+  
+  var style = document.createElement('style');
+  style.innerHTML = `
+  .color2 {
+  background-color: rgba(15, 157, 88, 0.7) !important
+  }
+  `;
+  document.head.appendChild(style);
+  document.getElementById("results").innerHTML="<h2>It looks like your device is jailbreakable<br>Here are your options:<h3>" + longString;
+
 }
 </script>
