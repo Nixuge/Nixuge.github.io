@@ -55,16 +55,9 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-	@import url('https://nixuge.me/static/css/tooltips.css');
-	body {
-		background-color: #101010;
-		color: #FFF;
-		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
-		font-size: 36px;
-		opacity: 1;
-		text-align:center;
-		animation: fade1 1s linear;
-	}
+	@import url('/static/css/tooltips.css');
+	@import url('/static/css/body.css');
+	@import url('/static/css/fade.css');
 	
 	.social {
 		border-radius: 20px !important;
@@ -80,15 +73,6 @@
 		fill: #fff;
 		transition: 120ms;
 		cursor: pointer;
-	}
-	
-	@keyframes fade {
-		0% { opacity: 0 }
-		100% { opacity: 1 }
-	}
-	@keyframes fade1 {
-		0%,15% { opacity: 0 }
-		100% { opacity: 1 }
 	}
 	
 	.inline>* { 
@@ -108,3 +92,4 @@ function copyText(item) {
 }
 </script>
 <script type="text/javascript" src="/static/js/favicon.js"></script>
+<script type="text/javascript" src="/static/js/animation.js"></script>

@@ -1,0 +1,11 @@
+	body {
+		background-color: #101010;
+		color: #FFF;
+		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+		font-size: 36px;
+		opacity: 1;
+		text-align:center;
+	}
+	body >:not(#nme){
+		animation: fade1 1s linear;
+	}
