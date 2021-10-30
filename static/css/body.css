@@ -6,6 +6,9 @@
 		opacity: 1;
 		text-align:center;
 	}
-	body {
+	#content {
 		animation: fade1 1s linear;
+	}
+	#nme {
+		animation: fade1 0.5s linear;
 	}
