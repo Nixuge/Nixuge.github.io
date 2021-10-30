@@ -10,13 +10,12 @@
 	<body>
 	<div class="color1">
 	<div class="color2">
-		<div id="nme" class="tooltip" onclick="location.href = '/';">
+		<div class="tooltip" onclick="location.href = '/';">
 			<div class="tooltip__initiator">
 				<h1>Nixuge.me</h1>
 			</div>
 			<div class="tooltip__item", id="Home">Back home?</div>
 		</div><br>
-		<div id="content">
 
 		Device:
 		<select name="phone-selector" id="phone">
@@ -127,16 +126,21 @@
 		<br><div id="results"></div>
 	</div>
 	</div>
-	</div>
 	</body>
 </html>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-	@import url('/static/css/tooltips.css');
-	@import url('/static/css/body.css');
-	@import url('/static/css/fade.css');
-	
+	@import url('https://nixuge.me/static/css/tooltips.css');
+	body {
+		color: #FFF;
+		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+		font-size: 36px;
+		opacity: 1;
+		text-align:center;
+		animation: fade1 1s linear;
+		background-color: #101010;
+	}
 	.color1 {
 		background-color: #101010 !important;
 		height:100%; 
@@ -146,7 +150,16 @@
 		width:100%; 
 		height:98vh !important; 
 		overflow:hidden;	
-    }
+  }
+	
+	@keyframes fade1 {
+		0%,15% { opacity: 0 }
+		100% { opacity: 1 }
+	}
+	@keyframes fade {
+		0% { opacity: 0 }
+		100% { opacity: 1 }
+	}
 	
 	select,
 	select>option,
@@ -177,12 +190,21 @@
 		border-width: 1px;
 		border-style: double;
 		cursor: pointer;
+		transition: all .10s ease-in;
+	}
+	button:active {
+		border-width: 1px;
+		border-style: double;
+		cursor: pointer;
+		background-color: #333;
+		border-color: #fff;
 	}
 	
 	
 </style>
 <script>
 //did the funny json bc y not even tho pretty sure there's a lib lmfao
+
 function submit() {
 
    var style = document.createElement('style');
@@ -355,5 +377,10 @@ function getJailbreakSources(hyperlinks, jailbreaks, working) {
 
 }
 </script>
-<script type="text/javascript" src="/static/js/animation.js"></script>
-<script type="text/javascript" src="/static/js/favicon.js"></script>
+<script>
+let fav_num = Math.floor(Math.random() * 4);
+let favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.href = `static/images/favicons/favicon${fav_num}.png`;
+document.head.appendChild(favicon);
+</script>
