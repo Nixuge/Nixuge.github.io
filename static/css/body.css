@@ -6,6 +6,6 @@
 		opacity: 1;
 		text-align:center;
 	}
-	body > * {
+	body {
 		animation: fade1 1s linear;
 	}
