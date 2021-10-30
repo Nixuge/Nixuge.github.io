@@ -56,15 +56,8 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 	@import url('https://nixuge.me/static/css/tooltips.css');
-	body {
-		background-color: #101010;
-		color: #FFF;
-		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
-		font-size: 36px;
-		opacity: 1;
-		text-align:center;
-		animation: fade1 1s linear;
-	}
+	@import url('https://nixuge.me/static/css/body.css');
+	@import url('https://nixuge.me/static/css/fade.css');
 	
 	.social {
 		border-radius: 20px !important;
@@ -82,27 +75,12 @@
 		cursor: pointer;
 	}
 	
-	@keyframes fade {
-		0% { opacity: 0 }
-		100% { opacity: 1 }
-	}
-	@keyframes fade1 {
-		0%,15% { opacity: 0 }
-		100% { opacity: 1 }
-	}
-	
 	.inline>* { 
 		display: inline-flex;
 	}
 	
 </style>
 <script>
-let fav_num = Math.floor(Math.random() * 4);
-let favicon = document.createElement('link');
-favicon.rel = 'icon';
-favicon.href = `static/images/favicons/favicon${fav_num}.png`;
-document.head.appendChild(favicon);
-
 var titles = ['Feur', 'Coucou', 'Home', 'Lambda pd']
 var title = titles[Math.floor(Math.random() * titles.length)]
 document.title = title + " - nixuge.me"
@@ -118,3 +96,5 @@ function copyText(item) {
   setTimeout(() => {  document.getElementById(item).innerHTML=copyText; }, 800);
 }
 </script>
+<script type="text/javascript" src="./static/js/animation.js"></script>
+<script type="text/javascript" src="./static/js/favicon.js"></script>
