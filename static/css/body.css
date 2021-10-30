@@ -5,8 +5,6 @@
 		font-size: 36px;
 		opacity: 1;
 		text-align:center;
-	}
-	#content {
 		animation: fade1 1s linear;
 	}
 	#nme {
