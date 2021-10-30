@@ -8,14 +8,14 @@
 		<title>Can I jailbreak? - nixuge.me</title>
 	</head>
 	<body>
-	<div class="color1">
+	<div id="nme" class="tooltip" onclick="location.href = '/';">
+		<div class="tooltip__initiator">
+			<h1>Nixuge.me</h1>
+		</div>
+		<div class="tooltip__item", id="Home">Back home?</div>
+	</div><br>
 	<div class="color2">
-		<div id="nme" class="tooltip" onclick="location.href = '/';">
-			<div class="tooltip__initiator">
-				<h1>Nixuge.me</h1>
-			</div>
-			<div class="tooltip__item", id="Home">Back home?</div>
-		</div><br>
+
 
 		Device:
 		<select name="phone-selector" id="phone">
@@ -125,7 +125,6 @@
 		
 		<br><div id="results"></div>
 	</div>
-	</div>
 	</body>
 </html>
 
@@ -134,11 +133,7 @@
 	@import url('/static/css/tooltips.css');
 	@import url('/static/css/body.css');
 	@import url('/static/css/fade.css');
-	
-	.color1 {
-		background-color: #101010 !important;
-		height:100%; 
-	}
+
 	.color2 {
 		transition: all .25s ease-in;
 		width:100%; 

@@ -1,6 +1,5 @@
 var oldURL = document.referrer;
 if(!oldURL.toLowerCase().includes("nixuge.me")) {
-  alert("ok!")
   var style = document.createElement('style');
   style.innerHTML = `
   #nme {
