@@ -97,12 +97,6 @@
 	
 </style>
 <script>
-let fav_num = Math.floor(Math.random() * 4);
-let favicon = document.createElement('link');
-favicon.rel = 'icon';
-favicon.href = `static/images/favicons/favicon${fav_num}.png`;
-document.head.appendChild(favicon);
-
 function copyText(item) {
   /* Get the text field */
   var copyText = document.getElementById(item).innerHTML;
@@ -113,3 +107,4 @@ function copyText(item) {
   setTimeout(() => {  document.getElementById(item).innerHTML=copyText; }, 800);
 }
 </script>
+<script type="text/javascript" src="/static/js/favicon.js"></script>
