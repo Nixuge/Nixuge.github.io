@@ -18,8 +18,24 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 	@import url('/static/css/tooltips.css');
-	@import url('/static/css/body.css');
 	@import url('/static/css/fade.css');
+
+    html {
+       height: 100%;
+     }
+	body {
+		background-color: #101010;
+		color: #FFF;
+		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+		font-size: 36px;
+		opacity: 1;
+		text-align:center;
+           min-height: 100%;
+	}
+	body >:not(#nme){
+		animation: fade1 1s linear;
+	}
+
 
 	.tooltip__item {
 		  top: calc(0% - 3em) !important;

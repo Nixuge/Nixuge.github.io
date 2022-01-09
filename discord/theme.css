@@ -54,6 +54,10 @@
 .powercord-toast[data-toast-type=info] .icon {
     color: var(--accent-lighter) !important;
 }
+.progressBar-1T6LYX {
+    background: var(--accent-lighter) /* fuck gradients */
+}
+
 /* END POWERCORD SECTION */
 
 
