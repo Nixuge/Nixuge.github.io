@@ -147,9 +147,9 @@
 }
 
 /* autocomplete @ */
-.theme-dark .autocomplete-1vrmpx {
+.theme-dark .autocomplete-3NRXG8 {
     background-color: #101010;
-}  
+}
 .theme-dark .selected-1Tbx07 {
     background-color: #191919;
 }
@@ -375,7 +375,7 @@
 .profileBadgeWrapper-1rGSsp.powercord-badge { /* POWERCORD BLUE BADGES TO ORANGE */
 	color: #d97245 !important
 }
-.profileBadgeWrapper-1rGSsp.powercord-badge [aria-label="Trans Rights"] { /* NO POWERCORD TRANS RIGHTS */
+.profileBadgeWrapper-1rGSsp.powercord-badge [aria-label="Trans Rights"] {
 	display: none
 }
 
@@ -761,17 +761,17 @@
     background-color: #FDB100;
 }
 .titleBar-AC4pGV>*:nth-child(2) {
-    margin-top: 6px
+    margin-top: 6px;
 	background-color: transparent;
     transition: background-color 0.25s ease-out;
 }
 .titleBar-AC4pGV>*:nth-child(3) {
-    margin-top: 6px
+    margin-top: 6px;
 	background-color: transparent;
     transition: background-color 0.25s ease-out;
 }
 .titleBar-AC4pGV>*:nth-child(4) {
-    margin-top: 6px
+    margin-top: 6px;
 	background-color: transparent;
     transition: background-color 0.25s ease-out;
 }

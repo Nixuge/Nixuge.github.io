@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --background-primary: #181818;
+    /* #36393f = primary */
+    --background-secondary: #141414; 
+    /* #2f3136 = secondary */
+    --background-secondary-alt: #131313;
+    --background-tertiary: #101010;
+    
+    /* #18191c; = floating */
+    --background-floating: #0b0c0e;
+    
+
+    /* dont remember */
+    --brand-experiment-560: #d97245;
+    
+    /* prob a lot of things (buttons etc) */
+    --brand-experiment: #d97245;
+    
+    /* checks thingys in options */
+    --control-brand-foreground: #d97245;
+
+    /* gif hover */
+    --brand-experiment-80a: #d97145c0; 
+
+    /* gif favorite hover */
+    --brand-experiment-95a: #d97145e0; 
+
+    /* loading cubes */
+    --brand-experiment-400: #d97245;
+
+    /* top left search thingy(set as secondary) */
+    --deprecated-quickswitcher-input-background: #00000000; 
+
+    /* button click hold */
+    --brand-experiment-600: #aa5835;
+
+
+    --text-link: #d97245;
+
+    /* typing area */
+    --channeltextarea-background: #101010;
+}
+
+/* POWERCORD SECTION */
+.theme-dark {
+    --toast-background: #181818 !important;
+    --toast-header: #141414 !important;
+    --toast-contents: transparent !important;
+    --toast-border: transparent !important;  
+}
+
+.powercord-toast[data-toast-type=info] .icon {
+    color: var(--accent-lighter) !important;
+}
+/* END POWERCORD SECTION */
+
+
+/* buy nitro gift screen */
+.theme-dark .root-g14mjS {
+    background-color: var(--background-secondary);
+    box-shadow: 0 0 0 1px rgb(32 34 37 / 60%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
+.theme-dark .footer-31IekZ {
+    background-color: var(--background-secondary);
+    box-shadow: inset 0 1px 0 rgb(47 49 54 / 60%);
+}
+
+/* gif screen border */
+.theme-dark .focused-q9B2e4:after, .theme-dark .result-3OpoO7:hover:after {
+    box-shadow: inset 0 0 0 2px var(--accent-lighter),inset 0 0 0 3px var(--background-secondary);
+}
+/* gif farovite hover */
+.theme-dark .categoryFadeBlurple-1HuV1x:hover, .theme-light .categoryFadeBlurple-1HuV1x:hover {
+    background-color: transparent;
+}
+
+/* "preview" button in accesibility settings */
+.lookFilled-yCfaCM.colorBrandNew-2-gGsS,
+.lookFilled-yCfaCM.colorBrandNew-2-gGsS:hover {
+    background-color: var(--accent-lighter);
+}
+.lookFilled-yCfaCM.colorBrandNew-2-gGsS:active {
+    background-color: var(--accent-active);
+}
+
+/* protip in top left search */
+.protip-1jXzAl {
+    padding: 10px 0;
+    border-top: none;
+}
+
+/* seach on top right */
+.theme-dark .container-2McqkF {
+    background-color: var(--background-primary)
+}
+.theme-dark .option-2KkUJO:after {
+background: transparent; /* remove weird gradient */
+}
+/* header of search on top right */
+.theme-dark .focused-2FU0YH {
+    background-color: var(--background-secondary)
+}
+
+/* mentions */
+.theme-dark .wrapper-1ZcZW- {
+    background: var(--accent-light-40);
+}
+
+/* image edit popup footer */
+.theme-dark .footer-VCsJQY {
+    background-color: var(--background-secondary);
+}
+
+
+/* fancier roles on profile */
+.role-2TIOKu {
+    transition:all .2s ease-in-out;
+    border: solid;
+    border-width: 1px 1px 1px 3px !important; /* for some reason not working without important */
+    border-radius: 1px 4px 4px 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: solid;
+    background: transparent;
+    opacity: 0.8;
+}
+.role-2TIOKu:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.roleCircle-1EgnFN { 
+    width: 0;
+    height: 0;
+}
+.roleCircle-1EgnFN::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 101%;
+    height: 101%;
+    background: inherit;
+    opacity: 0.3;
+}
+
+
+/* pattern on playing/spotify/twitch */
+.userPopout-2j1gM4 > div > div > div > img {
+    background-color: #FFF;
+    /* background-image: url(background.svg)  */
+}
+/* .userPopout-2j1gM4 < div < div < div < img {
+    background-color: #FFF;
+     background-image: url(background.svg)  
+} */
+
+.bodyInnerWrapper-2bQs1k {
+    background-color: transparent;
+}
+.userPopout-2j1gM4:has(div:has(div:has(div:has(div:has(div[class="assets-3PQvAh"]:has(img[alt=""])))))) {
+    background-color: #FFF !important
+}
+/* headerTextNormal-Z8we9g headerText-3g1XK9 ellipsis-23LXbI fontDisplay-3Gtuks base-21yXnu size12-oc4dx4 */
+
+
+/* mentions */
+.theme-dark .autocomplete-3NRXG8 {
+    background-color: var(--background-secondary);
+}
+/* mentions hover */
+.theme-dark .selected-3H3-RC {
+    background-color: var(--background-primary);
+}
+
+/* right click menus */
+.item-1OdjEX {
+    transition:all .1s ease-in-out;
+}
+
+/* friends page */
+.theme-dark .container-2cd8Mz {
+    background-color: var(--background-primary);
+}
+
+.headerTop-3GPUSF::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 101%;
+    height: 101%;
+    background: inherit;
+    opacity: 0.3;
+}
