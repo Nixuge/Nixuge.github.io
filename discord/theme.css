@@ -8,10 +8,12 @@
     --background-secondary-alt: #131313;
     --background-tertiary: #101010;
     
+    /* "new unread" */
+    --background-accent: #252525;
+
     /* #18191c; = floating */
     --background-floating: #0b0c0e;
     
-
     /* dont remember */
     --brand-experiment-560: #d97245;
     
@@ -27,8 +29,14 @@
     /* gif favorite hover */
     --brand-experiment-95a: #d97145e0; 
 
+    /* "join server" hover */
+    --brand-experiment-530: #d97145e0; 
+
     /* loading cubes */
     --brand-experiment-400: #d97245;
+    
+    /* "invite people" */
+    --brand-experiment-360: #d97245;
 
     /* top left search thingy(set as secondary) */
     --deprecated-quickswitcher-input-background: #00000000; 
@@ -36,11 +44,33 @@
     /* button click hold */
     --brand-experiment-600: #aa5835;
 
+    /* channel mention color */
+    --brand-experiment-200: #fbc074;
 
     --text-link: #d97245;
 
     /* typing area */
     --channeltextarea-background: #101010;
+
+    /* Channel color */
+    --channels-default: #999;
+
+    /* Global font for titles */
+    --font-display: 'Quicksand',Helvetica,Arial,sans-serif;
+
+}
+/* Theme not meant to be used in light mode,
+adding this just for the "add server" popup which uses
+light mode variables */
+.theme-light {
+    --background-primary: #181818;
+    --background-secondary: #141414; 
+    --background-secondary-alt: #131313;
+    --text-normal: #DDD;
+    --header-primary: #FFF;
+    --text-link: #d97245;
+    --header-secondary: #888;
+    --deprecated-text-input-bg: #111;
 }
 
 /* POWERCORD SECTION */
@@ -57,7 +87,6 @@
 .progressBar-1T6LYX {
     background: var(--accent-lighter) /* fuck gradients */
 }
-
 /* END POWERCORD SECTION */
 
 
@@ -107,9 +136,23 @@ background: transparent; /* remove weird gradient */
     background-color: var(--background-secondary)
 }
 
+/* Discover page */
+.theme-dark .pageWrapper-2PwDoS {
+    background-color: var(--background-secondary)
+}
+/* Discover "explore communities" */
+.theme-dark .searchBox-pyIJJj {
+    background-color: var(--background-secondary) !important;
+}
+/* Discover "explore communities" text */
+.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz {
+    color: #FFF;
+}
+
+
 /* mentions */
 .theme-dark .wrapper-1ZcZW- {
-    background: var(--accent-light-40);
+    background: rgba(100, 100, 100, 0.2);
 }
 
 /* image edit popup footer */
@@ -117,6 +160,10 @@ background: transparent; /* remove weird gradient */
     background-color: var(--background-secondary);
 }
 
+/* "new" badge on the wanna join more servers popup (& maybe other) */
+.newBadge-2r8BkJ {
+    background-color: var(--brand-experiment) !important;
+}
 
 /* fancier roles on profile */
 .role-2TIOKu {
@@ -151,26 +198,6 @@ background: transparent; /* remove weird gradient */
     opacity: 0.3;
 }
 
-
-/* pattern on playing/spotify/twitch */
-.userPopout-2j1gM4 > div > div > div > img {
-    background-color: #FFF;
-    /* background-image: url(background.svg)  */
-}
-/* .userPopout-2j1gM4 < div < div < div < img {
-    background-color: #FFF;
-     background-image: url(background.svg)  
-} */
-
-.bodyInnerWrapper-2bQs1k {
-    background-color: transparent;
-}
-.userPopout-2j1gM4:has(div:has(div:has(div:has(div:has(div[class="assets-3PQvAh"]:has(img[alt=""])))))) {
-    background-color: #FFF !important
-}
-/* headerTextNormal-Z8we9g headerText-3g1XK9 ellipsis-23LXbI fontDisplay-3Gtuks base-21yXnu size12-oc4dx4 */
-
-
 /* mentions */
 .theme-dark .autocomplete-3NRXG8 {
     background-color: var(--background-secondary);
@@ -199,4 +226,82 @@ background: transparent; /* remove weird gradient */
     height: 101%;
     background: inherit;
     opacity: 0.3;
+}
+
+/* Nitro boost in server dropdown */
+[id="guild-header-popout-premium-subscribe"]:hover {
+    background-color: #d638d1;
+}
+[id="guild-header-popout-premium-subscribe"]:active {
+    background-color: rgb(151, 37, 147) !important;
+}
+
+/* Nitro boost page button */
+.lookFilled-yCfaCM.colorWhite-1H92hK {
+    background-color: var(--background-primary);
+}
+.heroCtaContent-3AMZge {
+    color: #d638d1;
+}
+
+/* "join server" banner */
+.notice-12Koq- {
+    background-color: var(--brand-experiment);
+}
+
+/* remove random useless pading at the right of messages */
+.message-2CShn3 {
+    padding-right: 0px !important;
+}
+
+/* hide useless buttons (english only lmao) */
+[aria-label="Send a gift"],
+[aria-label="Open GIF picker"],
+[aria-label="Open sticker picker"] {
+    display: none !important
+}
+
+/* doesn't seem to work for me? (resize channels bar)*/
+:root { --sidebar-initial-width: 240px; }
+.sidebar-1tnWFu {
+    resize: horizontal;
+    width: var(--sidebar-initial-width);
+}
+
+/* ADD SERVER */
+.lookBlank-21BCro {
+    color: #FFF;
+}
+div.uploadIcon-2wV7s_ > div > svg > circle {
+    fill: var(--brand-experiment);
+}
+
+
+/* Gray buttons */
+.lookFilled-yCfaCM.colorGrey-2iAG-B {
+    background-color: #353535 !important;
+}
+.lookFilled-yCfaCM.colorGrey-2iAG-B:hover {
+    background-color: #454545 !important;
+}
+.lookFilled-yCfaCM.colorGrey-2iAG-B:active {
+    background-color: #323232 !important;
+}
+
+/* Folders in serverlist */
+div.listItem-3SmSlK > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg > path {
+    fill: var(--brand-experiment);
+}
+
+
+/* FONT PART */
+
+/* msges */
+.markup-eYLPri {
+    font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+}
+/* Usernames */
+.username-h_Y3Us {
+    font-weight: bold;
+    font-family: 'Quicksand',Helvetica,Arial,sans-serif;
 }
