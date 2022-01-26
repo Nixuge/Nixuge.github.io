@@ -73,6 +73,11 @@ light mode variables */
     --deprecated-text-input-bg: #111;
 }
 
+/* checkboxes for top right */
+.theme-dark {
+    --control-brand-foreground: #d97245;
+}
+
 /* POWERCORD SECTION */
 .theme-dark {
     --toast-background: #181818 !important;
@@ -304,4 +309,9 @@ div.listItem-3SmSlK > div:nth-child(2) > div > svg > foreignObject > div > div >
 .username-h_Y3Us {
     font-weight: bold;
     font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+}
+
+/* vc change server thingy */
+.theme-dark .quickSelectPopout-2F0PXw {
+    background: var(--background-secondary);
 }
