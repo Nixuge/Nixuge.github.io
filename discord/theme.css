@@ -315,3 +315,14 @@ div.listItem-3SmSlK > div:nth-child(2) > div > svg > foreignObject > div > div >
 .theme-dark .quickSelectPopout-2F0PXw {
     background: var(--background-secondary);
 }
+
+/* resize sidebar */
+.sidebar-1tnWFu {
+    resize: horizontal;
+    width: 240px;
+    max-width: 240px;
+}
+
+.progressBar-1T6LYX {
+    background-color: var(--control-brand-foreground) !important;
+}
