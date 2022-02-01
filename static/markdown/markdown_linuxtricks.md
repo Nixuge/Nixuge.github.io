@@ -21,7 +21,7 @@ and then run:
 
 ```bash
 xinput --set-prop '[Mouse name]' 'libinput Accel Profile Enabled' 0, 1
-xinput --set-prop '[Mouse name]' 'libinput Accel Speed' [Accel]</
+xinput --set-prop '[Mouse name]' 'libinput Accel Speed' [Accel]
 ```
 
 
