@@ -1,6 +1,6 @@
 <!-- Shitty markdown but works :D -->
 
-<details><summary><b>"Fix" G502/other mouses linux</b></summary><p>
+<details><summary><b>"Fix" G502 sensitivity/other mouses linux</b></summary><p>
 If not installed:
 
 ```bash
