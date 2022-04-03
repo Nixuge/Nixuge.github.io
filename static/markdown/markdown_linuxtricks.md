@@ -201,6 +201,15 @@ https://aur.chaotic.cx/
 <details><summary><b>Single GPU passthrough</b></summary><p>
 
 For now, follow this: https://github.com/joeknock90/Single-GPU-Passthrough<br>
+OR
+https://gitlab.com/risingprismtv/single-gpu-passthrough<br>
 Will see if I can make a guide myself after.
 
 </p></details>
+
+<details><summary><b>Games running slow under wine with high cpu</b></summary><p>
+Make sure you installed the 32bit nvidia utils<br>t
+<b>lib32-nvidia-utils</b> on Arch
+
+</p></details>
+
