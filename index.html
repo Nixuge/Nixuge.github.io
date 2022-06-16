@@ -16,20 +16,20 @@
             <img class="monochrome" src="static/svg/monochrome/github.svg" onload="SVGInject(this)">
         </a>
 
-        <a href="https://twitter.com/nixuge">
-            <img class="monochrome" src="static/svg/monochrome/twitter.svg" onload="SVGInject(this)">
-        </a>
-
-        <a href="https://t.me/nixuge">
-            <img class="monochrome" src="static/svg/monochrome/telegram.svg" onload="SVGInject(this)">
-        </a>
-
         <div class="tooltip" data-direction="bottom" onclick="copy_text('Discord', 'Nixu#1022')">
             <div class="tooltip__initiator">
                 <img class="monochrome" src="static/svg/monochrome/discord.svg" onload="SVGInject(this)">
             </div>
             <div class="tooltip__item" , id="Discord">Nixu#1022</div>
         </div>
+
+        <a href="https://t.me/nixuge">
+            <img class="monochrome" src="static/svg/monochrome/telegram.svg" onload="SVGInject(this)">
+        </a>
+
+        <a href="https://twitter.com/nixuge">
+            <img class="monochrome" src="static/svg/monochrome/twitter.svg" onload="SVGInject(this)">
+        </a>
 
         <a href="https://www.youtube.com/channel/UCrbklLjnqfBBBE8Cv0qzZJg">
             <img class="monochrome" src="static/svg/monochrome/youtube.svg" onload="SVGInject(this)">
@@ -115,11 +115,15 @@
     }
 </style>
 <script>
-    function copy_text(item_id, to_copy) {
+    function copy_text(item_id, to_copy, item_content) {
         navigator.clipboard.writeText(to_copy);
+		
+		if(typeof item_content === "undefined") {
+			item_content = to_copy
+		}
 
         const item = document.getElementById(item_id)
         item.innerHTML = "Copied to clipboard!";
-        setTimeout(() => { item.innerHTML = to_copy; }, 800); //set original value back after .8s
+        setTimeout(() => { item.innerHTML = item_content; }, 800); //set original value back after .8s
     }
 </script>
