@@ -13,40 +13,42 @@
     <h3>Contact</h3>
     <div class="inline">
         <a href="https://github.com/nixuge">
-            <img class="social" src="static/svg/monochrome/github.svg" onload="SVGInject(this)">
+            <img class="monochrome" src="static/svg/monochrome/github.svg" onload="SVGInject(this)">
         </a>
 
         <a href="https://twitter.com/nixuge">
-            <img class="social" src="static/svg/monochrome/twitter.svg" onload="SVGInject(this)">
+            <img class="monochrome" src="static/svg/monochrome/twitter.svg" onload="SVGInject(this)">
         </a>
 
         <a href="https://t.me/nixuge">
-            <img class="social" src="static/svg/monochrome/telegram.svg" onload="SVGInject(this)">
+            <img class="monochrome" src="static/svg/monochrome/telegram.svg" onload="SVGInject(this)">
         </a>
 
         <div class="tooltip" data-direction="bottom" onclick="copy_text('Discord', 'Nixu#1022')">
             <div class="tooltip__initiator">
-                <img class="social" src="static/svg/monochrome/discord.svg" onload="SVGInject(this)">
+                <img class="monochrome" src="static/svg/monochrome/discord.svg" onload="SVGInject(this)">
             </div>
             <div class="tooltip__item" , id="Discord">Nixu#1022</div>
         </div>
 
         <a href="https://www.youtube.com/channel/UCrbklLjnqfBBBE8Cv0qzZJg">
-            <img class="social" src="static/svg/monochrome/youtube.svg" onload="SVGInject(this)">
+            <img class="monochrome" src="static/svg/monochrome/youtube.svg" onload="SVGInject(this)">
         </a>
     </div>
 
     <h3>Good projects</h3>
     <div class="inline">
+
         <div class="tooltip" onclick="location.href = 'https\:\/\/hivebackup.nixuge.me';">
             <div class="tooltip__initiator">
-                <img class="image" src="static/images/HiveBackup.png">
+                <img class="image" src="/static/images/HiveBackup.png">
             </div>
             <div class="tooltip__item">HiveMC‎ backup‎ project</div> <!-- dirty chars to prevent linebreak-->
         </div>
+
         <div class="tooltip" data-direction="bottom" onclick="location.href = 'https\:\/\/mediagrabber.nixuge.me';">
             <div class="tooltip__initiator">
-                <img class="image" src="static/images/shortcuts.png">
+                <img class="image" src="/static/images/shortcuts.png">
             </div>
             <div class="tooltip__item">Open Media Grabber shortcut</div>
         </div>
@@ -54,9 +56,9 @@
     </div>
     
     <br>
-    <div class="tooltip" data-direction="bottom" onclick="location.href = 'other';">
-        <div class="tooltip__initiator">
-            <img class="social" src="static/svg/monochrome/other.svg" onload="SVGInject(this)">
+    <div class="inline tooltip" data-direction="bottom">
+        <div class="tooltip__initiator" onclick="location.href = 'other';">
+            <img class="monochrome" src="static/svg/monochrome/other.svg" onload="SVGInject(this)">
         </div>
         <div class="tooltip__item">Other</div>
     </div>
@@ -89,20 +91,20 @@
     }
 
 
-    .social {
+    .monochrome {
         border-radius: 20px;
         animation: fade 1.5s linear !important;
     }
 
     /* monochrome vignets transition */
     .background,
-    .social:hover>.front,
-    .social:hover>*>.front {
+    .monochrome:hover>.front,
+    .monochrome:hover>*>.front {
         transition: 120ms;
         fill: #222
     }
     .front,
-    .social:hover>.background {
+    .monochrome:hover>.background {
         transition: 120ms;
         fill: #fff
     }
