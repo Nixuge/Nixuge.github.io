@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<title>Linux Tricks - nixuge.me</title>
-	</head>
-	<body>
-		<div id="nme" class="tooltip" onclick="location.href = '/';">
-			<div class="tooltip__initiator">
-				<h1>Nixuge.me</h1>
-			</div>
-			<div class="tooltip__item", id="Home">Back home?</div>
-		</div>
-        <h4 class="info">Some random tricks/useful things I've found for linux (mostly unorganized shit).<br>
-            No idea where to save them so putting them here</h4>
-        <br>
-        
-        <div id="markdown"></div>
-	</body>
-    
+
+<head>
+    <title>Linux Tricks - nixuge.me</title>
+</head>
+
+<body>
+    <div id="nme" class="tooltip" onclick="location.href = '/';">
+        <div class="tooltip__initiator">
+            <h1>Nixuge.me</h1>
+        </div>
+        <div class="tooltip__item" , id="Home">Back home?</div>
+    </div>
+    <h4 class="info">Some random tricks/useful things I've found for linux (mostly unorganized shit).<br>
+        No idea where to save them so putting them here</h4>
+    <br>
+
+    <div id="markdown"></div>
+</body>
+
 </html>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-	@import url('/static/css/tooltips.css');
-	@import url('/static/css/fade.css');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    @import url('/static/css/tooltips.css');
+    @import url('/static/css/fade.css');
 
     @keyframes blackChange {
-        from {background-color: #101010;}
-        to {background-color: #131313;}
+        from {
+            background-color: #101010;
+        }
+
+        to {
+            background-color: #131313;
+        }
     }
 
     .info {
@@ -36,72 +43,82 @@
         padding: 5px;
         border-top: 3px solid rgb(143, 143, 143);
         border-bottom: 3px solid rgb(143, 143, 143);
-        text-align: center;   
+        text-align: center;
     }
 
     h1 {
-        text-align: center;   
+        text-align: center;
     }
 
-	html {
-       height: 100%;
+    html {
+        height: 100%;
     }
-	body {
+
+    body {
         padding-left: 25px;
-		background-color: #101010;
-		color: #FFF;
-		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
-		font-size: 30px;
-		opacity: 1;
+        background-color: #101010;
+        color: #FFF;
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        opacity: 1;
         min-height: 100%;
-	}
-    body >:not(#nme){
-		animation: fade1 1s linear;
-	}
+    }
 
-    details > summary {
+    body>:not(#nme) {
+        animation: fade1 1s linear;
+    }
+
+    details>summary {
         cursor: pointer;
         list-style: none;
         text-align: center;
         font-size: 40px;
     }
+
     details {
         border-top: 3px solid transparent;
         margin-top: 30px;
     }
+
     details[open] {
-        background:#131313;
+        background: #131313;
         animation: blackChange .2s;
         border-top: 3px solid rgb(143, 143, 143);
         border-bottom: 3px solid rgb(143, 143, 143);
         border-radius: 3px;
     }
-    
-    details[open] summary ~ * {
+
+    details[open] summary~* {
         padding-left: 15px;
         padding-right: 15px;
         animation: sweep .2s ease-in-out;
     }
 
     @keyframes sweep {
-      0%    {opacity: 0; margin-left: -10px}
-      100%  {opacity: 1; margin-left: 0px}
-    }
+        0% {
+            opacity: 0;
+            margin-left: -10px
+        }
 
-    
+        100% {
+            opacity: 1;
+            margin-left: 0px
+        }
+    }
 </style>
 <script type="text/javascript" src="/static/js/favicon.js"></script>
 <script type="text/javascript" src="/static/js/animation.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  fetch('/static/markdown/markdown_linuxtricks.md')
-    .then(response => response.text())
-    .then(text => 
-      document.getElementById('markdown').innerHTML = marked.parse(text)
-    )
+    fetch('/static/markdown/markdown_linuxtricks.md')
+        .then(response => response.text())
+        .then(text =>
+            await async function gen_markdown(text) {
+                document.getElementById('markdown').innerHTML = marked.parse(text);
+                hljs.highlightAll();
+            }
+        )
 </script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-<script>setTimeout(function() {hljs.highlightAll();}, 100);</script>
-
