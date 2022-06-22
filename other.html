@@ -18,7 +18,8 @@
 	<h3>Other</h3>
 
 	<div class="inline">
-		<div class="tooltip" onclick="copy_text('Powercord', 'git clone https\:\/\/github.com/Nixuge/pc-darkorange.git', 'Powercord theme (not maintained anymore)')">
+		<div class="tooltip"
+			onclick="copy_text('Powercord', 'git clone https\:\/\/github.com/Nixuge/pc-darkorange.git', 'Powercord theme (not maintained anymore)')">
 			<div class="tooltip__initiator">
 				<img class="image" src="static/svg/powercord.svg">
 			</div>
@@ -34,9 +35,6 @@
 		</div>
 	</div>
 </body>
-
-</html>
-
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 	@import url('/static/css/tooltips.css');
@@ -89,15 +87,16 @@
 	}
 </style>
 <script>
-    function copy_text(item_id, to_copy, item_content) {
-        navigator.clipboard.writeText(to_copy);
-		
-		if(typeof item_content === "undefined") {
+	function copy_text(item_id, to_copy, item_content) {
+		navigator.clipboard.writeText(to_copy);
+
+		if (typeof item_content === "undefined") {
 			item_content = to_copy
 		}
 
-        const item = document.getElementById(item_id)
-        item.innerHTML = "Copied to clipboard!";
-        setTimeout(() => { item.innerHTML = item_content; }, 800); //set original value back after .8s
-    }
+		const item = document.getElementById(item_id)
+		item.innerHTML = "Copied to clipboard!";
+		setTimeout(() => { item.innerHTML = item_content; }, 800); //set original value back after .8s
+	}
 </script>
+</html>

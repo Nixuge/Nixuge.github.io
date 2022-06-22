@@ -57,12 +57,13 @@
             <div class="tooltip__initiator">
                 <img class="image" src="static/images/Cydia.png">
             </div>
-            <div class="tooltip__item">Can‎ I‎ jailbreak (WIP)</div> <!-- Space without linebreaks on tooltips here!!! -->
+            <div class="tooltip__item">Can‎ I‎ jailbreak (WIP)</div>
+            <!-- Space without linebreaks on tooltips here!!! -->
         </div>
 
-        
+
     </div>
-    
+
     <br>
     <div class="inline tooltip" data-direction="bottom">
         <div class="tooltip__initiator" onclick="location.href = 'other';">
@@ -70,11 +71,8 @@
         </div>
         <div class="tooltip__item">Other</div>
     </div>
-    
+
 </body>
-
-</html>
-
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     @import url('/static/css/tooltips.css');
@@ -111,6 +109,7 @@
         transition: 120ms;
         fill: #222
     }
+
     .front,
     .monochrome:hover>.background {
         transition: 120ms;
@@ -125,13 +124,14 @@
 <script>
     function copy_text(item_id, to_copy, item_content) {
         navigator.clipboard.writeText(to_copy);
-		
-		if(typeof item_content === "undefined") {
-			item_content = to_copy
-		}
+
+        if (typeof item_content === "undefined") {
+            item_content = to_copy
+        }
 
         const item = document.getElementById(item_id)
         item.innerHTML = "Copied to clipboard!";
         setTimeout(() => { item.innerHTML = item_content; }, 800); //set original value back after .8s
     }
 </script>
+</html>

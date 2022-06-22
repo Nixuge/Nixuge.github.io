@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>(╯°□°）╯︵ ┻━┻</title>
-        <h1>404</h1>
-    </head>
-    <body>
-        <div class="tooltip" data-direction="bottom" onclick="location.href = '/';">
-            <div class="tooltip__initiator">
-                <img class="404" src="/static/images/404.png">
-            </div>
-            <div class="tooltip__item">Return home?</div>
-        </div>
-    </body>
-</html>
-</html>
 
+<head>
+	<title>(╯°□°）╯︵ ┻━┻</title>
+	<script type="text/javascript" src="/static/js/favicon.js"></script>
+	<script type="text/javascript" src="/static/js/animation.js"></script>
+</head>
+
+<body>
+	<h1>404</h1>
+	<div class="tooltip" data-direction="bottom" onclick="location.href = '/';">
+		<div class="tooltip__initiator">
+			<img class="404" src="/static/images/404.png">
+		</div>
+		<div class="tooltip__item">Return home?</div>
+	</div>
+</body>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 	@import url('/static/css/tooltips.css');
 	@import url('/static/css/fade.css');
 
-    html {
-       height: 100%;
-     }
+	html {
+		height: 100%;
+	}
+
 	body {
 		background-color: #101010;
 		color: #FFF;
-		font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+		font-family: 'Quicksand', Helvetica, Arial, sans-serif;
 		font-size: 36px;
 		opacity: 1;
-		text-align:center;
-           min-height: 100%;
+		text-align: center;
+		min-height: 100%;
 	}
-	body >:not(#nme){
+
+	body>:not(#nme) {
 		animation: fade1 1s linear;
 	}
 
 
 	.tooltip__item {
-		  top: calc(0% - 3em) !important;
+		top: calc(0% - 3em) !important;
 	}
 </style>
-<script type="text/javascript" src="/static/js/favicon.js"></script>
-<script type="text/javascript" src="/static/js/animation.js"></script>
+</html>

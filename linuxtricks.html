@@ -4,6 +4,11 @@
 
 <head>
     <title>Linux Tricks - nixuge.me</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="text/javascript" src="/static/js/favicon.js"></script>
+    <script type="text/javascript" src="/static/js/animation.js"></script>
 </head>
 
 <body>
@@ -19,9 +24,6 @@
 
     <div id="markdown"></div>
 </body>
-
-</html>
-
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     @import url('/static/css/tooltips.css');
@@ -106,9 +108,6 @@
         }
     }
 </style>
-<script type="text/javascript" src="/static/js/favicon.js"></script>
-<script type="text/javascript" src="/static/js/animation.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
     fetch('/static/markdown/markdown_linuxtricks.md')
         .then(response => response.text())
@@ -119,6 +118,4 @@
             }
         )
 </script>
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+</html>
