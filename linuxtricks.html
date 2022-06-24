@@ -111,11 +111,11 @@
 <script>
     fetch('/static/markdown/markdown_linuxtricks.md')
         .then(response => response.text())
-        .then(text =>
-            await async function gen_markdown(text) {
-                document.getElementById('markdown').innerHTML = marked.parse(text);
-                hljs.highlightAll();
-            }
-        )
+        .then(text => gen_markdown(text))
+    function gen_markdown(text) {
+        document.getElementById('markdown').innerHTML = marked.parse(text);
+        hljs.highlightAll();
+    }
 </script>
+
 </html>
