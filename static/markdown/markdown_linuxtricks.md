@@ -208,8 +208,15 @@ Will see if I can make a guide myself after.
 </p></details>
 
 <details><summary><b>Games running slow under wine with high cpu</b></summary><p>
-Make sure you installed the 32bit nvidia utils<br>t
+Make sure you installed the 32bit nvidia utils<br>
 <b>lib32-nvidia-utils</b> on Arch
 
+</p></details>
+
+
+<details><summary><b>Telegram not using the GTK file picker</b></summary><p>
+Install <b>xdg-desktop-portal-gtk</b> (on arch)<br>
+Then edit /usr/share/applications/telegramdesktop.desktop :<br>
+Add 'env XDG_CURRENT_DESKTOP=gnome ' at the start of the Exec line
 </p></details>
 
