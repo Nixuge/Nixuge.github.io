@@ -21,7 +21,7 @@
 		<div class="tooltip"
 			onclick="copy_text('Powercord', 'git clone https\:\/\/github.com/Nixuge/pc-darkorange.git', 'Powercord theme (not maintained anymore)')">
 			<div class="tooltip__initiator">
-				<img class="image" src="static/svg/Powercord.svg">
+				<img class="icon" src="static/svg/Powercord.svg">
 			</div>
 			<div class="tooltip__item" , id="Powercord">Powercord theme (not maintained anymore)</div>
 		</div>
@@ -29,7 +29,7 @@
 
 		<div class="tooltip" data-direction="bottom" onclick="location.href = 'linuxtricks';">
 			<div class="tooltip__initiator">
-				<img class="image" src="static/svg/Tux.svg">
+				<img class="icon" src="static/svg/Tux.svg">
 			</div>
 			<div class="tooltip__item">Linux Tricks</div>
 		</div>
@@ -37,7 +37,7 @@
 		<div class="tooltip" data-direction="bottom"
 			onclick="location.href = 'https\:\/\/www.icloud.com/shortcuts/e4427c1419a648ff8ac4ca69a3acd2d0';">
 			<div class="tooltip__initiator">
-				<img class="image" src="static/images/Twitch.png">
+				<img class="icon" src="static/images/Twitch.png">
 			</div>
 			<div class="tooltip__item">Free VODs shortcut for TTV (Needs VLC)</div>
 		</div>
@@ -45,7 +45,7 @@
 		<div class="tooltip" data-direction="bottom"
 			onclick="location.href = 'https\:\/\/mcdl.nixuge.me';">
 			<div class="tooltip__initiator">
-				<img class="image" src="static/images/MCProxy.png">
+				<img class="icon" src="static/images/MCProxy.png">
 			</div>
 			<div class="tooltip__item">MCProxy</div>
 		</div>
@@ -74,28 +74,11 @@
 		animation: fade1 1s linear;
 	}
 
-
-	.image {
+	.icon {
 		max-width: 90px;
 		max-height: 90px;
-	}
-
-	.social {
 		border-radius: 20px !important;
 		animation: fade 1.5s linear;
-	}
-
-	.social:hover>#bg,
-	.social:hover>#bg>path {
-		fill: #222;
-		transition: 120ms;
-	}
-
-	.social:hover,
-	.social:hover>#dd {
-		fill: #fff;
-		transition: 120ms;
-		cursor: pointer;
 	}
 
 	.inline>* {
