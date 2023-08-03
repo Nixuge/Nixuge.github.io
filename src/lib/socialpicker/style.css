@@ -1,0 +1,29 @@
+/* 
+This is overrall a bit dirty,
+But I really don't have other ideas
+on how to include a bunch of svgs correctly
+*/
+
+.background,
+.front {
+  transition: 120ms;
+}
+
+.background,
+.social:hover>.front,
+.social:hover>*>.front {
+    fill: #222
+}
+
+.front,
+.social:hover>.background {
+    fill: #fff
+}
+
+.social {
+    border-radius: 15px;
+}
+
+.social:hover {
+    cursor: pointer;
+}
