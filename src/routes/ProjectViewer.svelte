@@ -21,7 +21,8 @@
     }
 
     $: selectedProject, updateComponent();
-    
+
+    const map = new Map<String, HTMLElement>();
 
     function setProject(proj: Project) {
         if (proj.name === "show_more") {
@@ -42,7 +43,7 @@
 <div id="projectviewer">
     <div id="projectscroller">
     {#each shownProjects as proj}
-        <div class="projectlogo" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)}>
+        <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)} bind:this={map[proj.name]}>
             <img src="{proj.icon_path}" alt={proj.icon_alt}>
         </div>
     {/each}
@@ -91,6 +92,7 @@
         border-radius: 15px;
     }
     .projectlogo {
+        position: relative;
         transition: 50ms;
         padding: 5px;
     }
@@ -118,5 +120,26 @@
         position: fixed;
         bottom: 0;
         right: 20px;
+    }
+
+    .projectlogo::before {
+        transition: 100ms;
+        position: absolute;
+        content: "";
+        display: inline-block;
+        height: 90px;
+        width: 2px;
+        top: 5px;
+        left: 0px;
+        border-radius: 1px;
+
+        background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+    }
+    .projectlogo:hover::before {
+        background-color: #ddd;
+    }
+    .selectedproject::before {
+        background-color: #fff;
     }
 </style>
