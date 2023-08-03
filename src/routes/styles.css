@@ -12,6 +12,12 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: 15px;
+    overflow: hidden; /* Dirty, but for some reason HTML overflows at the bottom */
   }
-  
+
+a:visited {
+  color: #008cff;
+}
+a:visited {
+  color: #00f7ff;
+}

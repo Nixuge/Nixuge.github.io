@@ -7,7 +7,20 @@
 <!-- TODO: -->
 <!-- mobile/vertical mode -->
 
-<h1>Nixuge.me - Home</h1>
+<!-- <h1>Nixuge.me - Home</h1> -->
 <!-- <p>Visit <a href="/linuxtricks">dsfsdf</a> to read the documentation</p> -->
-<SocialPickerVertical />
-<ProjectViewer />
+<div id="content">
+    <SocialPickerVertical />
+    <ProjectViewer />
+</div>
+
+<style>
+    #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 80%;
+    }
+</style>
