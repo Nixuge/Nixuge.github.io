@@ -44,6 +44,11 @@
         <h1>{selectedProject.title}</h1>
         <!-- Should be safe, but meh -->
         {@html selectedProject.html}
+        <h2 class="bottom">
+            {#each selectedProject.links as link}
+                <br><a href="{link.link}">{link.name}</a>
+            {/each}
+        </h2>
     </div>
 </div>
 
@@ -51,7 +56,7 @@
     #projectviewer {
         border-radius: 15px;
         /* width: min-content; */
-        margin-left: 200px;
+        margin-left: 175px;
         display: flex;
         align-items: center;
         height: 100%;
@@ -92,5 +97,10 @@
         height: 100%;
         /* height: 50%; not "optimal" but no need to be precise anyways */
         overflow: auto;
+        position: relative;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 0;
     }
 </style>

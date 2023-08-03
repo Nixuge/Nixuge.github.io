@@ -41,7 +41,7 @@
         margin-left: 10px;
     }
     #verticaltitle {
-        font-size: 2.2em;
+        font-size: 2.5em;
         text-align: center;
         text-orientation: upright;
         writing-mode: vertical-rl;
@@ -54,5 +54,11 @@
         max-height: 80%;
         overflow: auto;
         padding: 10px 0 10px 0;
+        transition: 100ms;
     }
+    #verticaltitle:hover {
+        background-color: #fff;
+        color: #222;
+    }
+
 </style>
