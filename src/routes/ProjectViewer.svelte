@@ -42,11 +42,11 @@
 
 <div id="projectviewer">
     <div id="projectscroller">
-    {#each shownProjects as proj}
-        <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)} bind:this={map[proj.name]}>
-            <img src="{proj.icon_path}" alt={proj.icon_alt}>
-        </div>
-    {/each}
+        {#each shownProjects as proj}
+            <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)} bind:this={map[proj.name]}>
+                <img src="{proj.icon_path}" alt={proj.icon_alt}>
+            </div>
+        {/each}
     </div>
     <div id="projectinfo">
         <svelte:component this={projectComponent} />
@@ -60,14 +60,10 @@
 
 <style>
     #projectviewer {
-        /* width: min-content; */
         margin-left: 200px;
         display: flex;
         align-items: center;
         height: 100%;
-        /* max-width: 100%; */
-        overflow: hidden;
-        /* padding: 1px; */
     }
 
     #projectscroller {
@@ -77,7 +73,6 @@
         border-radius: 15px 0 0 15px;
         /* border: 1px solid #999; */
         border-right: 1px dotted #999;
-        overflow: auto;
 
         max-height: 100%;
         line-height: 0px;
@@ -85,7 +80,9 @@
         flex-basis: 100px;
         flex-grow: 0;
         flex-shrink: 0;
+        overflow: auto;
     }
+
     img {
         width: 90px;
         height: 90px;
@@ -130,8 +127,9 @@
         height: 90px;
         width: 2px;
         top: 5px;
-        left: 0px;
+        left: 0;
         border-radius: 1px;
+        overflow: show;
 
         background-color: rgba(0, 0, 0, 0);
         color: rgba(0, 0, 0, 0);
