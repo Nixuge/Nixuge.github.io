@@ -8,6 +8,9 @@
 </script>
 
 <div id="socialwrapper">
+    <div id="verticaltitle">
+        Nixuge.me
+    </div>
     <div id="socialpicker">
         <Discord />
         <Twitter />
@@ -35,5 +38,21 @@
         border: 1px solid #999;
         max-height: 100%;
         overflow: auto;
+        margin-left: 10px;
+    }
+    #verticaltitle {
+        font-size: 2.2em;
+        text-align: center;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        background: #222;
+        /* border-radius: 10px 0 0 10px; */
+        
+        border-radius: 10px;
+        border: 1px solid #999;
+        /* border-right: none; */
+        max-height: 80%;
+        overflow: auto;
+        padding: 10px 0 10px 0;
     }
 </style>

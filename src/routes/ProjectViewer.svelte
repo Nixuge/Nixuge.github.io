@@ -1,14 +1,31 @@
 <script lang="ts">
-    import { Project, important_projects } from "$lib/projectviewer/projects";
-
-    let moreShown = false;
+    import { Project, important_projects, other_projects } from "$lib/projectviewer/projects";
     
-    let selectedProject = important_projects[0];
+    const showMore = new Project("show_more", "more.png", "", "", "");
+    const showLess = new Project("show_less", "less.png", "", "", "");
+    
+    function getClonedArr() {
+        return important_projects.map((x) => x);
+    }
 
-    $: console.log(selectedProject)
+    let shownProjects = getClonedArr();
+    shownProjects.push(showMore)
+
+    let selectedProject = shownProjects[0];
 
     function setProject(proj: Project) {
-        selectedProject = proj;
+        if (proj.name === "show_more") {
+            const newShownProjects = getClonedArr();
+            newShownProjects.concat(other_projects)
+            newShownProjects.push(showLess)
+            shownProjects = newShownProjects;
+        } else if (proj.name === "show_less") {
+            const newShownProjects = getClonedArr();
+            newShownProjects.push(showMore)
+            shownProjects = newShownProjects;
+        } else {
+            selectedProject = proj;
+        }
     }
 
     
@@ -17,25 +34,24 @@
 
 <div id="projectviewer">
     <div id="projectscroller">
-    {#each important_projects as proj}
+    {#each shownProjects as proj}
         <div class="projectlogo" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)}>
             <img src="{proj.icon_path}" alt={proj.icon_alt}>
         </div>
     {/each}
     </div>
     <div id="projectinfo">
-        <!-- Should be safe, but meh -->
         <h1>{selectedProject.title}</h1>
+        <!-- Should be safe, but meh -->
         {@html selectedProject.html}
     </div>
 </div>
 
 <style>
     #projectviewer {
-        background: #222;
         border-radius: 15px;
         /* width: min-content; */
-        margin-left: 150px;
+        margin-left: 200px;
         display: flex;
         align-items: center;
         height: 100%;
@@ -44,15 +60,8 @@
         overflow: hidden;
     }
 
-    #projectinfo {
-        padding-left: 20px;
-        align-self: flex-start;
-        float: left;
-        width: 80%;
-        /* height: 50%; not "optimal" but no need to be precise anyways */
-    }
-
     #projectscroller {
+        background-color: #222;
         float: left;
         width: min-content;
         border-radius: 15px 0 0 15px;
@@ -60,6 +69,10 @@
         border-right: 1px dotted #999;
         overflow: auto;
         max-height: 100%;
+    }
+    img {
+        width: 90px;
+        height: 90px;
     }
     .projectlogo {
         /* border: 1px solid #fff; */
@@ -70,4 +83,14 @@
         /* border: 1px solid #ff0000; */
     }
 
+    #projectinfo {
+        background-color: #222;
+        padding-left: 20px;
+        align-self: flex-start;
+        float: left;
+        width: 80%;
+        height: 100%;
+        /* height: 50%; not "optimal" but no need to be precise anyways */
+        overflow: auto;
+    }
 </style>
