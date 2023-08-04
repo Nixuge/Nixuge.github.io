@@ -20,7 +20,17 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 80%;
-        width: 95%;
+    }
+    @media (min-width: 901px) {
+        #content {
+            height: 80%;
+            width: 95%;
+        }
+    }
+    @media (max-width: 900px) {
+        #content {
+            height: 95%;
+            width: 95%;
+        }
     }
 </style>

@@ -12,7 +12,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: hidden; /* Dirty, but for some reason HTML overflows at the bottom */
+    overflow: auto;
   }
 
 a {

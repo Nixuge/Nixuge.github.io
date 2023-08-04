@@ -11,54 +11,93 @@
     <div id="verticaltitle">
         Nixuge.me
     </div>
-    <div id="socialpicker">
-        <Discord />
-        <Twitter />
-        <Youtube />
-        <Telegram />
-        <Github />
+    <div id="socialpickerwrap">
+        <div id="socialpicker">
+            <Discord />
+            <Twitter />
+            <Youtube />
+            <Telegram />
+            <Github />
+        </div>
     </div>
 </div>
 
 <style>
-    #socialwrapper {
-        display: flex;
-        float: left;
-        align-items: center;
-        /* border: 1px solid red; */
-        height: 100%;
-        width: min-content;
-    }
+    /* * {
+        border: 1px solid red;
+    } */
+
     #socialpicker {
-        background: #222;
-        border-radius: 15px; /* Note: gh's icon has a higher border radius, to fix when not lazy */
-        width: min-content;
         line-height: 0;
-        float: left;
+        border-radius: 15px;
+        background: #222;
         border: 1px solid #999;
-        max-height: 100%;
+    }
+    #socialpickerwrap {
+        border-radius: 15px;
         overflow: auto;
-        margin-left: 10px;
     }
     #verticaltitle {
         font-size: 2.5em;
-        text-align: center;
-        text-orientation: upright;
-        writing-mode: vertical-rl;
-        background: #222;
-        /* border-radius: 10px 0 0 10px; */
-        
+        background: #222;        
         border-radius: 10px;
         border: 1px solid #999;
-        /* border-right: none; */
-        max-height: 80%;
-        overflow: auto;
-        padding: 10px 0 10px 0;
         transition: 100ms;
     }
     #verticaltitle:hover {
         background-color: #fff;
         color: #222;
     }
+    
+    @media (min-width: 901px) {
+        #socialwrapper {
+            display: flex;
+            float: left;
+            align-items: center;
+            height: 100%;
+            width: min-content;
+        }
+        #verticaltitle {
+            text-align: center;
+            text-orientation: upright;
+            writing-mode: vertical-rl;
+            
+            max-height: 80%;
+            overflow: auto;
+            padding: 10px 0 10px 0;
+        }
+        #socialpicker {
+            width: min-content;
+        }
+        #socialpickerwrap {
+            max-height: 100%;
+            margin-left: 10px;
+        }
+    }
+    @media (max-width: 900px) {
+        #socialwrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align horizontally */
+            text-align: center; /* Center align text within #verticaltitle */
+        }
+        #verticaltitle {
+            padding: 2px 10px 3px 10px;
+            transition: 100ms;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+        #socialpicker {
+            display: inline-block;
+            width: fit-content;
+        }
+        #socialpickerwrap {
+            width: 100%;
+            overflow: auto;
+            white-space: nowrap;
+        }
+    }
 
 </style>
+
+

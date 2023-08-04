@@ -65,37 +65,14 @@
     /* * {
         border: 1px solid #01fe40;
     } */
-    #projectviewer {
-        margin-left: 175px;
-        height: 100%;
-        display: block;
-    }
 
     #projectscrollerwrap {
-        float: left;
-
-        height: 100%;
-        line-height: 0px;
-
-        flex-basis: 100px;
-        flex-grow: 0;
-        flex-shrink: 0;
-
         display: flex;
-        
-        flex-direction: column;
-        justify-content: center;
-       
         border: 1px solid #999;
-        border-right: 1px dotted #999;
-        border-radius: 15px 0 0 15px;
         background-color: #222;
     }
     #projectscroller {
         overflow: auto;
-        width: max-content;
-        padding-left: 5px;
-        border-radius: 15px 0 0 15px;
     }
 
     img {
@@ -119,48 +96,22 @@
     #projectinfo {
         background-color: #222;
         overflow: auto;
-        height: 100%;
-        border-left: none;
-        border-radius: 0 15px 15px 0;
         border: 1px solid #999;
+        position: relative;
     }
     .bottom {
         background-color: #333333cc;
         padding: 7px;
         border-radius: 10px;
-        position: fixed;
         bottom: 0;
         right: 20px;
     }
 
-    /* To remove => small dot for selected */
-    /* .projectlogo::before {
-        transition: 100ms;
-        position: absolute;
-        content: "";
-        height: 7px;
-        width: 7px;
-        top: 45px;
-        left: -15px;
-        border-radius: 10px;
-        overflow: show;
-
-        background-color: rgba(0, 0, 0, 0);
-    }
-    .selectedproject:not(:hover):before {
-        background-color: #fff;
-    } */
     .projectlogo::after {
         transition: 100ms;
         position: absolute;
         content: "";
-        height: 90px;
-        width: 2px;
-        top: 5px;
-        left: -2px;
         border-radius: 1px;
-        overflow: show;
-
         background-color: rgba(0, 0, 0, 0);
     }
     .projectlogo:not(.selectedproject):hover::after {
@@ -168,5 +119,79 @@
     }
     .selectedproject:after {
         background-color: #fff;
+    }
+    @media (min-width: 901px) {
+        #projectviewer {
+            margin-left: 175px;
+            height: 100%;
+        }
+
+        #projectscrollerwrap {
+            float: left;
+
+            height: 100%;
+            line-height: 0px;
+
+            flex-basis: 100px;
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            display: flex;
+            
+            flex-direction: column;
+            justify-content: center;
+        
+            border-right: 1px dotted #999;
+            border-radius: 15px 0 0 15px;
+        }
+        #projectscroller {
+            width: max-content;
+            padding-left: 5px;
+        }
+        #projectinfo {
+            height: 100%;
+            border-left: none;
+            border-radius: 0 15px 15px 0;
+        }
+        .bottom {
+            position: fixed;
+        }
+
+        .projectlogo::after {
+            height: 90px;
+            width: 2px;
+            top: 5px;
+            left: -2px;
+        }
+    }
+    @media (max-width: 900px) {
+        #projectviewer {
+            margin-top: 25px;
+            height: 90%;
+        }
+        #projectscrollerwrap {
+            border-radius: 10px 10px 0 0;
+        }
+        #projectscroller {
+            display: flex;
+            padding-top: 5px;
+        }
+        #projectinfo {
+            /* align-self: stretch; */
+            height: 95%; /* TODO: FIX THAT */
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+        }
+        .bottom {
+            /* Doesn't work properly but oh well */
+            position: absolute;
+        }
+
+        .projectlogo::after {
+            height: 2px;
+            width: 90px;
+            top: 0px;
+            left: 5px;
+        }
     }
 </style>
