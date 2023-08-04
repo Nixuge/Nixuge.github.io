@@ -65,7 +65,6 @@
     
   </Foldable>
   <Foldable sub={true} title="Tested on 1.8-1.12, any launcher, X11 only.">
-    <!-- <p> -->
     <h3>
       If using 1.8 Forge please use the other method, as all this one does is basically replace your 
       &é"'(- etc... keys by numpad keys while you're running mc.
@@ -153,7 +152,6 @@
 
 
 <Foldable title="Games lagging/being choppy on Nvidia GPUs with seemingly a lot of fps (X11)">
-  <!-- <p> -->
   Install nvidia-settings if not installed:
   <Codeblock>pacman -S nvidia-settings apt install nvidia-settings</Codeblock>
   Open nvidia settings, go to OpenGL settings and turn off "Allow Flipping"<br>
@@ -189,10 +187,9 @@
 </Foldable>
 
 <Foldable title="Single GPU passthrough">
-    For now, follow this: https://github.com/joeknock90/Single-GPU-Passthrough<br
-    />
-    OR https://gitlab.com/risingprismtv/single-gpu-passthrough<br>
-    Will see if I can make a guide myself after.
+  <h2><a href="https://github.com/joeknock90/Single-GPU-Passthrough">Joeknock90's guide</a></h2>
+  <h2><a href="https://github.com/Nixuge/Single-GPU-Passthrough">My guide (win7 support included)</a></h2>
+  <h2><a href="https://gitlab.com/risingprismtv/single-gpu-passthrough">Risingprismtv's guide</a></h2>
 </Foldable>
 
 <Foldable title="Games running slow under wine with high cpu">

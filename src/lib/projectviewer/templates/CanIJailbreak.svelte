@@ -7,3 +7,4 @@ A "simple" website that tells you if your device is jailbreakable or not.
     <li>Xina (rootfull, 15.0-15.1.1)</li>
     <li>Dopamine (rootless, 15.0-15.4.1)</li>
 </ul>
+<h2>Please don't use the website as an absolute reference until it's been eventually rewritten</h2>

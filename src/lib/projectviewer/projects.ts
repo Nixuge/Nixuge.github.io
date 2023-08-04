@@ -20,15 +20,12 @@ export class Project {
     }
     public getComponentPath() {
         return "../lib/projectviewer/templates/" + this.component;
-        // return "./SocialPickerVertical.svelte";
     }
 }
 
-// Honestly not sure if I'd prefeer doing it like that or making components
-// for each one :/
-
 export const important_projects: Array<Project> = [
     new Project("hivebackup", "HiveBackup.png", "Hive Backup", [new Dl("Visit the Website", "https://hivebackup.github.io"), new Dl("Join the Discord", "https://discord.gg/BcEccZr8Db")], "HiveBackup.svelte"),
+    new Project("mineplexbackup", "MineplexBackup.png", "Mineplex Backup", [new Dl("Visit the Website", "https://mineplex.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY")], "MineplexBackup.svelte"),
     new Project("mediagrabber", "Shortcuts.png", "MediaGrabber", new Dl("Website", "https://mediagrabber.nixuge.me"), "MediaGrabber.svelte"),
     new Project("mcproxy", "MCProxy.png", "MCProxy", new Dl("Website link (download, instructions)", "https://mcdl.nixuge.me"), "MCProxy.svelte"),
     new Project("canijb", "Cydia.png", "CanIJailbreak", new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me"), "CanIJailbreak.svelte"),
