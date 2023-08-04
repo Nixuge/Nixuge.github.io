@@ -22,7 +22,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: ''
+          BASE_PATH: '/nixuge.github.io'
         run: |
           npm run build
           touch build/.nojekyll
