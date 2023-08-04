@@ -5,18 +5,23 @@
 
 <details class="{sub === true ? 'sub' : ''}">
     <summary>{title}</summary>
-    <slot/>
+    <div id="content">
+        <slot/>
+    </div>
+    
 </details>
 
 <style>
   details {
-    overflow: auto;
     background-color: #333;
     border-radius: 5px;
     margin: 15px;
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
+  }
+  #content {
+    overflow: auto;
   }
   details > summary {
     cursor: pointer;
