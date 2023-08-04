@@ -15,7 +15,7 @@ export class Project {
         links: Dl | Dl[],
         public component: Function
     ) {
-        this.icon_path = "/nixuge.github.io/images/projects/" + icon_filename;
+        this.icon_path = "images/projects/" + icon_filename;
         this.links = (links.constructor.name == "Dl") ? [links] as Dl[] : links as Dl[];
     }
 }
