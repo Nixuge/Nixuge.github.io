@@ -1,8 +1,9 @@
 <script lang="ts">
     import { Project, important_projects, other_projects } from "$lib/projectviewer/projects";
+    import type { ComponentType } from "svelte";
     
-    const showMore = new Project("show_more", "more.png", "", [], "");
-    const showLess = new Project("show_less", "less.png", "", [], "");
+    const showMore = new Project("show_more", "more.png", "", [], () => {});
+    const showLess = new Project("show_less", "less.png", "", [], () => {});
     
     function getClonedArr() {
         return important_projects.map((x) => x);
@@ -12,16 +13,11 @@
     shownProjects.push(showMore)
 
     let selectedProject = shownProjects[0];
+    
+    // Dynamically update shown component
+    let projectComponent: ComponentType;
+    $: selectedProject.component().then((res: any) => projectComponent = res.default);
 
-    let projectComponent: any;
-
-    async function updateComponent() {
-        projectComponent = (await import(/* @vite-ignore */selectedProject.getComponentPath())).default;
-    }
-
-    $: selectedProject, updateComponent();
-
-    const map = new Map<String, HTMLElement>();
 
     function setProject(proj: Project) {
         if (proj.name === "show_more") {
