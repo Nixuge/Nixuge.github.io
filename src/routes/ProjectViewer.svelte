@@ -54,11 +54,14 @@
         <div id="projectinfocontent">
             <svelte:component this={projectComponent} />
         </div>
-        <h2 class="bottom">
-            {#each selectedProject.links as link}
-                <a href="{link.link}">{link.name}</a><br>
-            {/each}
-        </h2>
+        {#if selectedProject.links.length > 0}
+            <h2 class="bottom">
+                {#each selectedProject.links as link}
+                    <a href="{link.link}">{link.name}</a><br>
+                {/each}
+            </h2>
+        {/if}
+
     </div>
 </div>
 
