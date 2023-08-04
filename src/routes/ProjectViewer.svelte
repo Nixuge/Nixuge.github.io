@@ -97,13 +97,10 @@
         background-color: #222;
         overflow: auto;
         border: 1px solid #999;
-        position: relative;
     }
     .bottom {
         background-color: #333333cc;
         padding: 7px;
-        border-radius: 10px;
-        bottom: 0;
         right: 20px;
     }
 
@@ -152,9 +149,12 @@
             height: 100%;
             border-left: none;
             border-radius: 0 15px 15px 0;
+            position: relative;
         }
         .bottom {
             position: fixed;
+            border-radius: 10px;
+            bottom: 0;
         }
 
         .projectlogo::after {
@@ -177,14 +177,14 @@
             padding-top: 5px;
         }
         #projectinfo {
-            /* align-self: stretch; */
-            height: 95%; /* TODO: FIX THAT */
             border-top: none;
             border-radius: 0 0 10px 10px;
+            margin-bottom: 20px;
         }
         .bottom {
-            /* Doesn't work properly but oh well */
-            position: absolute;
+            text-align: center;
+            position: sticky;
+            margin: 0;
         }
 
         .projectlogo::after {

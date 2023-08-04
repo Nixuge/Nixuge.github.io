@@ -26,7 +26,9 @@
     /* * {
         border: 1px solid red;
     } */
-
+    /* TODO again: */
+    /* Have actual items inside of socialpicker move */
+    /* instead of having socialpickerwrap moving instead */
     #socialpicker {
         line-height: 0;
         border-radius: 15px;
