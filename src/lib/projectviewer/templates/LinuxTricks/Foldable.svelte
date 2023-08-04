@@ -10,6 +10,7 @@
 
 <style>
   details {
+    overflow: auto;
     background-color: #333;
     border-radius: 5px;
     margin: 15px;
