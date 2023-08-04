@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Project, important_projects, other_projects } from "$lib/projectviewer/projects";
-    import { onMount } from "svelte";
     
     const showMore = new Project("show_more", "more.png", "", [], "");
     const showLess = new Project("show_less", "less.png", "", [], "");
@@ -44,7 +43,7 @@
     <div id="projectscrollerwrap">
         <div id="projectscroller">
             {#each shownProjects as proj}
-                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)} bind:this={map[proj.name]}>
+                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)}>
                     <img src="{proj.icon_path}" alt={proj.icon_alt}>
                 </div>
             {/each}
@@ -66,9 +65,10 @@
 </div>
 
 <style>
-    * {
-        /* border: 1px solid #01fe40; */
-    }
+    /* debugging => borders on every element */
+    /* * {
+        border: 1px solid #01fe40;
+    } */
     #projectviewer {
         margin-left: 175px;
         height: 100%;

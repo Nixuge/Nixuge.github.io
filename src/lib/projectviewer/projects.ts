@@ -32,7 +32,7 @@ export const important_projects: Array<Project> = [
     new Project("mediagrabber", "Shortcuts.png", "MediaGrabber", new Dl("Website", "https://mediagrabber.nixuge.me"), "MediaGrabber.svelte"),
     new Project("mcproxy", "MCProxy.png", "MCProxy", new Dl("Website link (download, instructions)", "https://mcdl.nixuge.me"), "MCProxy.svelte"),
     new Project("canijb", "Cydia.png", "CanIJailbreak", new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me"), "CanIJailbreak.svelte"),
-    new Project("linuxtricks", "Tux.svg", "LinuxTricks", [], "LinuxTricks.svelte"), // Todo: fix out syntax
+    new Project("linuxtricks", "Tux.svg", "LinuxTricks", [], "LinuxTricks/LinuxTricks.svelte"), // Todo: fix out syntax
     // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
     // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
     // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),

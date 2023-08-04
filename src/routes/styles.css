@@ -15,8 +15,8 @@ body {
     overflow: hidden; /* Dirty, but for some reason HTML overflows at the bottom */
   }
 
-a:visited {
-  color: #008cff;
+a {
+  color: #00ccff;
 }
 a:visited {
   color: #00f7ff;
