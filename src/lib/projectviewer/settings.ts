@@ -1,7 +1,9 @@
-const settings = new Map<String, boolean>;
+import { getCookie, setCookie, stringFromMap } from "$lib/cookies";
 
 export function setBool(setting: string, value: boolean) {
     settings.set(setting, value);
+    // Update the cookie w the config in it
+    setCookie("selected", stringFromMap(settings), 2);
 }
 
 export function getBool(setting: string) {
@@ -18,11 +20,21 @@ export function getBoolAndSetIfUndefined(setting: string, value: boolean) {
     return result;
 }
 
-// Note:
-// Due to dirty coding from me, if you want to have values that are "false" by default,
-// You'll have to set them here beforehand.
-settings.set("Minecraft Mod", false);
+const cookie = getCookie("selected");
+let settings: Map<String, boolean>;
+
+if (cookie == undefined || cookie == null) {
+    settings = new Map();
+    // Due to dirty coding from me, if you want to have values that are "false" by default,
+    // You'll have to set them here beforehand.
+    settings.set("Minecraft Mod", false);
+} else {    
+    settings = new Map(JSON.parse(cookie));
+}
 
 
-// TODO: serialize/deserialize from cookies
-// Note: cookies must have a short (eg 2-5min) expiration
+
+
+// TODO: extend cookie support to:
+// - search text (maybe?)
+// - opened tab
