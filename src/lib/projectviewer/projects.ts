@@ -94,5 +94,37 @@ export const projects: Array<Project> = [
         [],
         [Tag.MISCELANEOUS],
         () => import('./templates/LinuxTricks/LinuxTricks.svelte')
-    )
+    ),
+    new Project(
+        "MultiBind",
+        "mods/MultiBind.png",
+        "MultiBind",
+        [new Dl("Github Page", "https://github.com/Nixuge/MultiBind"), new Dl("Modrinth page", "https://modrinth.com/mod/multibind")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/MultiBind.svelte')
+    ),
+    new Project(
+        "EpicZoomer",
+        "mods/EpicZoomer.webp",
+        "EpicZoomer",
+        [new Dl("Github Page", "https://github.com/Nixuge/EpicZoomer"), new Dl("Modrinth page", "https://modrinth.com/mod/epiczoomer")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/EpicZoomer.svelte')
+    ),
+    new Project(
+        "WorldDownloaderLegacy",
+        "mods/WorldDownloaderLegacy.png",
+        "WorldDownloaderLegacy",
+        [new Dl("Github Page", "https://github.com/Nixuge/WorldDownloaderForge"), new Dl("Modrinth page", "https://modrinth.com/mod/worlddownloaderlegacy")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/WorldDownloaderLegacy.svelte')
+    ),
+    new Project(
+        "ServerlistBufferFixer",
+        "mods/ServerlistBufferFixer.webp",
+        "ServerlistBufferFixer",
+        [new Dl("Github Page", "https://github.com/Nixuge/ServerlistBufferFixer"), new Dl("Modrinth page", "https://modrinth.com/mod/serverlistbufferfixer")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/ServerlistBufferFixer.svelte')
+    ),
 ]
