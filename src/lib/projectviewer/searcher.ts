@@ -12,7 +12,7 @@ import { getBool } from "./settings";
 
 let searchText = "";
 export function setSearchText(search: string) {
-    searchText = search.replaceAll(" ", "");
+    searchText = search.replaceAll(" ", "").toLowerCase();
     updateSearchText();
 }
 

@@ -25,7 +25,7 @@ export class Project {
         public component: Function
     ) {
         this.icon_path = "images/projects/" + icon_filename;
-        this.name_clear = name.replaceAll(" ", "");
+        this.name_clear = name.replaceAll(" ", "").toLowerCase();
     }
 }
 
