@@ -12,7 +12,7 @@
     let shownProjects = getClonedArr();
     shownProjects.push(showMore)
 
-    let selectedProject = shownProjects[0];
+    let selectedProject = shownProjects[1];
     
     // Dynamically update shown component
     let projectComponent: ComponentType;
@@ -20,17 +20,28 @@
 
 
     function setProject(proj: Project) {
-        if (proj.name === "show_more") {
-            const newShownProjects = getClonedArr();
-            newShownProjects.concat(other_projects)
-            newShownProjects.push(showLess)
-            shownProjects = newShownProjects;
-        } else if (proj.name === "show_less") {
-            const newShownProjects = getClonedArr();
-            newShownProjects.push(showMore)
-            shownProjects = newShownProjects;
-        } else {
-            selectedProject = proj;
+        switch (proj.name) {
+            case "settings":
+                //TODO
+                selectedProject = proj;
+                break;
+            
+            case "show_more":
+                const newShownProjectsM = getClonedArr();
+                newShownProjectsM.concat(other_projects)
+                newShownProjectsM.push(showLess)
+                shownProjects = newShownProjectsM;
+                break;
+            
+            case "show_less":
+                const newShownProjectsL = getClonedArr();
+                newShownProjectsL.push(showMore)
+                shownProjects = newShownProjectsL;
+                break;
+        
+            default:
+                selectedProject = proj;
+                break;
         }
     }
 </script>
