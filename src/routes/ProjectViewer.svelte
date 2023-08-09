@@ -5,17 +5,17 @@
     import type { Project } from "$lib/projectviewer/projects";
 
     // Important before trying to load the selectedProject etc
-    updateSearchTags()
+    updateSearchTags();
     
     // Initial selectedProject setup
-    const cookie = getCookie("index")
+    const cookie = getCookie("index");
     const index = (cookie != undefined && $resultsReac.length > Number(cookie)) ? Number(cookie) : 1;
     let selectedProject = $resultsReac[index];
 
     // selectedProject on change
     function setProject(newProject: Project, index: number) {
         selectedProject = newProject;
-        setCookie("index", index, 2)
+        setCookie("index", index, 2);
     }
 
     // Dynamically update shown component

@@ -18,7 +18,7 @@ export function setSearchText(search: string) {
 
 let searchResultTags: Array<Project> = [];
 export function updateSearchTags() {
-    searchResultTags.length = 0    
+    searchResultTags.length = 0;  
     projects.forEach(proj => {
         for (const tag of proj.tags) {
             if (getBool(tag) && !searchResultTags.includes(proj)) {
@@ -39,7 +39,7 @@ export function updateSearchText() {
 
     searchResultTags.forEach(proj => {
         if (proj.name_clear.includes(searchText))
-            searchResultsFinal.push(proj)
+            searchResultsFinal.push(proj);
             searchResultsFinal = searchResultsFinal;
     });
 

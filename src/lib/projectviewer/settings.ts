@@ -10,13 +10,12 @@ export function setBool(setting: string, value: boolean) {
 }
 export function getBool(setting: string) {
     const result = settings.get(setting);
-
     return (result === undefined) ? true : result;
 }
 export function getBoolAndSetIfUndefined(setting: string, value: boolean) {
     const result = settings.get(setting);
     if (result === undefined) {
-        setBool(setting, value)
+        setBool(setting, value);
         return value;
     }
     return result;
