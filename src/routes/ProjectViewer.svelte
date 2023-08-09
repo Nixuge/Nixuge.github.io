@@ -1,18 +1,14 @@
 <script lang="ts">
     import { Project, important_projects, other_projects } from "$lib/projectviewer/projects";
     import type { ComponentType } from "svelte";
-    
-    const showMore = new Project("show_more", "more.png", "", [], () => {});
-    const showLess = new Project("show_less", "less.png", "", [], () => {});
-    
+        
     function getClonedArr() {
         return important_projects.map((x) => x);
     }
 
     let shownProjects = getClonedArr();
-    shownProjects.push(showMore)
 
-    let selectedProject = shownProjects[1];
+    let selectedProject = shownProjects[0];
     
     // Dynamically update shown component
     let projectComponent: ComponentType;
@@ -20,28 +16,10 @@
 
 
     function setProject(proj: Project) {
-        switch (proj.name) {
-            case "settings":
-                //TODO
-                selectedProject = proj;
-                break;
-            
-            case "show_more":
-                const newShownProjectsM = getClonedArr();
-                newShownProjectsM.concat(other_projects)
-                newShownProjectsM.push(showLess)
-                shownProjects = newShownProjectsM;
-                break;
-            
-            case "show_less":
-                const newShownProjectsL = getClonedArr();
-                newShownProjectsL.push(showMore)
-                shownProjects = newShownProjectsL;
-                break;
-        
-            default:
-                selectedProject = proj;
-                break;
+        if (proj.name === "settings") {
+            selectedProject = proj; //todo: fix
+        } else {
+            selectedProject = proj;
         }
     }
 </script>
