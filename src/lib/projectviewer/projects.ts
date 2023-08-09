@@ -183,6 +183,30 @@ export const projects: Array<Project> = [
         [Tag.MCMOD],
         () => import('./templates/mods/AllowSectionSign.svelte')
     ),
+    new Project(
+        "NoSelfControl",
+        "mods/NoSelfControl.png",
+        "NoSelfControl",
+        [new Dl("Github Page", "https://github.com/Nixuge/NoSelfControl"), new Dl("Modrinth page", "https://modrinth.com/mod/noselfcontrol")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/NoSelfControl.svelte')
+    ),
+    new Project(
+        "NoMoreRealms",
+        "mods/NoMoreRealms.png",
+        "NoMoreRealms",
+        [new Dl("Github Page", "https://github.com/Nixuge/NoMoreRealms"), new Dl("Modrinth page", "https://modrinth.com/mod/nomorerealms")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/NoMoreRealms.svelte')
+    ),
+    new Project(
+        "AzSpoof",
+        "mods/AzSpoof.png",
+        "AzSpoof",
+        [new Dl("Github Page", "https://github.com/Nixuge/AzSpoof"), new Dl("Modrinth page", "https://modrinth.com/mod/azspoof")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/AzSpoof.svelte')
+    )
 ]
 
 // new Project(
