@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { ComponentType } from "svelte";
-    import { searchResultFinalReac, updateSearchTags } from "$lib/projectviewer/searcher";
+    import { resultsReac, updateSearchTags } from "$lib/projectviewer/searcher";
     import { getCookie, setCookie } from "$lib/cookies";
     import type { Project } from "$lib/projectviewer/projects";
 
@@ -9,14 +9,10 @@
     
     // Initial selectedProject setup
     const cookie = getCookie("index")
-    let selectedProject: Project;
-    if (cookie != undefined && $searchResultFinalReac.length > Number(cookie)) {
-        selectedProject = $searchResultFinalReac[Number(cookie)];
-    } else {
-        selectedProject = $searchResultFinalReac[1];
-    }
+    const index = (cookie != undefined && $resultsReac.length > Number(cookie)) ? Number(cookie) : 1;
+    let selectedProject = $resultsReac[index];
 
-    // selectedProject change. (indexOf suboptimal!!)
+    // selectedProject on change
     function setProject(newProject: Project, index: number) {
         selectedProject = newProject;
         setCookie("index", index, 2)
@@ -30,7 +26,7 @@
 <div id="projectviewer">
     <div id="projectscrollerwrap">
         <div id="projectscroller">
-            {#each $searchResultFinalReac as proj, i}
+            {#each $resultsReac as proj, i}
                 <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => {setProject(proj, i)}} on:keypress={() => {setProject(proj, i)}}>
                     <img src="{proj.icon_path}" alt={proj.icon_alt}>
                 </div>

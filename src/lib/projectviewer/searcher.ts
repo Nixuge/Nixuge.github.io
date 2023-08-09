@@ -44,10 +44,10 @@ export function updateSearchText() {
     });
 
     // Only set to reactive at the end to avoid useless updates
-    searchResultFinalReac.set(searchResultsFinal); 
+    resultsReac.set(searchResultsFinal); 
 }
 
 
 let searchResultsFinal: Project[] = [];
 // writables works like a "let" in svelte files (same reactivity)
-export const searchResultFinalReac: Writable<Project[]> = writable([]);
+export const resultsReac: Writable<Project[]> = writable([]);
