@@ -1,6 +1,7 @@
 import { writable, type Writable } from "svelte/store";
 import { projects, Project, settingsProj } from "./projects";
 import { getBool } from "./settings";
+import { setCookie } from "$lib/cookies";
 
 // Note:
 // This isn't really optimized as it recalculates everything every character change
@@ -14,6 +15,7 @@ let searchText = "";
 export function setSearchText(search: string) {
     searchText = search.replaceAll(" ", "").toLowerCase();
     updateSearchText();
+    setCookie("search", searchText, 2)
 }
 
 let searchResultTags: Array<Project> = [];

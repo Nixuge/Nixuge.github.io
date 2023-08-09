@@ -1,7 +1,10 @@
 <script lang="ts">
+    import { getCookie } from "$lib/cookies";
     import { setSearchText } from "$lib/projectviewer/searcher";
 
-    let search = "";
+    const cookie = getCookie("search");
+
+    let search = (cookie === undefined) ? "" : cookie;
     $: setSearchText(search);
 </script>
 
