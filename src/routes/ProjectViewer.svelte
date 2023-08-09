@@ -1,12 +1,27 @@
 <script lang="ts">
     import type { ComponentType } from "svelte";
     import { searchResultFinalReac, updateSearchTags } from "$lib/projectviewer/searcher";
+    import { getCookie, setCookie } from "$lib/cookies";
+    import type { Project } from "$lib/projectviewer/projects";
 
     // Important before trying to load the selectedProject etc
     updateSearchTags()
     
-    let selectedProject = $searchResultFinalReac[1];
-    
+    // Initial selectedProject setup
+    const cookie = getCookie("index")
+    let selectedProject: Project;
+    if (cookie != undefined && $searchResultFinalReac.length > Number(cookie)) {
+        selectedProject = $searchResultFinalReac[Number(cookie)];
+    } else {
+        selectedProject = $searchResultFinalReac[1];
+    }
+
+    // selectedProject change. (indexOf suboptimal!!)
+    function setProject(newProject: Project, index: number) {
+        selectedProject = newProject;
+        setCookie("index", index, 2)
+    }
+
     // Dynamically update shown component
     let projectComponent: ComponentType;
     $: selectedProject.component().then((res: any) => projectComponent = res.default);
@@ -15,8 +30,8 @@
 <div id="projectviewer">
     <div id="projectscrollerwrap">
         <div id="projectscroller">
-            {#each $searchResultFinalReac as proj}
-                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => {selectedProject = proj}} on:keypress={() => {selectedProject = proj}}>
+            {#each $searchResultFinalReac as proj, i}
+                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => {setProject(proj, i)}} on:keypress={() => {setProject(proj, i)}}>
                     <img src="{proj.icon_path}" alt={proj.icon_alt}>
                 </div>
             {/each}

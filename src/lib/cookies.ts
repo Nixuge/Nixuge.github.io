@@ -19,7 +19,7 @@ export function setCookie(name: string, value: any , minutes: number) {
 }
 export function getCookie(name: string) {
     if (!browser)
-        return;
+        return undefined;
 
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -28,5 +28,5 @@ export function getCookie(name: string) {
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
-    return null;
+    return undefined;
 }

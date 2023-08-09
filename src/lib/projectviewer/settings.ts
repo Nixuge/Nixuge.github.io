@@ -1,11 +1,13 @@
 import { getCookie, setCookie, stringFromMap } from "$lib/cookies";
 
+// Initialized @ bottom
+let settings: Map<String, boolean>;
+
 export function setBool(setting: string, value: boolean) {
     settings.set(setting, value);
     // Update the cookie w the config in it
     setCookie("selected", stringFromMap(settings), 2);
 }
-
 export function getBool(setting: string) {
     const result = settings.get(setting);
 
@@ -21,9 +23,7 @@ export function getBoolAndSetIfUndefined(setting: string, value: boolean) {
 }
 
 const cookie = getCookie("selected");
-let settings: Map<String, boolean>;
-
-if (cookie == undefined || cookie == null) {
+if (cookie == undefined) {
     settings = new Map();
     // Due to dirty coding from me, if you want to have values that are "false" by default,
     // You'll have to set them here beforehand.
