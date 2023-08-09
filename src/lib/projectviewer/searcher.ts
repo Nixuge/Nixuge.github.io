@@ -1,7 +1,7 @@
 import { writable, type Writable } from "svelte/store";
 import { projects, Project, settingsProj } from "./projects";
 import { getBool } from "./settings";
-import { setCookie } from "$lib/cookies";
+import { getCookie, setCookie } from "$lib/cookies";
 
 // Note:
 // This isn't really optimized as it recalculates everything every character change
@@ -11,11 +11,18 @@ import { setCookie } from "$lib/cookies";
 // Still, it caches the tag search, and uses that one when searching for text
 // instead of re-finding everything every time
 
-let searchText = "";
-export function setSearchText(search: string) {
+const cookie = getCookie("search");
+let searchText = (cookie === undefined) ? "" : cookie;
+
+export function setSearchText(search: string | undefined) {
+    if (search === undefined)
+        return;
     searchText = search.replaceAll(" ", "").toLowerCase();
     updateSearchText();
-    setCookie("search", searchText, 2)
+    setCookie("search", searchText, 2);
+}
+export function getSearchText() {
+    return searchText;
 }
 
 let searchResultTags: Array<Project> = [];
@@ -32,9 +39,6 @@ export function updateSearchTags() {
     updateSearchText();
 }
 
-
-
-
 export function updateSearchText() {
     searchResultsFinal.length = 0;
     searchResultsFinal.push(settingsProj);
@@ -46,7 +50,7 @@ export function updateSearchText() {
     });
 
     // Only set to reactive at the end to avoid useless updates
-    resultsReac.set(searchResultsFinal); 
+    resultsReac.set(searchResultsFinal);
 }
 
 
