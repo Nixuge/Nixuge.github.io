@@ -127,4 +127,45 @@ export const projects: Array<Project> = [
         [Tag.MCMOD],
         () => import('./templates/mods/ServerlistBufferFixer.svelte')
     ),
+    new Project(
+        "RessourcePackCommand",
+        "mods/RessourcePackCommand.webp",
+        "RessourcePackCommand",
+        [new Dl("Github Page", "https://github.com/Nixuge/RessourcePackCommand"), new Dl("Modrinth page", "https://modrinth.com/mod/ressourcepackcommand")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/RessourcePackCommand.svelte')
+    ),
+    new Project(
+        "NumericalTabPing",
+        "mods/NumericalTabPing.png",
+        "NumericalTabPing",
+        [new Dl("Github Page", "https://github.com/Nixuge/NumericalTabPing"), new Dl("Modrinth page", "https://modrinth.com/mod/numericaltabping")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/NumericalTabPing.svelte')
+    ),
+    new Project(
+        "NoChatHide",
+        "mods/NoChatHide.png",
+        "NoChatHide",
+        [new Dl("Github Page", "https://github.com/Nixuge/NoChatHide"), new Dl("Modrinth page", "https://modrinth.com/mod/nochathide")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/NoChatHide.svelte')
+    ),
+    new Project(
+        "SuperchargedChunkLoading",
+        "mods/SuperchargedChunkLoading.webp",
+        "SuperchargedChunkLoading",
+        [new Dl("Github Page", "https://github.com/Nixuge/SuperchargedChunkLoading"), new Dl("Modrinth page", "https://modrinth.com/mod/superchargedchunkloading")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/SuperchargedChunkLoading.svelte')
+    ),
 ]
+
+// new Project(
+//     "ServerlistBufferFixer",
+//     "mods/ServerlistBufferFixer.webp",
+//     "ServerlistBufferFixer",
+//     [new Dl("Github Page", "https://github.com/Nixuge/ServerlistBufferFixer"), new Dl("Modrinth page", "https://modrinth.com/mod/serverlistbufferfixer")],
+//     [Tag.MCMOD],
+//     () => import('./templates/mods/ServerlistBufferFixer.svelte')
+// ),
