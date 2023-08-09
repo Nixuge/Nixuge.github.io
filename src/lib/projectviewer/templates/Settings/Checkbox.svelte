@@ -1,12 +1,12 @@
 <script lang="ts">
     import { updateSearchTags } from "$lib/projectviewer/searcher";
-    import { setBool, getBoolOrUndefined } from "$lib/projectviewer/settings";
+    import { setBool, getBoolAndSetIfUndefined } from "$lib/projectviewer/settings";
 
     export let setting: string;
-    export let value: boolean = true; //for some reason the bind is inverted
-
+    export let value: boolean = true;
+    
     // On init, basically if existing reload value from config
-    const configVal = getBoolOrUndefined(setting);
+    const configVal = getBoolAndSetIfUndefined(setting, value);
     if (configVal !== undefined) {
         value = configVal;
     }
@@ -16,7 +16,6 @@
         setBool(setting, value);
         updateSearchTags();
     }
-
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -39,6 +38,7 @@
         background-color: rgba(0, 0, 0, .2);
     }
     .checkbox {
+        cursor: pointer;
         width: 1.2rem;
         height: 1.2rem;
     }

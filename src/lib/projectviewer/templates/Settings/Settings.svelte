@@ -12,7 +12,7 @@
 <h2>Tags</h2>
 <div id="tagsettings">
     {#each Object.values(Tag) as tag}
-        <Checkbox setting={tag} />
+        <Checkbox setting={tag} value={tag == "Minecraft Mod" ? false : undefined} /> <!-- bit of a dirty check, will do for now -->
     {/each}
 </div>
 
