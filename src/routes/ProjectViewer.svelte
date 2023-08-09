@@ -1,34 +1,22 @@
 <script lang="ts">
-    import { Project, important_projects } from "$lib/projectviewer/projects";
     import type { ComponentType } from "svelte";
-        
-    function getClonedArr() {
-        return important_projects.map((x) => x);
-    }
+    import { searchResultFinalReac, updateSearchTags } from "$lib/projectviewer/searcher";
 
-    let shownProjects = getClonedArr();
-
-    let selectedProject = shownProjects[0];
+    // Important before trying to load the selectedProject etc
+    updateSearchTags()
+    
+    let selectedProject = $searchResultFinalReac[1];
     
     // Dynamically update shown component
     let projectComponent: ComponentType;
     $: selectedProject.component().then((res: any) => projectComponent = res.default);
-
-
-    function setProject(proj: Project) {
-        if (proj.name === "settings") {
-            selectedProject = proj; //todo: fix
-        } else {
-            selectedProject = proj;
-        }
-    }
 </script>
 
 <div id="projectviewer">
     <div id="projectscrollerwrap">
         <div id="projectscroller">
-            {#each shownProjects as proj}
-                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => setProject(proj)} on:keypress={() => setProject(proj)}>
+            {#each $searchResultFinalReac as proj}
+                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => {selectedProject = proj}} on:keypress={() => {selectedProject = proj}}>
                     <img src="{proj.icon_path}" alt={proj.icon_alt}>
                 </div>
             {/each}

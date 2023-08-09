@@ -1,5 +1,12 @@
+<script lang="ts">
+    import { setSearchText } from "$lib/projectviewer/searcher";
+
+    let search = "";
+    $: setSearchText(search);
+</script>
+
 <div id="searchbarwrapper">
-    <input id="searchbar" type="text" placeholder="Search for a project">
+    <input id="searchbar" type="text" placeholder="Search for a project" bind:value={search}>
 </div>
 
 <style>

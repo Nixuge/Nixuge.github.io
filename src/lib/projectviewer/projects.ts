@@ -15,6 +15,7 @@ export enum Tag {
 
 export class Project {
     icon_path: string
+    name_clear: string
     constructor(
         public name: string,
         icon_filename: string,
@@ -24,10 +25,20 @@ export class Project {
         public component: Function
     ) {
         this.icon_path = "images/projects/" + icon_filename;
+        this.name_clear = name.replaceAll(" ", "");
     }
 }
 
-export const important_projects: Array<Project> = [
+
+export const settingsProj = new Project("Settings",
+    "settings.png",
+    "Settings",
+    [],
+    [],
+    () => import('./templates/Settings/Settings.svelte')
+)
+
+export const projects: Array<Project> = [
     new Project(
         "Settings",
         "settings.png",
@@ -83,17 +94,5 @@ export const important_projects: Array<Project> = [
         [],
         [Tag.MISCELANEOUS],
         () => import('./templates/LinuxTricks/LinuxTricks.svelte')
-    ),
-    
-
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-    // new Project("hivebackup", "HiveBackup.png", "Hive Backup", "The Hive Backup Project", "hello!!!"),
-
+    )
 ]

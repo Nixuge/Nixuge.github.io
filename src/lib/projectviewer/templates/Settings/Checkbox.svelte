@@ -1,12 +1,20 @@
 <script lang="ts">
-    import { setBool } from "$lib/projectviewer/settings";
+    import { updateSearchTags } from "$lib/projectviewer/searcher";
+    import { setBool, getBoolOrUndefined } from "$lib/projectviewer/settings";
 
     export let setting: string;
     export let value: boolean = true; //for some reason the bind is inverted
 
+    // On init, basically if existing reload value from config
+    const configVal = getBoolOrUndefined(setting);
+    if (configVal !== undefined) {
+        value = configVal;
+    }
+
     function toggle() {
         value = !value;
         setBool(setting, value);
+        updateSearchTags();
     }
 
 </script>
