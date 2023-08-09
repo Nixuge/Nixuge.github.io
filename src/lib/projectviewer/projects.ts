@@ -159,6 +159,30 @@ export const projects: Array<Project> = [
         [Tag.MCMOD],
         () => import('./templates/mods/SuperchargedChunkLoading.svelte')
     ),
+    new Project(
+        "NoMoreWeather",
+        "mods/NoMoreWeather.webp",
+        "NoMoreWeather",
+        [new Dl("Github Page", "https://github.com/Nixuge/NoMoreWeather"), new Dl("Modrinth page", "https://modrinth.com/mod/nomoreweather")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/NoMoreWeather.svelte')
+    ),
+    new Project(
+        "QuitConfirm",
+        "mods/QuitConfirm.png",
+        "QuitConfirm",
+        [new Dl("Github Page", "https://github.com/Nixuge/QuitConfirm"), new Dl("Modrinth page", "https://modrinth.com/mod/quitconfirm")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/QuitConfirm.svelte')
+    ),
+    new Project(
+        "AllowSectionSign",
+        "mods/AllowSectionSign.webp",
+        "AllowSectionSign",
+        [new Dl("Github Page", "https://github.com/Nixuge/AllowSectionSign"), new Dl("Modrinth page", "https://modrinth.com/mod/allowsectionsign")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/AllowSectionSign.svelte')
+    ),
 ]
 
 // new Project(
