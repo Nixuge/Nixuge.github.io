@@ -19,6 +19,8 @@
 
 <style>
     .tag {
+        white-space: nowrap;
+        overflow: auto;
         transition: 100ms;
         cursor: pointer;
         font-size: 1.5rem;

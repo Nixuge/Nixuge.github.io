@@ -5,7 +5,12 @@ export function setBool(setting: string, value: boolean) {
 }
 
 export function getBool(setting: string) {
-    return settings.get(setting);
+    const result = settings.get(setting);
+    if (result === undefined) {
+        setBool(setting, true);
+        return true;
+    }
+    return result;
 }
 
 // TODO: serialize/deserialize from cookies

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Project, important_projects, other_projects } from "$lib/projectviewer/projects";
+    import { Project, important_projects } from "$lib/projectviewer/projects";
     import type { ComponentType } from "svelte";
         
     function getClonedArr() {
