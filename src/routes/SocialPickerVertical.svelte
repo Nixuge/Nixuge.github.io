@@ -60,6 +60,8 @@
             width: min-content;
         }
         #verticaltitle {
+            flex-shrink: 0; /* Fix an annoying FF bug */
+            
             text-align: center;
             text-orientation: upright;
             writing-mode: vertical-rl;
@@ -72,6 +74,8 @@
             width: min-content;
         }
         #socialpickerwrap {
+            flex-shrink: 0; /* Fix an annoying FF bug */
+
             max-height: 100%;
             margin-left: 10px;
         }
