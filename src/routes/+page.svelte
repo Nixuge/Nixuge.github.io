@@ -4,12 +4,7 @@
     import SocialPickerVertical from './SocialPickerVertical.svelte';
 </script>
 
-<!-- TODO: -->
-<!-- mobile/vertical mode -->
-
-<!-- <p>Visit <a href="/linuxtricks">dsfsdf</a> to read the documentation</p> -->
 <div id="content">
-    <!-- <h1>Nioxuge.me</h1> -->
     <SocialPickerVertical />
     <ProjectViewer />
 </div>

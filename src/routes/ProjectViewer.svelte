@@ -12,6 +12,13 @@
     const index = (cookie != undefined && $resultsReac.length > Number(cookie)) ? Number(cookie) : 1;
     let selectedProject = $resultsReac[index];
 
+    // Import the project component on hover
+    // May (a bit) negatively impact performances (loading unneeded components), 
+    // but makes load times obviously better 
+    function loadProject(project: Project) {
+        project.component()
+    }
+
     // selectedProject on change
     function setProject(newProject: Project, index: number) {
         selectedProject = newProject;
@@ -27,7 +34,12 @@
     <div id="projectscrollerwrap">
         <div id="projectscroller">
             {#each $resultsReac as proj, i}
-                <div class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" role="presentation" on:click={() => {setProject(proj, i)}} on:keypress={() => {setProject(proj, i)}}>
+                <div role="presentation"
+                    class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" 
+                    on:click={() => {setProject(proj, i)}} 
+                    on:keypress={() => {setProject(proj, i)}} 
+                    on:mouseenter={() => {loadProject(proj)}}
+                >
                     <img src="{proj.icon_path}" alt={proj.icon_alt}>
                 </div>
             {/each}
