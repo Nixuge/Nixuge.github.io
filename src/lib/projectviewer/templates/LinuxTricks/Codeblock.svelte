@@ -1,4 +1,4 @@
-<div  class="codeblock">
+<div class="codeblock">
     <slot />
 </div>
 

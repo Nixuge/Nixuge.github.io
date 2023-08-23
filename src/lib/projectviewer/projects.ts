@@ -22,7 +22,8 @@ export class Project {
         public icon_alt: string,
         public links: Dl[],
         public tags: Tag[],
-        public component: Function
+        public component: Function,
+        public important: boolean = false
     ) {
         this.icon_path = "images/projects/" + icon_filename;
         this.name_clear = name.replaceAll(" ", "").toLowerCase();
@@ -37,23 +38,23 @@ export const settingsProj = new Project("Settings",
     [],
     () => import('./templates/Settings/Settings.svelte')
 )
+export const presentationProj = new Project("About",
+    "About.png",
+    "About",
+    [],
+    [],
+    () => import('./templates/About.svelte'),
+    true
+)
 
 export const projects: Array<Project> = [
-    new Project(
-        "Settings",
-        "settings.png",
-        "Settings",
-        [],
-        [],
-        () => import('./templates/Settings/Settings.svelte')
-    ),
     new Project(
         "Hive Backup",
         "HiveBackup.png",
         "Hive Backup",
         [new Dl("Visit the Website", "https://hivebackup.github.io"), new Dl("Join the Discord", "https://discord.gg/BcEccZr8Db")],
         [Tag.MCBACKUP],
-        () => import('./templates/HiveBackup.svelte')
+        () => import('./templates/projects/HiveBackup.svelte')
     ),
     new Project(
         "Mineplex Backup",
@@ -61,7 +62,7 @@ export const projects: Array<Project> = [
         "Mineplex Backup",
         [new Dl("Visit the Website", "https://mineplex.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY")],
         [Tag.MCBACKUP],
-        () => import('./templates/MineplexBackup.svelte')
+        () => import('./templates/projects/MineplexBackup.svelte')
     ),
     new Project(
         "MediaGrabber",
@@ -69,7 +70,7 @@ export const projects: Array<Project> = [
         "MediaGrabber",
         [new Dl("Website", "https://mediagrabber.nixuge.me")],
         [Tag.WEBSITES, Tag.IOS],
-        () => import('./templates/MediaGrabber.svelte')
+        () => import('./templates/projects/MediaGrabber.svelte')
     ),
     new Project(
         "McProxy",
@@ -77,7 +78,7 @@ export const projects: Array<Project> = [
         "MCProxy",
         [new Dl("Website link (download, instructions)", "https://mcdl.nixuge.me")],
         [Tag.WEBSITES, Tag.MISCELANEOUS],
-        () => import('./templates/MCProxy.svelte')
+        () => import('./templates/projects/MCProxy.svelte')
     ),
     new Project(
         "CanIJB",
@@ -85,7 +86,7 @@ export const projects: Array<Project> = [
         "CanIJailbreak",
         [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
         [Tag.WEBSITES],
-        () => import('./templates/CanIJailbreak.svelte')
+        () => import('./templates/projects/CanIJailbreak.svelte')
     ),
     new Project(
         "LinuxTricks",

@@ -9,7 +9,7 @@
     
     // Initial selectedProject setup
     const cookie = getCookie("index");
-    const index = (cookie != undefined && $resultsReac.length > Number(cookie)) ? Number(cookie) : 1;
+    const index = (cookie != undefined && $resultsReac.length > Number(cookie)) ? Number(cookie) : 0;
     let selectedProject = $resultsReac[index];
 
     // Import the project component on hover
@@ -35,7 +35,10 @@
         <div id="projectscroller">
             {#each $resultsReac as proj, i}
                 <div role="presentation"
-                    class="projectlogo {selectedProject.name === proj.name ? 'selectedproject' : ''}" 
+                    class="projectlogo 
+                        {selectedProject.name === proj.name ? 'selectedproject' : ''} 
+                        {proj.important ? 'important' : ''}
+                    " 
                     on:click={() => {setProject(proj, i)}} 
                     on:keypress={() => {setProject(proj, i)}} 
                     on:mouseenter={() => {loadProject(proj)}}
@@ -84,7 +87,6 @@
         position: relative;
         transition: 50ms;
         padding: 5px;
-        border-radius: 15px;
     }
     .projectlogo:hover {
         cursor: pointer;
@@ -162,6 +164,10 @@
             width: 2px;
             top: 5px;
             left: -2px;
+        }
+
+        .important {
+            border-bottom: 2px dotted #fff;
         }
     }
     @media (max-width: 900px) {

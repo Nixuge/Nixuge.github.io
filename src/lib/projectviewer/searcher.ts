@@ -1,5 +1,5 @@
 import { writable, type Writable } from "svelte/store";
-import { projects, Project, settingsProj } from "./projects";
+import { projects, Project, settingsProj, presentationProj } from "./projects";
 import { getBool } from "./settings";
 import { getCookie, setCookie } from "$lib/cookies";
 
@@ -41,7 +41,9 @@ export function updateSearchTags() {
 
 export function updateSearchText() {
     searchResultsFinal.length = 0;
+    searchResultsFinal.push(presentationProj)
     searchResultsFinal.push(settingsProj);
+    
 
     searchResultTags.forEach(proj => {
         if (proj.name_clear.includes(searchText))

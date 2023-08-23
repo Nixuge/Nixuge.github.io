@@ -57,7 +57,7 @@
             float: left;
             align-items: center;
             height: 100%;
-            width: min-content;
+            width: fit-content;
         }
         #verticaltitle {
             flex-shrink: 0; /* Fix an annoying FF bug */
