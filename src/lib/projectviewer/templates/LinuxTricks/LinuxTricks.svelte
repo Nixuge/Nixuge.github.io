@@ -1,6 +1,6 @@
 <script>
-  import Codeblock from "./Codeblock.svelte";
-  import Foldable from "./Foldable.svelte";
+  import Codeblock from "../utils/Codeblock.svelte";
+  import Foldable from "../utils/Foldable.svelte";
 </script>
 
 <h1>A few tricks for casual Linux usage i've found over the years</h1>

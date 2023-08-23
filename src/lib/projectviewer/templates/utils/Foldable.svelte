@@ -1,9 +1,10 @@
 <script lang="ts">
     export let title: string;
     export let sub: boolean = false;
+    export let open: boolean = false;
 </script>
 
-<details class="{sub === true ? 'sub' : ''}">
+<details open={open} class="{sub === true ? 'sub' : ''}">
     <summary>{title}</summary>
     <div id="content">
         <slot/>
@@ -28,6 +29,7 @@
     text-align: center;
     list-style-type: "";
     font-size: 1.5em;
+    margin-bottom: 5px;
   }
 
   details:not(.sub) > summary {
