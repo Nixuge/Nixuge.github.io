@@ -5,6 +5,7 @@
     import TagCheckbox from "./TagCheckbox.svelte";
     import SearchBar from "./SearchBar.svelte";
     import "./checkbox.css";
+    import SettingCheckbox from "./SettingCheckbox.svelte";
 
     // Will do a component if I add too many options
     let inclusion = true;
@@ -15,7 +16,7 @@
         inclusion = configVal;
     }
     
-    function toggle() {
+    function toggleInclusion() {
         inclusion = !inclusion;
         setBoolSetting("inclusion", inclusion);
         updateSearchTags();
@@ -35,13 +36,14 @@
 </div>
 <h2>Other settings</h2>
 <div id="othersettings">
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div class="tag" on:click={toggle} on:keypress={toggle}>
-        <input class="checkbox" type="checkbox" bind:checked={inclusion}>
-        Tag {inclusion ? "inclusion": "exclusion "} mode
-        <br>
-        <span class="optioninfo">{inclusion ? "if an element matches at least one tag you selected, it'll be shown." : "if an element matches a tag you have unselected it won't be shown, even if it matches another selected one."}</span>
-    </div>
+    <SettingCheckbox 
+        key="inclusion" 
+        textTrue="Tag inclusion mode"
+        textFalse = "Tag exclusion mode"
+        subtextTrue = "if an element matches at least one tag you selected, it'll be shown."
+        subtextFalse = "if an element matches a tag you have unselected it won't be shown, even if it matches another selected one."
+        functionAfterToggle = {updateSearchTags}
+    />
 </div>
 
 <style>
@@ -52,12 +54,4 @@
     h2 {
         margin-bottom: 10px;
     }
-    .tag {
-        padding: 10px;
-    }
-    .optioninfo {
-        padding: 0px;
-        font-size: .7em;
-        color: rgb(181, 181, 181)    }
-
 </style>
