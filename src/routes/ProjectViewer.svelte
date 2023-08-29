@@ -71,8 +71,8 @@
 
     #projectscrollerwrap {
         display: flex;
-        border: 1px solid #999;
-        background-color: #222;
+        border: 1px solid var(--border-fade);
+        background-color: var(--background-2);
     }
     #projectscroller {
         overflow: auto;
@@ -96,18 +96,18 @@
         padding: 10px 20px 20px 20px; /* Less padding on top as titles usually already provied part of those */
     }
     #projectinfo {
-        background-color: #222;
+        background-color: var(--background-2);
         overflow: auto;
-        border: 1px solid #999;
+        border: 1px solid var(--border-fade);
     }
     .bottom {
-        background-color: #333333cc;
+        background-color: var(--background-3-slight-transparency);
         padding: 7px;
         right: 20px;
     }
     .disabled {
         pointer-events: none;
-        color: #aaa;
+        color: var(--text-fade-2);
     }
 
     .projectlogo::after {
@@ -118,10 +118,10 @@
         background-color: rgba(0, 0, 0, 0);
     }
     .projectlogo:not(.selectedproject):hover::after {
-        background-color: #ddd;
+        background-color: var(--project-selector-hover);
     }
     .selectedproject:after {
-        background-color: #fff;
+        background-color: var(--project-selector-selected);
     }
     @media (min-width: 901px) {
         #projectviewer {
@@ -144,7 +144,7 @@
             flex-direction: column;
             justify-content: center;
         
-            border-right: 1px dotted #999;
+            border-right: 1px dotted var(--border-fade);
             border-radius: 15px 0 0 15px;
         }
         #projectscroller {
@@ -171,7 +171,7 @@
         }
 
         .important {
-            border-bottom: 2px dotted #fff;
+            border-bottom: 2px dotted var(--border-main);
         }
     }
     @media (max-width: 900px) {

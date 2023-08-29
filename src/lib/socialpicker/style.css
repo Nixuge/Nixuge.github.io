@@ -12,12 +12,12 @@ on how to include a bunch of svgs correctly
 .background,
 .social:hover>.front,
 .social:hover>*>.front {
-    fill: #222
+    fill: var(--social-title-background)
 }
 
 .front,
 .social:hover>.background {
-    fill: #fff
+    fill: var(--social-title-main)
 }
 
 .social {

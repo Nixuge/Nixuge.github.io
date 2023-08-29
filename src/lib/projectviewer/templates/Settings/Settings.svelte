@@ -1,26 +1,12 @@
 <script>
     import { Tag } from "$lib/projectviewer/projects";
-    import { DISABLED_BY_DEFAULT_TAGS, setBoolSetting, getBoolSetting } from "$lib/projectviewer/settings";
+    import { DISABLED_BY_DEFAULT_TAGS } from "$lib/projectviewer/settings";
     import { updateSearchTags } from "$lib/projectviewer/searcher"
+    import { toggleTheme } from "$lib/theme";
     import TagCheckbox from "./TagCheckbox.svelte";
     import SearchBar from "./SearchBar.svelte";
-    import "./checkbox.css";
     import SettingCheckbox from "./SettingCheckbox.svelte";
-
-    // Will do a component if I add too many options
-    let inclusion = true;
-
-    // On init, basically if existing reload value from config
-    const configVal = getBoolSetting("inclusion", true);
-    if (configVal !== undefined) {
-        inclusion = configVal;
-    }
-    
-    function toggleInclusion() {
-        inclusion = !inclusion;
-        setBoolSetting("inclusion", inclusion);
-        updateSearchTags();
-    }
+    import "./checkbox.css";
 </script>
 
 <h1>Search settings</h1>
@@ -43,6 +29,12 @@
         subtextTrue = "if an element matches at least one tag you selected, it'll be shown."
         subtextFalse = "if an element matches a tag you have unselected it won't be shown, even if it matches another selected one."
         functionAfterToggle = {updateSearchTags}
+    />
+    <SettingCheckbox 
+        key="theme" 
+        textTrue="Dark mode"
+        textFalse = "White mode"
+        functionAfterToggle = {toggleTheme}
     />
 </div>
 

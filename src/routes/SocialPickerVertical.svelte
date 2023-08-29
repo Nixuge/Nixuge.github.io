@@ -32,8 +32,9 @@
     #socialpicker {
         line-height: 0;
         border-radius: 15px;
-        background: #222;
-        border: 1px solid #999;
+        background: var(--social-title-background);
+        border: 1px solid var(--border-fade);
+        transition: 120ms;
     }
     #socialpickerwrap {
         border-radius: 15px;
@@ -41,14 +42,16 @@
     }
     #verticaltitle {
         font-size: 2.5em;
-        background: #222;        
+        background: var(--social-title-background);   
+        color: var(--social-title-main);
         border-radius: 10px;
-        border: 1px solid #999;
-        transition: 100ms;
+        border: 1px solid var(--border-fade);
+        transition: 120ms;
     }
+    /* Inverted colors here, so uding text on background & invert */
     #verticaltitle:hover {
-        background-color: #fff;
-        color: #222;
+        background-color: var(--social-title-main);
+        color: var(--social-title-background);
     }
     
     @media (min-width: 901px) {

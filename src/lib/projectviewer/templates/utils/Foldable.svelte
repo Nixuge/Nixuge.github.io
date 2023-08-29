@@ -14,7 +14,7 @@
 
 <style>
   details {
-    background-color: #333;
+    background-color: var(--background-3);
     border-radius: 5px;
     margin: 15px;
     padding: 3px;
@@ -40,6 +40,6 @@
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 5px;
-    background-color: #444;
+    background-color: var(--background-4);
   }
 </style>

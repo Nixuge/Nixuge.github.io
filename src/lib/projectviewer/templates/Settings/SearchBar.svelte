@@ -20,7 +20,7 @@
         background-color: rgba(0, 0, 0, .2);
     }
     #searchbar {
-        color: #fff;
+        color: var(--text-main);
         border: none;
         width: 100%;
         font-size: 1.5rem;

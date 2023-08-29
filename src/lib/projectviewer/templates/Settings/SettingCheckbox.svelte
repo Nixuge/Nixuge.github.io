@@ -20,7 +20,6 @@
         value = !value;
         setBoolSetting(key, value);
         functionAfterToggle();
-        functionAfterToggle();
     }
     
 </script>
@@ -44,6 +43,6 @@
     .optioninfo {
         padding: 0px;
         font-size: .7em;
-        color: rgb(181, 181, 181)    
+        color: var(--text-fade-1)
     }
 </style>

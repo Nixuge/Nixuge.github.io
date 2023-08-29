@@ -1,5 +1,5 @@
 <script lang="ts">
-    import './styles.css';
+    import './style.css';
     import ProjectViewer from './ProjectViewer.svelte';
     import SocialPickerVertical from './SocialPickerVertical.svelte';
 </script>
