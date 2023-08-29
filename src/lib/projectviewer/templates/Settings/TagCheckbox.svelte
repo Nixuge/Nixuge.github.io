@@ -1,6 +1,6 @@
 <script lang="ts">
     import { updateSearchTags } from "$lib/projectviewer/searcher";
-    import { setBoolTag, getBoolTag } from "$lib/projectviewer/settings";
+    import { setBoolTag, getBoolTag } from "$lib/settings";
     import "./checkbox.css";
 
     export let tag: string;

@@ -1,4 +1,4 @@
-import { getBoolSetting } from "./projectviewer/settings";
+import { getBoolSetting } from "./settings";
 
 export function setDarkTheme() {
     document.body.classList.remove("light");

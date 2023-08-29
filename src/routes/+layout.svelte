@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { setWhiteTheme } from '$lib/theme';
-    import { getBoolSetting } from '$lib/projectviewer/settings';
+    import { getBoolSetting } from '$lib/settings';
     import './colors.css'
 
     onMount(() => {

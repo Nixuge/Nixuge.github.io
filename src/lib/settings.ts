@@ -8,16 +8,16 @@ let selected_settings: Map<String, boolean>;
 let selected_tags: Map<String, boolean>;
 
 
-function setBool(usedMap: Map<String, boolean>, map_key: string, value: boolean, cookie_key: string) {
+function setBool(usedMap: Map<String, boolean>, map_key: string, value: boolean, cookie_key: string, expire_after: number = 10) {
     usedMap.set(map_key, value);
     // Update the cookie w the config in it
-    setCookie(cookie_key, stringFromMap(usedMap), 2);
+    setCookie(cookie_key, stringFromMap(usedMap), expire_after);
 }
 export function setBoolTag(tag: string, value: boolean) {
     setBool(selected_tags, tag, value, "selected_tags")
 }
 export function setBoolSetting(setting: string, value: boolean) {
-    setBool(selected_settings, setting, value, "selected_settings")
+    setBool(selected_settings, setting, value, "selected_settings", 60*24*7)
 }
 
 function getBool(usedMap: Map<String, boolean>, setting: string, default_value: boolean, cookie_key: string) {

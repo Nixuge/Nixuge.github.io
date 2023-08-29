@@ -1,6 +1,6 @@
 <script>
     import { Tag } from "$lib/projectviewer/projects";
-    import { DISABLED_BY_DEFAULT_TAGS } from "$lib/projectviewer/settings";
+    import { DISABLED_BY_DEFAULT_TAGS } from "$lib/settings";
     import { updateSearchTags } from "$lib/projectviewer/searcher"
     import { toggleTheme } from "$lib/theme";
     import TagCheckbox from "./TagCheckbox.svelte";

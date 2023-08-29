@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getBoolSetting, setBoolSetting } from "$lib/projectviewer/settings";
+    import { getBoolSetting, setBoolSetting } from "$lib/settings";
     import "./checkbox.css";
 
     export let key: string

@@ -1,7 +1,7 @@
 <script lang="ts">
     import './style.css';
     import ProjectViewer from './ProjectViewer.svelte';
-    import SocialPickerVertical from './SocialPickerVertical.svelte';
+    import SocialPickerVertical from './SocialPicker.svelte';
 </script>
 
 <div id="content">

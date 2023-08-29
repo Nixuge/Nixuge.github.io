@@ -1,6 +1,6 @@
 import { writable, type Writable } from "svelte/store";
 import { projects, Project, settingsProj, presentationProj } from "./projects";
-import { getBoolSetting, getBoolTag } from "./settings";
+import { getBoolSetting, getBoolTag } from "../settings";
 import { getCookie, setCookie } from "$lib/cookies";
 
 // Note:
