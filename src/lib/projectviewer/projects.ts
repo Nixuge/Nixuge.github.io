@@ -1,7 +1,8 @@
 class Dl {
     constructor(
         public name: string,
-        public link: string
+        public link: string,
+        public disabled: boolean = false
     ) { }
 }
 
@@ -63,6 +64,14 @@ export const projects: Array<Project> = [
         [new Dl("Visit the Website", "https://mineplex.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY")],
         [Tag.MCBACKUP],
         () => import('./templates/projects/MineplexBackup.svelte')
+    ),
+    new Project(
+        "Funcraft Backup",
+        "FuncraftBackup.png",
+        "Funcraft Backup",
+        [new Dl("Visit the Website", "https://funcraft.nixuge.me", true), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
+        [Tag.MCBACKUP],
+        () => import('./templates/projects/FuncraftBackup.svelte')
     ),
     new Project(
         "MediaGrabber",

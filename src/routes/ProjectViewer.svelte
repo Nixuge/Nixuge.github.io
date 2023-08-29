@@ -55,7 +55,7 @@
         {#if selectedProject.links.length > 0}
             <h2 class="bottom">
                 {#each selectedProject.links as link}
-                    <a href="{link.link}">{link.name}</a><br>
+                    <a class="{link.disabled ? 'disabled' : ''}" href="{link.link}">{link.name}</a><br>
                 {/each}
             </h2>
         {/if}
@@ -104,6 +104,10 @@
         background-color: #333333cc;
         padding: 7px;
         right: 20px;
+    }
+    .disabled {
+        pointer-events: none;
+        color: #aaa;
     }
 
     .projectlogo::after {

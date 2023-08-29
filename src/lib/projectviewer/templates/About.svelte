@@ -43,11 +43,13 @@
 </div>
 
 <style>
+    /* Minimize margin for first title */
     #hello {
-        margin-top: 20px; /* minimize margin */
+        margin-top: 20px; 
     }
+    /* Bigger font */
     #about {
-        font-size: 1.5em; /* Bigger font */
+        font-size: 1.5em; 
     }
     /* Heights for images */
     /* Multiline = 2xsingline + gap (here 2x85px + 15px) */
