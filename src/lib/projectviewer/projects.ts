@@ -50,6 +50,46 @@ export const presentationProj = new Project("About",
 
 export const projects: Array<Project> = [
     new Project(
+        "MediaGrabber",
+        "Shortcuts.png",
+        "MediaGrabber",
+        [new Dl("Website", "https://mediagrabber.nixuge.me")],
+        [Tag.WEBSITES, Tag.IOS],
+        () => import('./templates/projects/MediaGrabber.svelte')
+    ),
+    new Project(
+        "McProxy",
+        "MCProxy.png",
+        "MCProxy",
+        [new Dl("Website link (download, instructions)", "https://mcdl.nixuge.me")],
+        [Tag.WEBSITES, Tag.MISCELANEOUS],
+        () => import('./templates/projects/MCProxy.svelte')
+    ),
+    new Project(
+        "HowOldIs",
+        "HowOldIs.png",
+        "HowOldIs",
+        [],
+        [Tag.WEBSITES, Tag.MISCELANEOUS],
+        () => import('./templates/HowOldIs/HowOldIs.svelte')
+    ),
+    new Project(
+        "CanIJB",
+        "Cydia.png",
+        "CanIJailbreak",
+        [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
+        [Tag.WEBSITES],
+        () => import('./templates/projects/CanIJailbreak.svelte')
+    ),
+    new Project(
+        "LinuxTricks",
+        "Tux.svg",
+        "LinuxTricks",
+        [],
+        [Tag.MISCELANEOUS],
+        () => import('./templates/LinuxTricks/LinuxTricks.svelte')
+    ),
+    new Project(
         "Hive Backup",
         "HiveBackup.png",
         "Hive Backup",
@@ -72,38 +112,6 @@ export const projects: Array<Project> = [
         [new Dl("Visit the Website", "https://funcraft.nixuge.me", true), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
         [Tag.MCBACKUP],
         () => import('./templates/projects/FuncraftBackup.svelte')
-    ),
-    new Project(
-        "MediaGrabber",
-        "Shortcuts.png",
-        "MediaGrabber",
-        [new Dl("Website", "https://mediagrabber.nixuge.me")],
-        [Tag.WEBSITES, Tag.IOS],
-        () => import('./templates/projects/MediaGrabber.svelte')
-    ),
-    new Project(
-        "McProxy",
-        "MCProxy.png",
-        "MCProxy",
-        [new Dl("Website link (download, instructions)", "https://mcdl.nixuge.me")],
-        [Tag.WEBSITES, Tag.MISCELANEOUS],
-        () => import('./templates/projects/MCProxy.svelte')
-    ),
-    new Project(
-        "CanIJB",
-        "Cydia.png",
-        "CanIJailbreak",
-        [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
-        [Tag.WEBSITES],
-        () => import('./templates/projects/CanIJailbreak.svelte')
-    ),
-    new Project(
-        "LinuxTricks",
-        "Tux.svg",
-        "LinuxTricks",
-        [],
-        [Tag.MISCELANEOUS],
-        () => import('./templates/LinuxTricks/LinuxTricks.svelte')
     ),
     new Project(
         "MultiBind",
