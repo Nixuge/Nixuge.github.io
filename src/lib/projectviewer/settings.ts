@@ -1,5 +1,7 @@
 import { getCookie, setCookie, stringFromMap } from "$lib/cookies";
 
+export const DISABLED_BY_DEFAULT_TAGS = ["Minecraft Mod"]
+
 // Initialized @ bottom
 let settings: Map<String, boolean>;
 
@@ -24,9 +26,9 @@ export function getBoolAndSetIfUndefined(setting: string, value: boolean) {
 const cookie = getCookie("selected");
 if (cookie == undefined) {
     settings = new Map();
-    // Due to dirty coding from me, if you want to have values that are "false" by default,
-    // You'll have to set them here beforehand.
-    settings.set("Minecraft Mod", false);
+    DISABLED_BY_DEFAULT_TAGS.forEach(tag => {
+        settings.set(tag, false);
+    });
 } else {    
     settings = new Map(JSON.parse(cookie));
 }

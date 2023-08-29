@@ -2,6 +2,7 @@
     import { Tag } from "$lib/projectviewer/projects";
     import Checkbox from "./Checkbox.svelte";
     import SearchBar from "./SearchBar.svelte";
+    import { DISABLED_BY_DEFAULT_TAGS } from "$lib/projectviewer/settings";
 </script>
 
 <h1>Search settings</h1>
@@ -12,7 +13,7 @@
 <h2>Tags</h2>
 <div id="tagsettings">
     {#each Object.values(Tag) as tag}
-        <Checkbox setting={tag} value={tag == "Minecraft Mod" ? false : undefined} /> <!-- bit of a dirty check, will do for now -->
+        <Checkbox setting={tag} value={DISABLED_BY_DEFAULT_TAGS.includes(tag) ? false : undefined} />
     {/each}
 </div>
 
