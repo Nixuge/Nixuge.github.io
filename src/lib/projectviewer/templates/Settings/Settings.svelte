@@ -1,8 +1,25 @@
 <script>
     import { Tag } from "$lib/projectviewer/projects";
-    import Checkbox from "./Checkbox.svelte";
+    import { DISABLED_BY_DEFAULT_TAGS, setBoolSetting, getBoolSetting } from "$lib/projectviewer/settings";
+    import { updateSearchTags } from "$lib/projectviewer/searcher"
+    import TagCheckbox from "./TagCheckbox.svelte";
     import SearchBar from "./SearchBar.svelte";
-    import { DISABLED_BY_DEFAULT_TAGS } from "$lib/projectviewer/settings";
+    import "./checkbox.css";
+
+    // Will do a component if I add too many options
+    let inclusion = true;
+
+    // On init, basically if existing reload value from config
+    const configVal = getBoolSetting("inclusion", true);
+    if (configVal !== undefined) {
+        inclusion = configVal;
+    }
+    
+    function toggle() {
+        inclusion = !inclusion;
+        setBoolSetting("inclusion", inclusion);
+        updateSearchTags();
+    }
 </script>
 
 <h1>Search settings</h1>
@@ -13,8 +30,18 @@
 <h2>Tags</h2>
 <div id="tagsettings">
     {#each Object.values(Tag) as tag}
-        <Checkbox setting={tag} value={DISABLED_BY_DEFAULT_TAGS.includes(tag) ? false : undefined} />
+        <TagCheckbox tag={tag} value={DISABLED_BY_DEFAULT_TAGS.includes(tag) ? false : undefined} />
     {/each}
+</div>
+<h2>Other settings</h2>
+<div id="othersettings">
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <div class="tag" on:click={toggle} on:keypress={toggle}>
+        <input class="checkbox" type="checkbox" bind:checked={inclusion}>
+        Tag {inclusion ? "inclusion": "exclusion "} mode
+        <br>
+        <span class="optioninfo">{inclusion ? "if an element matches at least one tag you selected, it'll be shown." : "if an element matches a tag you have unselected it won't be shown, even if it matches another selected one."}</span>
+    </div>
 </div>
 
 <style>
@@ -25,4 +52,12 @@
     h2 {
         margin-bottom: 10px;
     }
+    .tag {
+        padding: 10px;
+    }
+    .optioninfo {
+        padding: 0px;
+        font-size: .7em;
+        color: rgb(181, 181, 181)    }
+
 </style>

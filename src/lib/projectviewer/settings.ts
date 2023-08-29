@@ -1,41 +1,56 @@
 import { getCookie, setCookie, stringFromMap } from "$lib/cookies";
 
-export const DISABLED_BY_DEFAULT_TAGS = ["Minecraft Mod"]
+export const DISABLED_BY_DEFAULT_TAGS = ["Minecraft Mod"];
+// export const DISABLED_BY_DEFAULT_SETTINGS = []; unused for now as unneeded.
 
 // Initialized @ bottom
-let settings: Map<String, boolean>;
+let selected_settings: Map<String, boolean>;
+let selected_tags: Map<String, boolean>;
 
-export function setBool(setting: string, value: boolean) {
-    settings.set(setting, value);
+
+function setBool(usedMap: Map<String, boolean>, map_key: string, value: boolean, cookie_key: string) {
+    usedMap.set(map_key, value);
     // Update the cookie w the config in it
-    setCookie("selected", stringFromMap(settings), 2);
+    setCookie(cookie_key, stringFromMap(usedMap), 2);
 }
-export function getBool(setting: string) {
-    const result = settings.get(setting);
-    return (result === undefined) ? true : result;
+export function setBoolTag(tag: string, value: boolean) {
+    setBool(selected_tags, tag, value, "selected_tags")
 }
-export function getBoolAndSetIfUndefined(setting: string, value: boolean) {
-    const result = settings.get(setting);
+export function setBoolSetting(setting: string, value: boolean) {
+    setBool(selected_settings, setting, value, "selected_settings")
+}
+
+function getBool(usedMap: Map<String, boolean>, setting: string, default_value: boolean, cookie_key: string) {
+    const result = usedMap.get(setting);
     if (result === undefined) {
-        setBool(setting, value);
-        return value;
+        setBool(usedMap, setting, default_value, cookie_key);
+        return default_value;
     }
     return result;
 }
-
-const cookie = getCookie("selected");
-if (cookie == undefined) {
-    settings = new Map();
-    DISABLED_BY_DEFAULT_TAGS.forEach(tag => {
-        settings.set(tag, false);
-    });
-} else {    
-    settings = new Map(JSON.parse(cookie));
+export function getBoolSetting(setting: string, default_value: boolean = true) {
+    return getBool(selected_settings, setting, default_value, "selected_settings")
+}
+export function getBoolTag(setting: string, default_value: boolean = true) {
+    return getBool(selected_tags, setting, default_value, "selected_tags")
 }
 
+
+// If I add disabled settings by default, would need to do that for both
+const tag_cookie = getCookie("selected_tags");
+if (tag_cookie == undefined) {
+    selected_tags = new Map();
+    DISABLED_BY_DEFAULT_TAGS.forEach(tag => {
+        selected_tags.set(tag, false);
+    });
+} else {    
+    selected_tags = new Map(JSON.parse(tag_cookie));
+}
+
+const setting_cookie = getCookie("selected_settings");
+selected_settings = (setting_cookie === undefined) ? new Map() : new Map(JSON.parse(setting_cookie));
 
 
 
 // TODO: extend cookie support to:
 // - search text (maybe?)
-// - opened tab

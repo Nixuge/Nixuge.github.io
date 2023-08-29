@@ -1,6 +1,6 @@
 import { writable, type Writable } from "svelte/store";
 import { projects, Project, settingsProj, presentationProj } from "./projects";
-import { getBool } from "./settings";
+import { getBoolSetting, getBoolTag } from "./settings";
 import { getCookie, setCookie } from "$lib/cookies";
 
 // Note:
@@ -25,17 +25,38 @@ export function getSearchText() {
     return searchText;
 }
 
-let searchResultTags: Array<Project> = [];
-export function updateSearchTags() {
-    searchResultTags.length = 0;  
+let searchResultsTagStep: Array<Project> = [];
+function updateSearchTagsExclusive() {
+    projects.forEach(proj => {
+        let shown = true;
+        for (const tag of proj.tags) {
+            if (!getBoolTag(tag) || searchResultsTagStep.includes(proj)) {
+                shown = false;
+                break;
+            }
+        }
+        if (shown)
+            searchResultsTagStep.push(proj);
+    });
+}
+function updateSearchTagsInclusive() {
     projects.forEach(proj => {
         for (const tag of proj.tags) {
-            if (getBool(tag) && !searchResultTags.includes(proj)) {
-                searchResultTags.push(proj);
+            if (getBoolTag(tag) && !searchResultsTagStep.includes(proj)) {
+                searchResultsTagStep.push(proj);
                 break;
             }
         }
     });
+}
+export function updateSearchTags() {
+    searchResultsTagStep.length = 0;
+    
+    if (getBoolSetting("inclusion"))
+        updateSearchTagsInclusive()
+    else
+        updateSearchTagsExclusive()
+    
     updateSearchText();
 }
 
@@ -45,7 +66,7 @@ export function updateSearchText() {
     searchResultsFinal.push(settingsProj);
     
 
-    searchResultTags.forEach(proj => {
+    searchResultsTagStep.forEach(proj => {
         if (proj.name_clear.includes(searchText))
             searchResultsFinal.push(proj);
             searchResultsFinal = searchResultsFinal;
