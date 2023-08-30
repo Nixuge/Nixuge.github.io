@@ -21,6 +21,7 @@
 </script>
 
 <div>
+    <h1>How old are some old things?</h1>
     <Foldable title="Minecraft" open={true}>
         <hr>
             {#each oldMinecraftElements as oldElement}
