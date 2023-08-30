@@ -109,7 +109,7 @@ export const projects: Array<Project> = [
         "Funcraft Backup",
         "FuncraftBackup.png",
         "Funcraft Backup",
-        [new Dl("Visit the Website", "https://funcraft.nixuge.me", true), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
+        [new Dl("Visit the Website (alpha)", "https://funcraft.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
         [Tag.MCBACKUP],
         () => import('./templates/projects/FuncraftBackup.svelte')
     ),
