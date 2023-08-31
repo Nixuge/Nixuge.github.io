@@ -10,6 +10,7 @@ export enum Tag {
     MCMOD = "Minecraft Mod",
     MCBACKUP = "Minecraft Backup Projects",
     WEBSITES = "Websites", // util websites?
+    APPLET = "Applets",
     MISCELANEOUS = "Miscelaneous",
     IOS = "iOS"
 }
@@ -70,7 +71,7 @@ export const projects: Array<Project> = [
         "HowOldIs.png",
         "HowOldIs",
         [],
-        [Tag.WEBSITES, Tag.MISCELANEOUS],
+        [Tag.MISCELANEOUS, Tag.APPLET],
         () => import('./templates/HowOldIs/HowOldIs.svelte')
     ),
     new Project(
@@ -86,7 +87,7 @@ export const projects: Array<Project> = [
         "Tux.svg",
         "LinuxTricks",
         [],
-        [Tag.MISCELANEOUS],
+        [Tag.MISCELANEOUS, Tag.APPLET],
         () => import('./templates/LinuxTricks/LinuxTricks.svelte')
     ),
     new Project(
