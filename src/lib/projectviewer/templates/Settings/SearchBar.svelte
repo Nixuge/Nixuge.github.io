@@ -17,7 +17,7 @@
         margin: 3px;
         margin-right: 10px;
         border-radius: 5px;
-        background-color: rgba(0, 0, 0, .2);
+        background-color: var(--setting-searchbar-background);
     }
     #searchbar {
         color: var(--text-main);

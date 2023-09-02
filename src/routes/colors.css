@@ -1,62 +1,78 @@
-@media only screen and (prefers-color-scheme: dark) {
-    /* Global default (dark) */
-    :root {
-        color-scheme: dark;
-        --text-main: #fff;
-        --text-fade-1: #b5b5b5;
-        --text-fade-2: #aaa;
-        
-        --border-main: #fff;
-        --border-fade: #999;
+/* Global default (dark) */
+:root {
+    color-scheme: dark;
+    --text-main: #fff;
+    --text-fade-1: #b5b5b5;
+    --text-fade-2: #aaa;
 
-        --background-1: #111;
-        --background-2: #222;
-        --background-3: #333;
-        --background-3-slight-transparency: #333333cc;
-        --background-4: #444;
+    --border-main: #fff;
+    --border-fade: #999;
 
-        --social-title-main: #fff;
-        --social-title-background: #222;
-        
-        --color-a: #00ccff;
-        --color-a-visited: #00f7ff;
+    --background-1: #111;
+    --background-2: #222;
+    --background-3: #333;
+    --background-3-slight-transparency: #333333cc;
+    --background-4: #444;
 
-        --project-selector-selected: #fff;
-        --project-selector-hover: #ddd;
-    }
-    /* Global default (light) */
-    body.light {
-        color-scheme: light;
-        --text-main: #000;
-        --text-fade-1: #252525;
-        --text-fade-2: #444;
-        
-        --border-main: #000;
-        --border-fade: #555;
-        
-        /* Q: Why are these not straight up #fff, #eee, etc
-           A: For some reason if you add more blue to the color, it looks whiter
-              Also background-1 and background-2 are inverted, as I found that having
-                a darker background and a lighter foreground feels better
-        */
-        --background-1: #e5e6ed;
-        --background-2: #f0f0f6;
-        --background-3: #c1c2cb;
-        --background-3-slight-transparency: #c1c2cbcc;
-        --background-4: #b3b3bb;
-        
-        --social-title-main: #252525;
-        --social-title-background: #f0f0f6;
+    --social-title-main: #fff;
+    --social-title-background: #222;
 
-        --color-a: #0080ff;
-        --color-a-visited: #005eff;
+    --setting-searchbar-background: rgba(0, 0, 0, .2);
 
-        --project-selector-selected: #000;
-        --project-selector-hover: #222;
-    }
-    /* Global default (both) */
-    /* body {
+    --color-a: #00ccff;
+    --color-a-visited: #00f7ff;
 
-    } */
+    --project-selector-selected: #fff;
+    --project-selector-hover: #ddd;
 }
 
+/* Global default (light) */
+body.light {
+    color-scheme: light;
+    --text-main: #000;
+    --text-fade-1: #252525;
+    --text-fade-2: #444;
+
+    --border-main: #000;
+    --border-fade: #555;
+
+    /* Q: Why are these not straight up #fff, #eee, etc
+           A: For some reason if you add more blue to the color, it looks whiter
+              Also background-1 and background-2 are inverted, as I found that having
+              a darker background and a lighter foreground feels better
+        */
+    --background-1: #f0f0f6;
+    --background-2: #e8e9ef;
+    --background-3: #c1c2cb;
+    --background-3-slight-transparency: #c1c2cbcc;
+    --background-4: #b3b3bb;
+
+    --social-title-main: #252525;
+    --social-title-background: #e8e9ef;
+
+    --setting-searchbar-background: rgba(0, 0, 0, .1);
+
+    --color-a: #0080ff;
+    --color-a-visited: #005eff;
+
+    --project-selector-selected: #000;
+    --project-selector-hover: #222;
+}
+
+/* Global default (both) */
+/* body {
+
+} */
+
+
+/* Note:
+This ignores the system them.
+Ideally I'd have the theme change on the system theme change.
+However, not sure if that's really needed.
+If one day I want to go at it, the code below should be good
+(wrap it in an onMount)
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+});
+*/
