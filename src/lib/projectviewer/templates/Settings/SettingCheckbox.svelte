@@ -24,16 +24,14 @@
     
 </script>
 
-<div id="othersettings">
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div class="tag" on:click={toggleInclusion} on:keypress={toggleInclusion}>
-        <input class="checkbox" type="checkbox" bind:checked={value}>
-        {value ? textTrue : textFalse}
-        {#if subtextTrue != ""}
-            <br>
-            <span class="optioninfo">{value ? subtextTrue : subtextFalse}</span>
-        {/if}
-    </div>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="tag" on:click={toggleInclusion} on:keypress={toggleInclusion}>
+    <input class="checkbox" type="checkbox" bind:checked={value}>
+    {value ? textTrue : textFalse}
+    {#if subtextTrue != ""}
+        <br>
+        <span class="optioninfo">{value ? subtextTrue : subtextFalse}</span>
+    {/if}
 </div>
 
 <style>
