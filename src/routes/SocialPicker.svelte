@@ -3,7 +3,7 @@
     import Github from "$lib/socialpicker/Github.svelte";
     import Telegram from "$lib/socialpicker/Telegram.svelte";
     import Twitter from "$lib/socialpicker/Twitter.svelte";
-    import Youtube from "$lib/socialpicker/Youtube.svelte";
+    import Modrinth from "$lib/socialpicker/Modrinth.svelte";
     import "$lib/socialpicker/style.css";
 </script>
 
@@ -15,9 +15,9 @@
         <div id="socialpicker">
             <Discord />
             <Twitter />
-            <Youtube />
             <Telegram />
             <Github />
+            <Modrinth />
         </div>
     </div>
 </div>
