@@ -1,6 +1,6 @@
 <script>
     function open() {
-        alert("@nixuge on discord")
+        window.open("https://discordapp.com/users/784062518901473351")
     }
 </script>
 
