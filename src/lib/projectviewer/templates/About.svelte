@@ -3,6 +3,11 @@
 </script>
 
 <div id="about">
+    <h1 style="text-align: center; color: red">Subdomains such as "maps.nixuge.me" & "funcraft.nixuge.me" 
+        are temporarily down for maintenance until my exams end (June 21st).
+        <br><br>
+        They WILL be back up soon.
+    </h1>
     <h1 id="hello">Welcome to Nixuge.me </h1>
     <h2>Hello 👋</h2>
     <p>I'm mainly a legacy (&amp; sometimes newer) Minecraft modder.</p>
