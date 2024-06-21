@@ -79,9 +79,11 @@
     }
 
     img {
-        width: 90px;
         height: 90px;
+        max-width: 90px;
         border-radius: 15px;
+        display: block;
+        margin: auto;
     }
     .projectlogo {
         position: relative;
