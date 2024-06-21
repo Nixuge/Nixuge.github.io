@@ -207,3 +207,47 @@
     <h2>See <a href="https://github.com/Nixuge/GTKPickerAdder">GTKPickerAdder</a></h2>
   </Foldable>
 </Foldable>
+
+<Foldable title="Dolphin/Qt apps not being themed by kvantum on anything that's not plasma">
+  <h2>The fix here is for hyprland specifically but you can easily adapt it for any other DE</h2>
+  <p>Most fixes I could find had the right method except for 1 exception: the qt version.<br>
+    As of Plasma 6, Dolphin now uses Qt6. If you need this for Qt5 apps, just replace qt6ct by qt5ct
+  </p>
+  <h3>The actual steps:</h3>
+  <li>
+    <ul>- (Only required for Qt5 - skip for modern dolphin) install kvantum-qt5</ul>
+    <ul>- Install qt6ct</ul>
+    <ul>- Run it & set the "Style" to "kvantum" or "kvantum-dark"</ul>
+    <ul>- Set the environment variable QT_QPA_PLATFORMTHEME to qt6ct<br>
+    -->If on hyprland, add "env = QT_QPA_PLATFORMTHEME,qt6ct" to the config
+    </ul>
+    <ul>- Should be done</ul>
+  </li>
+</Foldable>
+
+<Foldable title="Dolphin not showing file associations">
+  <h2>TLDR; symlink plasma-applications.menu to applications.menu in /etc/xdg/menus using the following:</h2>
+  <Codeblock>
+    sudo ln /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
+  </Codeblock>
+
+  <h2>The following is only the source of that fix</h2>
+
+  <p>See <a href="https://www.reddit.com/r/kde/comments/1bd313p/comment/kyss9hk/">https://www.reddit.com/r/kde/comments/1bd313p/comment/kyss9hk/</a></p>
+  <p>Text if this is deleted:</p>
+  <p>"Your problem has probably nothing to do with xdg mimeapps.list, but with applications.menu. 
+    I assume you use a custom Display Manager or a custom setup that is causing the "startplasma" executable to not be called? 
+    There was a recent change on how the xdg applications menu is named for KDE6 https://phabricator.kde.org/T12542. 
+    It seems like the KDE6 specific "applications.menu" file was renamed to "plasma-applications.menu" (should be found here /etc/xdg/menus). 
+    "startplasma" would set the env variable XDG_MENU_PREFIX to "plasma-" so the file should be found by "kbuildsycoca6" (if startplasma is called). 
+    Since you are (probably) not using startplasma you have to set the env yourself in your Display Manager startup script like so:"</p>
+    <Codeblock>
+      export XDG_MENU_PREFIX=plasma-
+      systemctl --user import-environment XDG_MENU_PREFIX
+      dbus-update-activation-environment XDG_MENU_PREFIX
+    </Codeblock>
+
+    <br>
+    <p>Addition from u/codeIMperfect:</p>
+    <p>This is exactly the issue, but as u/Red-Eye-Soul suggests above it is much simpler to simply make a symlink applications.menu to plasma-applications.menu    </p>
+</Foldable>
