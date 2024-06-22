@@ -1,5 +1,6 @@
 <script>
     import Foldable from "./utils/Foldable.svelte";
+    import SkillImage from "./utils/SkillImage.svelte";
 </script>
 
 <div id="about">
@@ -20,18 +21,48 @@
     <!-- thanks to skillicons.dev for the icons -->
     <Foldable title="Current knowledge" open={true}>
         <Foldable title="Known languages" open={true} sub={true}>
-            <img class="singleline" src="https://skillicons.dev/icons?i=java,python,typescript,js,vuejs,svelte,html,css,cs,bash&perline=10" alt="Known languages">
+            <SkillImage icon="java" />
+            <SkillImage icon="python" />
+            <SkillImage icon="typescript" />
+            <SkillImage icon="js" />
+            <SkillImage icon="vuejs" />
+            <SkillImage icon="svelte" />
+            <SkillImage icon="html" />
+            <SkillImage icon="css" />
+            <SkillImage icon="cs" />
+            <SkillImage icon="bash" />
         </Foldable>
         <Foldable title="Used technologies" open={true} sub={true}>
-            <img class="multiline" src="https://skillicons.dev/icons?i=linux,vscode,idea,github,git,docker,vim,gradle,nginx,cloudflare,vite,vercel,selenium,postgres,sqlite,ps&perline=10" alt="Using">
+            <SkillImage icon="linux" />
+            <SkillImage icon="vscode" />
+            <SkillImage icon="github" />
+            <SkillImage icon="git" />
+            <SkillImage icon="docker" />
+            <SkillImage icon="vim" />
+            <SkillImage icon="gradle" />
+            <SkillImage icon="nginx" />
+            <SkillImage icon="cloudflare" />
+            <SkillImage icon="vite" />
+            <SkillImage icon="vercel" />
+            <SkillImage icon="selenium" />
+            <SkillImage icon="postgres" />
+            <SkillImage icon="sqlite" />
+            <SkillImage icon="ps" />
             <br>
             + Forge, Fabric, Bukkit (Spigot, Paper), Folia, &amp; some more...
         </Foldable>
         <Foldable title="Need more training" sub={true}>
-            <img class="singleline" src="https://skillicons.dev/icons?i=rust,unity&perline=10" alt="Need more training">
+            <SkillImage icon="rust" />
+            <SkillImage icon="unity" />
         </Foldable>
         <Foldable title="Want to learn" sub={true}>
-            <img class="singleline" src="https://skillicons.dev/icons?i=tauri,swift,ruby,wasm,c,cpp,qt&perline=10" alt="Want to learn">
+            <SkillImage icon="tauri" />
+            <SkillImage icon="swift" />
+            <SkillImage icon="ruby" />
+            <SkillImage icon="wasm" />
+            <SkillImage icon="c" />
+            <SkillImage icon="cpp" />
+            <SkillImage icon="qt" />
         </Foldable>
         <Foldable title="Other stats" sub={true}>
             <h3 class="nomargin">Github commits chart</h3>
@@ -47,6 +78,7 @@
 </div>
 
 <style>
+    /* todo(?): maybe have the icons centered? Not sure if i should or not. */
     /* Minimize margin for first title */
     #hello {
         margin-top: 20px; 
@@ -54,14 +86,6 @@
     /* Bigger font */
     #about {
         font-size: 1.5em; 
-    }
-    /* Heights for images */
-    /* Multiline = 2xsingline + gap (here 2x85px + 15px) */
-    .multiline {
-        height: 185px;
-    }
-    .singleline {
-        height: 85px;
     }
     .nomargin {
         margin: 0;
