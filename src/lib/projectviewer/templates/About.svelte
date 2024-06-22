@@ -32,7 +32,7 @@
             <SkillImage icon="cs" />
             <SkillImage icon="bash" />
         </Foldable>
-        <Foldable title="Used technologies" open={true} sub={true}>
+        <Foldable title="Main used technologies" open={true} sub={true}>
             <SkillImage icon="linux" />
             <SkillImage icon="vscode" />
             <SkillImage icon="github" />
@@ -48,8 +48,12 @@
             <SkillImage icon="postgres" />
             <SkillImage icon="sqlite" />
             <SkillImage icon="ps" />
-            <br>
-            + Forge, Fabric, Bukkit (Spigot, Paper), Folia, &amp; some more...
+            <SkillImage baseUrl="images/skills/" icon="forge.png" alt="forge"/>
+            <SkillImage baseUrl="images/skills/" icon="fabric.png" alt="fabric"/>
+            <SkillImage baseUrl="images/skills/" icon="bukkit.png" alt="bukkit"/>
+            <SkillImage baseUrl="images/skills/" icon="paper.png" alt="paper"/>
+            <SkillImage baseUrl="images/skills/" icon="folia.png" alt="folia"/>
+            <SkillImage baseUrl="images/skills/" icon="velocity.png" alt="velocity"/>
         </Foldable>
         <Foldable title="Need more training" sub={true}>
             <SkillImage icon="rust" />
@@ -64,7 +68,7 @@
             <SkillImage icon="cpp" />
             <SkillImage icon="qt" />
         </Foldable>
-        <Foldable title="Other stats" sub={true}>
+        <Foldable title="Other stats" open={true} sub={true}>
             <h3 class="nomargin">Github commits chart</h3>
             <img src="https://ghchart.rshah.org/ff8c8c/Nixuge" alt="Github Chart" width="95%" />
             <br><br>
