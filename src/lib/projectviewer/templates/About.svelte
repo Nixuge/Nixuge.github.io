@@ -21,52 +21,60 @@
     <!-- thanks to skillicons.dev for the icons -->
     <Foldable title="Current knowledge" open={true}>
         <Foldable title="Known languages" open={true} sub={true}>
-            <SkillImage icon="java" />
-            <SkillImage icon="python" />
-            <SkillImage icon="typescript" />
-            <SkillImage icon="js" />
-            <SkillImage icon="vuejs" />
-            <SkillImage icon="svelte" />
-            <SkillImage icon="html" />
-            <SkillImage icon="css" />
-            <SkillImage icon="cs" />
-            <SkillImage icon="bash" />
+            <div class="icons">
+                <SkillImage icon="java" />
+                <SkillImage icon="python" />
+                <SkillImage icon="typescript" />
+                <SkillImage icon="js" />
+                <SkillImage icon="vuejs" />
+                <SkillImage icon="svelte" />
+                <SkillImage icon="html" />
+                <SkillImage icon="css" />
+                <SkillImage icon="cs" />
+                <SkillImage icon="bash" />
+            </div>
         </Foldable>
         <Foldable title="Main used technologies" open={true} sub={true}>
-            <SkillImage icon="linux" />
-            <SkillImage icon="vscode" />
-            <SkillImage icon="github" />
-            <SkillImage icon="git" />
-            <SkillImage icon="docker" />
-            <SkillImage icon="vim" />
-            <SkillImage icon="gradle" />
-            <SkillImage icon="nginx" />
-            <SkillImage icon="cloudflare" />
-            <SkillImage icon="vite" />
-            <SkillImage icon="vercel" />
-            <SkillImage icon="selenium" />
-            <SkillImage icon="postgres" />
-            <SkillImage icon="sqlite" />
-            <SkillImage icon="ps" />
-            <SkillImage baseUrl="images/skills/" icon="forge.png" alt="forge"/>
-            <SkillImage baseUrl="images/skills/" icon="fabric.png" alt="fabric"/>
-            <SkillImage baseUrl="images/skills/" icon="bukkit.png" alt="bukkit"/>
-            <SkillImage baseUrl="images/skills/" icon="paper.png" alt="paper"/>
-            <SkillImage baseUrl="images/skills/" icon="folia.png" alt="folia"/>
-            <SkillImage baseUrl="images/skills/" icon="velocity.png" alt="velocity"/>
+            <div class="icons">
+                <SkillImage icon="linux" />
+                <SkillImage icon="vscode" />
+                <SkillImage icon="github" />
+                <SkillImage icon="git" />
+                <SkillImage icon="docker" />
+                <SkillImage icon="vim" />
+                <SkillImage icon="gradle" />
+                <SkillImage icon="nginx" />
+                <SkillImage icon="cloudflare" />
+                <SkillImage icon="vite" />
+                <SkillImage icon="vercel" />
+                <SkillImage icon="selenium" />
+                <SkillImage icon="postgres" />
+                <SkillImage icon="sqlite" />
+                <SkillImage icon="ps" />
+                <SkillImage baseUrl="images/skills/" icon="forge.png" alt="forge"/>
+                <SkillImage baseUrl="images/skills/" icon="fabric.png" alt="fabric"/>
+                <SkillImage baseUrl="images/skills/" icon="bukkit.png" alt="bukkit"/>
+                <SkillImage baseUrl="images/skills/" icon="paper.png" alt="paper"/>
+                <SkillImage baseUrl="images/skills/" icon="folia.png" alt="folia"/>
+                <SkillImage baseUrl="images/skills/" icon="velocity.png" alt="velocity"/>
+            </div>
         </Foldable>
         <Foldable title="Need more training" sub={true}>
-            <SkillImage icon="rust" />
-            <SkillImage icon="unity" />
+            <div class="icons">
+                <SkillImage icon="rust" />
+                <SkillImage icon="unity" />
+            </div>
         </Foldable>
         <Foldable title="Want to learn" sub={true}>
-            <SkillImage icon="tauri" />
-            <SkillImage icon="swift" />
-            <SkillImage icon="ruby" />
-            <SkillImage icon="wasm" />
-            <SkillImage icon="c" />
-            <SkillImage icon="cpp" />
-            <SkillImage icon="qt" />
+            <div class="icons">
+                <SkillImage icon="tauri" />
+                <SkillImage icon="swift" />
+                <SkillImage icon="ruby" />
+                <SkillImage icon="wasm" />
+                <SkillImage icon="c" />
+                <SkillImage icon="cpp" />
+                <SkillImage icon="qt" />
+            </div>
         </Foldable>
         <Foldable title="Other stats" open={true} sub={true}>
             <h3 class="nomargin">Github commits chart</h3>
@@ -93,5 +101,8 @@
     }
     .nomargin {
         margin: 0;
+    }
+    .icons {
+        text-align: center;
     }
 </style>
