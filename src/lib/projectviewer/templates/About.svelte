@@ -4,8 +4,6 @@
 </script>
 
 <div id="about">
-    <h2 style="text-align: center; color: lime; margin-top: 0px; margin-bottom: -10px;">Subdomains are back up. Thank you for your patience.
-    </h2>
     <h1 id="hello">Welcome to Nixuge.me </h1>
     <h2>Hello 👋</h2>
     <p>I'm mainly a legacy (&amp; sometimes newer) Minecraft modder.</p>
