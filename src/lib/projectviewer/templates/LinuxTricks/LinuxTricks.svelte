@@ -251,3 +251,16 @@
     <p>Addition from u/codeIMperfect:</p>
     <p>This is exactly the issue, but as u/Red-Eye-Soul suggests above it is much simpler to simply make a symlink applications.menu to plasma-applications.menu    </p>
 </Foldable>
+
+<Foldable title="Make the 'compressing package' step on Arch's AUR packages way faster">
+  <h2>Simply open '/etc/makepkg.conf' and replace:</h2>
+  <Codeblock>
+    PKGEXT='.pkg.tar.zst'
+  </Codeblock>
+  <h2 style="margin: 5px; margin-left: 0px;">with</h2>
+  <Codeblock>
+    PKGEXT='.pkg.tar'
+  </Codeblock>
+  <br>
+  <p>This basically skips the compression step. It doesn't really matter in that case since we just decompress it instantly after anyways at the install step.</p>
+</Foldable>
