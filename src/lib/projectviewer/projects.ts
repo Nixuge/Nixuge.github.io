@@ -51,8 +51,21 @@ export const presentationProj = new Project("About",
 )
 
 // Not added, could be in a list component:
-// - DesktopOrganizer
-
+// - DesktopOrganizer (insignificant/w other scripts?)
+// - RandomScripts
+// - Minecraft-Wiki-Redirector
+// - SpectatorBoost
+// - SaveScreenshotCoordinates
+// - BlockedServerBypassForge
+// - BlockSumoPlugin (NixuCraft)
+// - mcstatusarchive (w ServerlistsParser)
+// - Cydia repo (NetworkManagerReborn)
+// - Mochi
+// - Aurixa
+// - lepetitconseil (?)
+// - vendetta-plugins
+// - Adjust-VTT (insignificant/mochi) 
+// - FK (pv)
 
 export const projects: Array<Project> = [
     new Project(
@@ -80,12 +93,12 @@ export const projects: Array<Project> = [
         () => import('./templates/HowOldIs/HowOldIs.svelte')
     ),
     new Project(
-        "CanIJB",
-        "Cydia.png",
-        "CanIJailbreak",
-        [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
-        [Tag.WEBSITES, Tag.INSIGNIFICANT],
-        () => import('./templates/projects/CanIJailbreak.svelte')
+        "Desk. Patcher",
+        undefined,
+        "DesktopPatcher",
+        [],
+        [Tag.MISCELANEOUS],
+        () => import('./templates/projects/DesktopPatcher.svelte')
     ),
     new Project(
         "Watch2gether",
@@ -94,6 +107,14 @@ export const projects: Array<Project> = [
         [new Dl("Website", "https://watch2gether.nixuge.me")],
         [Tag.WEBSITES],
         () => import('./templates/projects/Watch2Gether.svelte')
+    ),
+    new Project(
+        "CanIJB",
+        "Cydia.png",
+        "CanIJailbreak",
+        [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
+        [Tag.WEBSITES, Tag.INSIGNIFICANT],
+        () => import('./templates/projects/CanIJailbreak.svelte')
     ),
     new Project(
         "Pacobox",
