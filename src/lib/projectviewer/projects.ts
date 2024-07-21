@@ -12,7 +12,8 @@ export enum Tag {
     WEBSITES = "Websites", // util websites?
     APPLET = "Applets",
     MISCELANEOUS = "Miscelaneous",
-    IOS = "iOS"
+    IOS = "iOS",
+    INSIGNIFICANT = "Insignificant"
 }
 
 export class Project {
@@ -20,7 +21,7 @@ export class Project {
     name_clear: string
     constructor(
         public name: string,
-        icon_filename: string,
+        icon_filename: string | undefined,
         public icon_alt: string,
         public links: Dl[],
         public tags: Tag[],
@@ -48,6 +49,10 @@ export const presentationProj = new Project("About",
     () => import('./templates/About.svelte'),
     true
 )
+
+// Not added, could be in a list component:
+// - DesktopOrganizer
+
 
 export const projects: Array<Project> = [
     new Project(
@@ -79,8 +84,24 @@ export const projects: Array<Project> = [
         "Cydia.png",
         "CanIJailbreak",
         [new Dl("Website (!OUTDATED!)", "https://canijb.nixuge.me")],
-        [Tag.WEBSITES],
+        [Tag.WEBSITES, Tag.INSIGNIFICANT],
         () => import('./templates/projects/CanIJailbreak.svelte')
+    ),
+    new Project(
+        "Watch2gether",
+        undefined,
+        "Watch2gether",
+        [new Dl("Website", "https://watch2gether.nixuge.me")],
+        [Tag.WEBSITES],
+        () => import('./templates/projects/Watch2Gether.svelte')
+    ),
+    new Project(
+        "Pacobox",
+        undefined,
+        "Pacobox",
+        [],
+        [Tag.MISCELANEOUS, Tag.INSIGNIFICANT],
+        () => import('./templates/projects/Pacobox.svelte')
     ),
     new Project(
         "LinuxTricks",
@@ -113,6 +134,14 @@ export const projects: Array<Project> = [
         [new Dl("Visit the Website (alpha)", "https://funcraft.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
         [Tag.MCBACKUP],
         () => import('./templates/projects/FuncraftBackup.svelte')
+    ),
+    new Project(
+        "Forge 1.8.9 Mod Template",
+        "mods/Forge189Template.png",
+        "Forge 1.8.9 Mod Template",
+        [new Dl("Source", "https://github.com/Nixuge/ForgeTemplate_1.8.9")],
+        [Tag.MCMOD],
+        () => import('./templates/mods/Forge189Template.svelte')
     ),
     new Project(
         "MultiBind",

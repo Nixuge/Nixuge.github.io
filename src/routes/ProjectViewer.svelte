@@ -96,6 +96,7 @@
         border-radius: 15px;
     }
     .iconreplacement > p {
+        white-space: nowrap;
         position: absolute;
         top: 50%;
         left: 50%;
