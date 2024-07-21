@@ -43,7 +43,11 @@
                     on:keypress={() => {setProject(proj, i)}} 
                     on:mouseenter={() => {loadProject(proj)}}
                 >
-                    <img src="{proj.icon_path}" alt={proj.icon_alt}>
+                    {#if proj.icon_path}
+                        <img src="{proj.icon_path}" alt={proj.icon_alt}>
+                    {:else}
+                        <div class="iconreplacement"><p>{proj.name}</p></div>
+                    {/if}
                 </div>
             {/each}
         </div>
@@ -84,6 +88,19 @@
         border-radius: 15px;
         display: block;
         margin: auto;
+    }
+    .iconreplacement {
+        width: 90px;
+        height: 90px;
+        background-color: #555;
+        border-radius: 15px;
+    }
+    .iconreplacement > p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        margin: 0;
     }
     .projectlogo {
         position: relative;

@@ -16,7 +16,7 @@ export enum Tag {
 }
 
 export class Project {
-    icon_path: string
+    icon_path?: string
     name_clear: string
     constructor(
         public name: string,
@@ -27,7 +27,7 @@ export class Project {
         public component: Function,
         public important: boolean = false
     ) {
-        this.icon_path = "images/projects/" + icon_filename;
+        this.icon_path = icon_filename ? "images/projects/" + icon_filename : undefined;
         this.name_clear = name.replaceAll(" ", "").toLowerCase();
     }
 }
