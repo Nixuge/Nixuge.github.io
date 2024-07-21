@@ -123,7 +123,7 @@ export const projects: Array<Project> = [
         "Mineplex Backup",
         "MineplexBackup.png",
         "Mineplex Backup",
-        [new Dl("Visit the Website", "https://mineplex.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY")],
+        [new Dl("Visit the Website", "https://maps.nixuge.me/mineplex"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY")],
         [Tag.MCBACKUP],
         () => import('./templates/projects/MineplexBackup.svelte')
     ),
@@ -131,7 +131,7 @@ export const projects: Array<Project> = [
         "Funcraft Backup",
         "FuncraftBackup.png",
         "Funcraft Backup",
-        [new Dl("Visit the Website (alpha)", "https://funcraft.nixuge.me"), new Dl("Join the Discord", "https://discord.gg/rsJYGpPxqY", true)],
+        [new Dl("Visit the Website", "https://funcraft.nixuge.me"), new Dl("See the Map Archives", "https://maps.nixuge.me/funcraft"), new Dl("Archived Forum", "https://funcraft.nixuge.me/forum", true)],
         [Tag.MCBACKUP],
         () => import('./templates/projects/FuncraftBackup.svelte')
     ),

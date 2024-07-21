@@ -1,6 +1,7 @@
 import { getCookie, setCookie, stringFromMap } from "$lib/cookies";
+import { Tag } from "./projectviewer/projects";
 
-export const DISABLED_BY_DEFAULT_TAGS = ["Minecraft Mod"];
+export const DISABLED_BY_DEFAULT_TAGS = [Tag.INSIGNIFICANT];
 // export const DISABLED_BY_DEFAULT_SETTINGS = []; unused for now as unneeded.
 
 // Initialized @ bottom
@@ -40,7 +41,7 @@ export function getBoolTag(setting: string, default_value: boolean = true) {
 const tag_cookie = getCookie("selected_tags");
 if (tag_cookie == undefined) {
     selected_tags = new Map();
-    DISABLED_BY_DEFAULT_TAGS.forEach(tag => {
+    DISABLED_BY_DEFAULT_TAGS.forEach(tag => {        
         selected_tags.set(tag, false);
     });
 } else {    

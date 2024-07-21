@@ -1,10 +1,14 @@
+<script>
+    import SelfLink from "../utils/SelfLink.svelte";
+</script>
+
 <h1>The FunCraft Backup Project</h1>
-<h2>An (almost) full archive of the now closed server <a href="https://funcraft.net">FunCraft</a></h2>
+<h2>An (almost) full archive of the now closed server <a href="https://www.funcraft.net">FunCraft</a></h2>
 <img src="https://github.com/Nixuge/AzSpoof/assets/33488576/09c1b0e8-e02d-4c9d-9c97-4d415df037b9" alt="Funcraft closed">
 
 <h2>Note: this isn't uploaded yet, and won't be until I cleanup the data a bit.</h2>
 
-<h1>Minecraft Server</h1>
+<h1>Maps</h1>
 Most of the maps from the Minecraft server itself were downloaded, right before it closing down.
 AFAIK the only things that could be missing/incomplete are:
 <ul>
@@ -21,6 +25,8 @@ AFAIK the only things that could be missing/incomplete are:
     <li><a href="https://www.curseforge.com/minecraft/mc-mods/in-game-account-switcher/files/2309123">In-Game Account Switcher</a>, v6.0.1.24 (by The_Fireplace)</li>
     <li><a href="https://optifine.net/">Optifine</a> (by sp614x)</li>
 </ul>
+<h3>Maps Website Source:</h3>
+<ul><li><SelfLink link="github.com/Nixuge/McMapsBackup-Website" /></li></ul>
 
 <h1>Player Stats</h1>
 Altho the website looks like it'll be fine for a while, all of the player stats were downloaded.
