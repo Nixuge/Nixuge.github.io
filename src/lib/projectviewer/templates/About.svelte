@@ -78,10 +78,10 @@
             <h3 class="nomargin">Github commits chart</h3>
             <img src="https://ghchart.rshah.org/ff8c8c/Nixuge" alt="Github Chart" width="95%" />
             <br><br>
-            <img src="https://github-readme-stats-rust-kappa.vercel.app/api?username=Nixuge&theme=tokyonight&show_icons=true&count_private=true&custom_title=Nixuge's%20Stats%20-%20Last%201%20Year" width="60%" alt="Github Stats">
-            <img src="https://github-readme-stats-rust-kappa.vercel.app/api/top-langs/?username=Nixuge&theme=tokyonight&langs_count=10&layout=compact" width="35%"  alt="Most used languages">
+            <img src="https://ghstats.nixuge.me?username=Nixuge&theme=tokyonight&show_icons=true&count_private=true&custom_title=Nixuge's%20Stats%20-%20Last%201%20Year" width="60%" alt="Github Stats">
+            <img src="https://ghstats.nixuge.me/top-langs?username=Nixuge&theme=tokyonight&langs_count=10&layout=compact" width="35%"  alt="Most used languages">
 
-            <img src="https://github-readme-stats-rust-kappa.vercel.app/api/wakatime?username=Nixuge&theme=tokyonight&langs_count=20&layout=compact" width="60%" alt="Wakatime stats">
+            <img src="https://ghstats.nixuge.me/wakatime?username=Nixuge&theme=tokyonight&langs_count=20&layout=compact" width="60%" alt="Wakatime stats">
         </Foldable>
     </Foldable>
 
